@@ -6,7 +6,7 @@
  *
  * @param {Color} $color - the color you wish to check
  * @param {String} $method (rec709) - the method used to calculate the luminence
- * @return {Number} - a percentage ranging from dark 0% to bright 100%
+ * @returns {Number} - a percentage ranging from dark 0% to bright 100%
  *
  * @see http://en.wikipedia.org/wiki/Luma_(video)
  * @see http://www.w3.org/TR/AERT#color-contrast
@@ -56,7 +56,7 @@
  *
  * @requires {Function} brightness()
  * @param {Color} $color - the color you wish to check
- * @return {Boolean}
+ * @returns {Boolean}
  *
  * @example http://sassmeister.com/gist/80f095fdf2e8fc2dfba9
  */

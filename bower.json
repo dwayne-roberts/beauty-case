@@ -1,0 +1,16 @@
+{
+  "name": "beauty-case",
+  "description": "A toolkit for the make-up artists of the world wide web. A lightweight library of mixins, functions, helpers and placeholders which can be used throughout maxfactor themes.",
+  "homepage": "https://bitbucket.org/dwayne-roberts/beauty-case/",
+  "private": true,
+  "main": "beauty-case.scss",
+  "version": "0.1.0",
+  "license": "MIT",
+  "company": "Sky Radio Group",
+  "author": "Dwayne Roberts <dwayne.roberts@skyradio.nl",
+  "dependencies": {},
+  "devDependencies": {
+    "susy": "~2.2.1",
+    "breakpoint-sass": "~2.5.0"
+  }
+}

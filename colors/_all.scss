@@ -5,13 +5,13 @@
 
 /*
 
-  brightness .................................. (function) The brightness of a color
-  contrast-color/readable ..................... (function) The color with the highest contrast
-  is-bright ................................... (function) Checks if the brightness is greater than 60%
-  palette/swatch .............................. (function) A specific tint or shade within a palette
-  random-color ................................ (function) A random color
-  shade ....................................... (function) A darker shade of a given color
-  tint ........................................ (function) A lighter tint of a given color
+  brightness .................................. (fn) The brightness of a color
+  contrast-color/readable ..................... (fn) The color with the highest contrast
+  is-bright ................................... (fn) Checks if the brightness is greater than 60%
+  palette/swatch .............................. (fn) A specific tint or shade within a palette
+  random-color ................................ (fn) A random color
+  shade ....................................... (fn) A darker shade of a given color
+  tint ........................................ (fn) A lighter tint of a given color
 
 
 */

@@ -1,0 +1,58 @@
+/**
+ * @name contrast-color
+ * @description Returns the color with the highest contrast
+ * Given two colors this function checks which of the two has a higher contrast in relation to a
+ * background color.
+ *
+ * @requires {Function} is-bright()
+ * @param {Color} $background-color - background color
+ * @param {Color} $dark-color ($color-almost-black) - a darker color
+ * @param {Color} $light-color ($color-almost-white) - a lighter color
+ * @return {Color} $contrast-color - a contrasting lighter or darker color
+ *
+ * @example http://sassmeister.com/gist/24b6af6596bc3e0fb894
+ */
+
+$color-almost-white: #fafafa !default;
+$color-almost-black: #0d0d0d !default;
+
+@function contrast-color($background-color, $dark-color: $color-almost-black, $light-color: $color-almost-white) {
+
+  // Error checking
+  @if type-of($background-color) != 'color' {
+    @warn "Type Error: Expected a $background-color of type 'color', provided #{type-of($background-color)} #{$background-color}";
+    @return false;
+  }
+
+  @if type-of($dark-color) != 'color' {
+    @warn "Type Error: Expected a $dark-color of type 'color', provided #{type-of($dark-color)} #{$dark-color}";
+    @return false;
+  }
+
+  @if type-of($light-color) != 'color' {
+    @warn "Type Error: Expected a $light-color of type 'color', provided #{type-of($light-color)} #{$light-color}";
+    @return false;
+  }
+
+  @if not function-exists(is-bright) {
+    @warn 'Reference Error: Requirement; is-bright() not found';
+    @return false;
+  }
+
+  // Logic
+  $contrast-color: if(is-bright($background-color), $dark-color, $light-color);
+
+  @return $contrast-color;
+}
+
+
+/**
+ * @name readable
+ * @alias contrast-color
+ *
+ */
+
+@function readable($args...) {
+  @return contrast-color($args...);
+}
+

@@ -1,0 +1,36 @@
+/**
+ * @name tint
+ * @description Returns a lighter tint of a given color
+ * Lightens a color by mixing it with white as specified by a percentage.
+ *
+ * @param {Color} $color - the color you wish to lighten
+ * @param {Number} $percentage - a percentage  ranging from 0% to 100%
+ * @return {Color} $lighter-color - the lighter color
+ *
+ * @example http://sassmeister.com/gist/30b89e594becc3e70dc3
+ */
+
+@function tint($color, $percentage) {
+
+  // Error checking
+  @if type-of($color) != 'color' {
+    @warn "Type Error: Expected a $color of type color, provided (#{type-of($color)}) #{$color}";
+    @return false;
+  }
+
+  @if type-of($percentage) != 'number' {
+    @warn "Type Error: Expected a $percentage of type number, provided (#{type-of($percentage)}) #{$percentage}";
+    @return false;
+  }
+
+  @if unit($percentage) != '%' {
+    @warn "Unit Error: Unit of $percentage - (#{unit($percentage)}) was incorrect, expected '%'";
+    @return false;
+  }
+
+  // Logic
+  $white: rgb(255, 255, 255);
+  $lighter-color: mix($white, $color, $percentage);
+
+  @return $lighter-color;
+}

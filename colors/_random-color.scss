@@ -1,0 +1,18 @@
+/**
+ * Random color
+ * @description A random color
+ *
+ * @returns {Color} $color
+ *
+ * @example http://sassmeister.com/gist/e969d1ab07c76bcf5e09
+ */
+
+@function random-color() {
+
+  $red   : random(255);
+  $green : random(255);
+  $blue  : random(255);
+  $color : rgb($red, $green, $blue);
+
+  @return $color;
+}

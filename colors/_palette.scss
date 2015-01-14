@@ -1,0 +1,89 @@
+/**
+ * @name palette
+ * @description A specific tint or shade within a palette
+ * Based on a specific scale, this function calculates a color adjustment for a given color
+ *
+ * @requires {Function} tint
+ * @requires {Function} shade
+ * @param {Color} $color - the base color
+ * @return {Color} $shade
+ *
+ * @example http://sassmeister.com/gist/13267d5819362a9a5640
+ */
+
+@function palette($color, $shade: false) {
+
+  $shade-options: lightest, lighter, light, dark, darker, darkest;
+
+  // Error checking
+  @if type-of($color) != 'color' {
+    @warn "Type Error: Expected a $color of type 'color', provided #{type-of($color)} #{$color}";
+    @return false;
+  }
+
+  @if type-of($shade) != 'string' {
+    @warn "Type Error: Expected a $shade of type 'string', provided #{type-of($shade)} #{$shade}";
+    @return false;
+  }
+
+  @if not map-has-key($shades, $shade) {
+    @warn "Range Error: #{$shade} was not found among valid options: #{$shade-options}";
+    @return false;
+  }
+
+  @if not function-exists(tint) {
+    @warn 'Reference Error: Requirement tint() not found';
+    @return false;
+  }
+
+  @if not function-exists(shade) {
+    @warn 'Reference Error: Requirement shade() not found';
+    @return false;
+  }
+
+  // Logic
+  $shades: (
+    light: (
+      function: tint,
+      value: 20%
+    ),
+    lighter: (
+      function: tint,
+      value: 40%
+    ),
+    lightest: (
+      function: tint,
+      value: 60%
+    ),
+    dark: (
+      function: shade,
+      value: 20%
+    ),
+    darker: (
+      function: shade,
+      value: 40%
+    ),
+    darkest: (
+      function: shade,
+      value: 60%
+    )
+  );
+
+  $adjusted-color : map-get($shades, $shade);
+  $fn             : map-get($adjusted-color, function);
+  $val            : map-get($adjusted-color, value);
+
+  @return call($fn, $color, $val);
+}
+
+
+
+/**
+ * @name swatch
+ * @alias palette
+ *
+ */
+
+@function swatch($args...) {
+  @return palette($args...);
+}

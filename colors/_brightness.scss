@@ -1,0 +1,66 @@
+/**
+ * @name brightness
+ * @description Returns the brightness of a color
+ * It works just like the native lightness() Sass function but adheres more closely to how the human
+ * eye perceives light.
+ *
+ * @param {Color} $color - the color you wish to check
+ * @param {String} $method (rec709) - the method used to calculate the luminence
+ * @return {Number} - a percentage ranging from dark 0% to bright 100%
+ *
+ * @see http://en.wikipedia.org/wiki/Luma_(video)
+ * @see http://www.w3.org/TR/AERT#color-contrast
+ * @example http://sassmeister.com/gist/80f095fdf2e8fc2dfba9
+ */
+
+@function brightness($color, $method: rec709) {
+
+  $method-options: w3c, rec709, none;
+
+  // Error checking
+  @if type-of($color) != 'color' {
+    @warn "Type Error: Expected a $color of type color, provided (#{type-of($color)}) #{$color}";
+    @return false;
+  }
+
+  @if type-of($method) != 'string' {
+    @warn "Type Error: Expected a $method of type 'string', provided #{type-of($method)} #{$method}";
+    @return false;
+  }
+
+  @if not index($method-options, $method) {
+    @warn "Range Error: #{$method} was not found among valid options: #{$method-options}";
+    @return false;
+  }
+
+  // Logic
+  $methods: (
+    w3c: (.299, .587, .114),
+    rec709: (.2126, .7152, .0722),
+    none: (1, 1, 1)
+  );
+
+  $coefficient: map-get($methods, $method);
+
+  $red: nth($coefficient, 1) * red($color);
+  $green: nth($coefficient, 2) * green($color);
+  $blue: nth($coefficient, 3) * blue($color);
+
+  @return ($red + $green + $blue) / 255 * 100%;
+}
+
+
+/**
+ * @name is-bright
+ * @description Checks if the brightness is greater than 60%
+ *
+ * @requires {Function} brightness()
+ * @param {Color} $color - the color you wish to check
+ * @return {Boolean}
+ *
+ * @example http://sassmeister.com/gist/80f095fdf2e8fc2dfba9
+ */
+
+@function is-bright($color) {
+  @return brightness($color) > 60%;
+}

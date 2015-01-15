@@ -1,0 +1,37 @@
+/**
+ * @name gradient-vertical
+ * @description Create a uniform vertical gradient
+ * Creates a linear gradient from top to bottom with uniformly spaced color stops
+ *
+ * @params {List} $color-stops - a list of colors
+ *
+ * @example http://sassmeister.com/gist/4b0f20e99d546cf02140
+ */
+
+@mixin gradient-vertical($color-stops) {
+
+  $exception: false;
+
+  @if type-of($color-stops) != 'list' {
+    @warn "Type Error: Expected a $color-stops of type 'list', provided #{type-of($color-stops)} #{$color-stops}";
+    $exception: true;
+  }
+
+  @if length($color-stops) < 2 {
+    @warn "Syntax Error: Incorrect number of arguments provided. Provided #{length($color-stops)}, required min. 2";
+    $exception: true;
+  }
+
+  @if length($color-stops) > 2 and type-of($color-stops) != 'map' {
+    @each $color in $color-stops {
+      @if type-of($color) != 'color' {
+        @warn "Type Error: Expected a color of type 'color', provided #{type-of($color)} #{$color}";
+        $exception: true;
+      }
+    }
+  }
+
+  @if not $exception {
+    background-image: linear-gradient(to bottom, $color-stops);
+  }
+}

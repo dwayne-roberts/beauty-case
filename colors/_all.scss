@@ -8,10 +8,13 @@
   brightness .................................. (fn) The brightness of a color
   contrast-color/readable ..................... (fn) The color with the highest contrast
   is-bright ................................... (fn) Checks if the brightness is greater than 60%
+  gradient-diagonal ........................... (mx) Creates a uniform diagonal gradient at 45deg
+  gradient-horizontal ......................... (mx) Creates a uniform horizontal gradient
+  gradient-radial ............................. (mx) Creates a uniform radial gradient
+  gradient-vertical ........................... (mx) Creates a uniform vertical gradient
   palette/swatch .............................. (fn) A specific tint or shade within a palette
   random-color ................................ (fn) A random color
   shade ....................................... (fn) A darker shade of a given color
   tint ........................................ (fn) A lighter tint of a given color
-
 
 */

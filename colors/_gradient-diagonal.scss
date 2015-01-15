@@ -1,0 +1,37 @@
+/**
+ * @name gradient-diagonal
+ * @description Create a uniform diagonal gradient
+ * Creates a linear gradient from the top left to the bottom right with uniformly spaced color stops
+ *
+ * @params {List} $color-stops - a list of colors
+ *
+ * @example http://sassmeister.com/gist/e56e25ad10ebcd4acac5
+ */
+
+@mixin gradient-diagonal($color-stops) {
+
+  $exception: false;
+
+  @if type-of($color-stops) != 'list' {
+    @warn "Type Error: Expected a $color-stops of type 'list', provided #{type-of($color-stops)} #{$color-stops}";
+    $exception: true;
+  }
+
+  @if length($color-stops) < 2 {
+    @warn "Syntax Error: Incorrect number of arguments provided. Provided #{length($color-stops)}, required min. 2";
+    $exception: true;
+  }
+
+  @if length($color-stops) > 2 and type-of($color-stops) != 'map' {
+    @each $color in $color-stops {
+      @if type-of($color) != 'color' {
+        @warn "Type Error: Expected a color of type 'color', provided #{type-of($color)} #{$color}";
+        $exception: true;
+      }
+    }
+  }
+
+  @if not $exception {
+    background-image: linear-gradient(135deg, $color-stops);
+  }
+}

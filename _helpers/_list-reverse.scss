@@ -1,0 +1,32 @@
+/**
+ * @name list-reverse
+ * @description Reverses the values in a list
+ *
+ * @param {List} $list - a list with values to reserve
+ * @returns {List} $reversed-list
+ *
+ * @example http://sassmeister.com/gist/51870f70870b7c101c1e
+ */
+
+@function reverse-list($list) {
+
+  // Error checking
+  @if type-of($list) != 'list' {
+    @warn "Type Error: Expected a $list of type 'list', provided #{type-of($list)} #{$list}";
+    @return false;
+  }
+
+  @if length($list) < 2 {
+    @warn "Syntax Error: Incorrect number of arguments provided. Provided #{length($list)}, required min. 2";
+    @return false;
+  }
+
+  // Logic
+  $reversed-list: ();
+
+  @for $i from length($list) through 1 {
+    $reversed-list: append($reversed-list, nth($list, $i), comma);
+  }
+
+  @return $reversed-list;
+}

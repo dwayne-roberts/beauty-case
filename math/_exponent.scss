@@ -1,0 +1,71 @@
+/**
+ * @name exponent
+ * @description Calculates the value of a number raised to the power of an exponent
+ *
+ * @param {Number} $number - the number to raise
+ * @param {Number} $exponent - the power to raise the number to
+ * @returns {Number} $result
+ *
+ * @example http://sassmeister.com/gist/4632930b995a089a1df3
+ */
+
+@function exponent($number, $exponent) {
+
+  // Error checking
+  @if type-of($number) != 'number' {
+    @warn "Type Error: Expected a $number of type 'number', provided (#{type-of($number)}) #{$number}";
+    @return false;
+  }
+
+  @if not unitless($number) {
+    @warn "Unit Error: Unit of $number - (#{unit($number)}) was incorrect, expected 'unitless'";
+    @return false;
+  }
+
+  @if type-of($exponent) != 'number' {
+    @warn "Type Error: Expected a $exponent of type 'number', provided (#{type-of($exponent)}) #{$exponent}";
+    @return false;
+  }
+
+  @if not unitless($exponent) {
+    @warn "Unit Error: Unit of $exponent - (#{unit($exponent)}) was incorrect, expected 'unitless'";
+    @return false;
+  }
+
+  // Logic
+  $result: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $result: $result * $number;
+    }
+  } @else {
+    @for $i from $exponent to 0 {
+      $result: $result / $number;
+    }
+  }
+
+  @return $result;
+}
+
+
+/**
+ * Exp
+ * @alias exponent
+ *
+ */
+
+@function exp($args...) {
+  @return exponent($args...);
+}
+
+
+/**
+ * Pow
+ * @alias exponent
+ *
+ */
+
+@function pow($args...) {
+  @return exponent($args...);
+}

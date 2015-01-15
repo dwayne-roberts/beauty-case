@@ -1,0 +1,21 @@
+/**
+ * @name is-odd
+ * @description Checks if a number is odd
+ *
+ * @param {Number} $number
+ * @returns {Boolean} $eval
+ *
+ * @example http://sassmeister.com/gist/1b5acc85c9494fef7445
+ */
+
+@function odd($number) {
+
+  @if type-of($number) != 'number' {
+    @warn "Type Error: Expected a $number of type 'number', provided #{type-of($number)} #{$number}";
+    @return false;
+  }
+
+  $eval: $number % 2 != 0;
+
+  @return $eval;
+}

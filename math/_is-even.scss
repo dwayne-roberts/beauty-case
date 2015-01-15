@@ -1,0 +1,21 @@
+/**
+ * @name is-even
+ * @description Checks if a number is even
+ *
+ * @param {Number} $number
+ * @returns {Boolean} $eval
+ *
+ * @example http://sassmeister.com/gist/e08b47e8228ac9e169d2
+ */
+
+@function is-even($number) {
+
+  @if type-of($number) != 'number' {
+    @warn "Type Error: Expected a $number of type 'number', provided #{type-of($number)} #{$number}";
+    @return false;
+  }
+
+  $eval: $number % 2 == 0;
+
+  @return $eval;
+}

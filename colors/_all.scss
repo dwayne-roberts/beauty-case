@@ -18,3 +18,14 @@
   tint ........................................ (fn) A lighter tint of a given color
 
 */
+
+@import 'brightness';
+@import 'contrast-color';
+@import 'gradient-diagonal';
+@import 'gradient-horizontal';
+@import 'gradient-radial';
+@import 'gradient-vertical';
+@import 'palette';
+@import 'random-color';
+@import 'shade';
+@import 'tint';

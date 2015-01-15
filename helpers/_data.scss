@@ -1,0 +1,41 @@
+/**
+ * @name data
+ * @description Creates a straightforward data attribute selector
+ *
+ * @param {String} $attr - attribute name
+ * @param {String} $value (false) - value of the attribute
+ * @returns {String} $selector - data attribute selector
+ *
+ * @example http://sassmeister.com/gist/d6b81a42517d12c4f4ef
+ */
+
+$data-namespace: false !default;
+
+@function data($attr, $value: false, $namespace: $data-namespace) {
+
+  // Error checking
+  @if type-of($attr) != 'string' {
+    @warn "Type Error: Expected a $attr of type 'string', provided #{type-of($attr)} #{$attr}";
+    @return false;
+  }
+
+  // Logic
+  $selector: 'data-' + $attr;
+
+  @if $namespace {
+    $selector: 'data-' + $namespace + '-' + $attr;
+  }
+
+  @if $value {
+    @if type-of($value) != 'string' {
+      @warn "Type Error: Expected a $value of type 'string', provided #{type-of($value)} #{$value}";
+      @return false;
+    }
+
+    $selector: $selector + '="' + $value + '"';
+  }
+
+  $selector: '[' + $selector + ']';
+
+  @return $selector;
+}

@@ -1,0 +1,42 @@
+/**
+ * @name box-sizing
+ * @description Sets the box-sizing property on an element
+ * This mixin sets the  box-sizing property on an element and sets it childeren to inherit the property
+ *
+ * @param {String} $selector (html) - the CSS selector on which to set the property
+ * @param {String} $box-sizing - a valid box-sizing value
+ *
+ * @example http://sassmeister.com/gist/db21d4d01b41bb72294a
+ */
+
+$base-box-sizing: border-box;
+
+@mixin box-sizing($selector: html, $box-sizing: $base-box-sizing) {
+
+  $exception          : false;
+  $box-sizing-options : content-box, border-box, inherit, initial;
+
+  // Error checking
+  @if type-of($selector) != 'string' {
+    @warn "Type Error: Expected a $selector of type 'string', provided (#{type-of($selector)}) #{$selector}";
+    $exception: true;
+  }
+
+  @if not index($box-sizing-options, $box-sizing) {
+    @warn "Range Error: #{$box-sizing} was not found among the valid options: #{$box-sizing-options}";
+    $exception: true;
+  }
+
+  // Logic
+  @if not $exception {
+    #{$selector} {
+      box-sizing: $box-sizing;
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+    }
+  }
+}

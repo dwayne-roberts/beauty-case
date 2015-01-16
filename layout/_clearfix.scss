@@ -4,6 +4,8 @@
  * This is a modern day fix to reflow and calculate an elements correct height and width when it contains floated items.
  *
  * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+ *
+ * @example http://sassmeister.com/gist/e33c24751c0faeef8189
  */
 
 @mixin clearfix {

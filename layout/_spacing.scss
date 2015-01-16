@@ -1,0 +1,67 @@
+/**
+ * @name spacing
+ * @description  A size in relation to some reference
+ * Returns a size from xxs to xxl that is factor of a maximum reference size
+ *
+ * @param {String} $size - the size to return
+ * @param {Number} $reference ($grid-gutter-width) - the reference to use
+ * @return {Number} $spacing
+ *
+ * @example http://sassmeister.com/gist/b13daa8b281c8d6da6d8
+ */
+
+$grid-gutter-width: 30px !default;
+
+@function spacing($size, $reference: $grid-gutter-width) {
+
+  $size-options : xxs, xs, sm, md, lg, xl, xxl;
+  $spacing-factors : 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875;
+
+  // Error checking
+  @if type-of($size) != 'string' {
+    @warn "Type Error: Expected a $size of type 'string', provided #{type-of($size)} #{$size}";
+    @return false;
+  }
+
+  @if type-of($reference) != 'number' {
+    @warn "Type Error: Expected a $reference of type 'number', provided #{type-of($reference)} #{$reference}";
+    @return false;
+  }
+
+  @if unitless($reference) {
+    @warn "Unit Error: Unit of $reference - (#{unit($reference)}) was incorrect, expected 'px or em'";
+    @return false;
+  }
+
+  @if not index($size-options, $size) {
+    @warn "Range Error: #{$size} was not found among valid options: #{$size-options}";
+    @return false;
+  }
+
+  // Logic
+  $spacing: round($reference * nth($spacing-factors, index($size-options, $size)));
+  @return $spacing;
+}
+
+
+/**
+ * @name size
+ * @alias spacing
+ */
+
+@function size($args...) {
+  @include spacing($args...);
+}
+
+
+/**
+ * @name width
+ * @alias spacing
+ */
+
+@function width($args...) {
+  @include spacing($args...);
+}
+
+
+

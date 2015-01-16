@@ -50,7 +50,7 @@ $grid-gutter-width: 30px !default;
  */
 
 @function spacing($args...) {
-  @include size($args...);
+  @return size($args...);
 }
 
 
@@ -60,7 +60,7 @@ $grid-gutter-width: 30px !default;
  */
 
 @function width($args...) {
-  @include size($args...);
+  @return size($args...);
 }
 
 

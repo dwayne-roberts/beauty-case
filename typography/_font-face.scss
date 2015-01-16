@@ -1,0 +1,63 @@
+/**
+ * @name font-face
+ * @description Shorthand font-face declaration
+ *
+ * @param {String} $family - an alias reference to the font
+ * @param {String} $file-path - full path to the file, assuming only extensions will differ
+ * @param {String} $weight (normal) - font weight
+ * @param {String} $style (normal) - font variant/style
+ *
+ * @example http://sassmeister.com/gist/79ddc3119c4b4266da2d
+ */
+
+@mixin font-face ($font-family, $file-path, $font-weight: normal, $font-style: normal) {
+
+  $exception           : false;
+  $font-weight-options : normal, bold, bolder, lighter, intial, inherit, 100, 200, 300, 400, 500, 600, 700, 800, 900;
+  $font-style-options  : normal, italic, oblique, initial, inherit;
+
+  // Error checking
+  @if type-of($font-family) != 'string' {
+    @warn "Type Error: Expected a $font-family of type 'string', provided #{type-of($font-family)} #{$font-family}";
+    $exception: true;
+  }
+
+  @if type-of($file-path) != 'string' {
+    @warn "Type Error: Expected a $file-path of type 'string', provided #{type-of($file-path)} #{$file-path}";
+    $exception: true;
+  }
+
+  @if type-of($font-weight) != 'string' and type-of($font-weight) != 'number' {
+    @warn "Type Error: Expected a $font-weight of type 'string' or 'number', provided #{type-of($font-weight)} #{$font-weight}";
+    $exception: true;
+  }
+
+  @if type-of($font-style) != 'string' {
+    @warn "Type Error: Expected a $font-style of type 'string', provided #{type-of($font-style)} #{$font-style}";
+    $exception: true;
+  }
+
+  @if not index($font-weight-options, $font-weight) {
+    @warn "Range Error: #{$font-weight} was not found among valid options: #{$font-weight-options}";
+    $exception: true;
+  }
+
+  @if not index($font-style-options, $font-style) {
+    @warn "Range Error: #{$font-style} was not found among valid options: #{$font-style-options}";
+    $exception: true;
+  }
+
+  // Logic
+  @if not $exception {
+    @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+        url('#{$file-path}.woff') format('woff'),
+        url('#{$file-path}.ttf') format('truetype'),
+        url('#{$file-path}.svg##{$font-family}') format('svg');
+      font-style: $font-style;
+      font-weight: $font-weight;
+    }
+  }
+}

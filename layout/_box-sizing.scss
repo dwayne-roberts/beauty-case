@@ -9,7 +9,7 @@
  * @example http://sassmeister.com/gist/db21d4d01b41bb72294a
  */
 
-$base-box-sizing: border-box;
+$base-box-sizing: border-box !default;
 
 @mixin box-sizing($selector: html, $box-sizing: $base-box-sizing) {
 

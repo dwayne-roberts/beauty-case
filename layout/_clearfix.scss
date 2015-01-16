@@ -1,0 +1,29 @@
+/**
+ * @name clearfix
+ * @description Forces an element to clear itself and its children
+ * This is a modern day fix to reflow and calculate an elements correct height and width when it contains floated items.
+ *
+ * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+ */
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+/**
+ * @placeholder
+ * @alias clearfix
+ */
+
+%clearfix {
+  @include clearfix;
+}

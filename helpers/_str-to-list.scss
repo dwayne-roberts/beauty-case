@@ -1,0 +1,29 @@
+/**
+ * @name str-to-list
+ * @description Converts a "string" like list to a comma seperated list
+ *
+ * @param {List} $str - a space seperated list of values
+ * @returns {List} $comma-list
+ *
+ * @example http://sassmeister.com/gist/14bcd53827e03dc8849a
+ */
+
+@function str-to-list($str) {
+
+  // Error checking
+  @if type-of($str) != 'list' {
+    @warn "Type Error: Expected a $str of type 'list', provided #{type-of($str)} #{$str}";
+    @return false;
+  }
+
+  @if length($str) < 2 {
+    @warn "Syntax Error: Incorrect number of arguments provided. Provided #{length($str)}, required min. 2";
+    @return false;
+  }
+
+  // Logic
+  $empty-list: ();
+  $comma-list: join($empty-list, $str, comma);
+
+  @return $comma-list;
+}

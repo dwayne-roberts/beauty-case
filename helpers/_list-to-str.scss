@@ -1,0 +1,29 @@
+/**
+ * @name list-to-str
+ * @description Converts a comma separated list to a "string"
+ *
+ * @param {List} $list - a comma separated list of values
+ * @returns {List} $str
+ *
+ * @example http://sassmeister.com/gist/1fefe3426878da9f0a2f
+ */
+
+@function list-to-str($list) {
+
+  // Error checking
+  @if type-of($list) != 'list' {
+    @warn "Type Error: Expected a $list of type 'list', provided #{type-of($list)} #{$list}";
+    @return false;
+  }
+
+  @if length($list) < 2 {
+    @warn "Syntax Error: Incorrect number of arguments provided. Provided #{length($list)}, required min. 2";
+    @return false;
+  }
+
+  // Logic
+  $empty-list: ();
+  $str: join($empty-list, $list, space);
+
+  @return $str;
+}

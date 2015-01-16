@@ -7,8 +7,10 @@
 
   data ........................................ (fn) Creates a straightforward data attribute selector
   list-reverse ................................ (fn) Reverses the values in a list
+  list-to-str ................................. (fn) Converts a comma separated list to a "string"
   px-to-em/em ................................. (fn) Converts a fixed px value to a relative em
   px-to-rem/rem ............................... (fn) Converts a fixed px value to a relative root em
+  str-to-list ................................. (fn) Converts a "string" like list to a comma seperated list
   strip-unit .................................. (fn) Strips the unit from a number
 
   TODO: create functions to convert strings to numbers and vica versa
@@ -20,6 +22,8 @@
 
 @import 'data';
 @import 'list-reverse';
+@import 'list-to-str';
 @import 'px-to-em';
 @import 'px-to-rem';
+@import 'str-to-list';
 @import 'strip-unit';

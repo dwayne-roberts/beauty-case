@@ -7,8 +7,10 @@
 
   establish-baseline .......................... (mx) Set the base vertical rhythm
   font-face ................................... (mx) Shorthand font-face declaration
+  headings .................................... (fn) Generate a list of headings
 
 */
 
 @import 'establish-baseline';
 @import 'font-face';
+@import 'headings';

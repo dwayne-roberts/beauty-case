@@ -1,0 +1,43 @@
+/**
+ * @name text-selection
+ * @description Set the text highlight color
+ *
+ * @param {Color} $bg-color - the color of the background after selection
+ * @param {Color} $text-color - the color of the text after selection
+ * @param {Color} $text-shadow (none) - the text shadow after selection
+ *
+ * @example http://sassmeister.com/gist/b7c558e9fce48c436875
+ */
+
+@mixin text-selection($bg-color, $text-color, $text-shadow: 'none') {
+
+  $exception: false;
+
+  @if type-of($bg-color) != 'color' {
+    @warn "Type Error: Expected a $bg-color of type 'color', provided #{type-of($bg-color)} #{$bg-color}";
+    $exception: true;
+  }
+
+  @if type-of($text-color) != 'color' {
+    @warn "Type Error: Expected a $text-color of type 'color', provided #{type-of($text-color)} #{$text-color}";
+    $exception: true;
+  }
+
+  @if not $exception {
+    &::selection {
+      background: $bg-color;
+      color: $text-color;
+      text-shadow: $text-shadow;
+    }
+  }
+}
+
+
+/**
+ * @name selection
+ * @alias text-selection
+ */
+
+@mixin selection($args...) {
+  @include text-selection($args...);
+}

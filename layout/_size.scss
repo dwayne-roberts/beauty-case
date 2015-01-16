@@ -1,21 +1,21 @@
 /**
- * @name spacing
+ * @name size
  * @description  A size in relation to some reference
  * Returns a size from xxs to xxl that is factor of a maximum reference size
  *
  * @param {String} $size - the size to return
  * @param {Number} $reference ($grid-gutter-width) - the reference to use
- * @return {Number} $spacing
+ * @return {Number} $abs-size
  *
  * @example http://sassmeister.com/gist/b13daa8b281c8d6da6d8
  */
 
 $grid-gutter-width: 30px !default;
 
-@function spacing($size, $reference: $grid-gutter-width) {
+@function size($size, $reference: $grid-gutter-width) {
 
   $size-options : xxs, xs, sm, md, lg, xl, xxl;
-  $spacing-factors : 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875;
+  $factors : 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875;
 
   // Error checking
   @if type-of($size) != 'string' {
@@ -39,28 +39,28 @@ $grid-gutter-width: 30px !default;
   }
 
   // Logic
-  $spacing: round($reference * nth($spacing-factors, index($size-options, $size)));
-  @return $spacing;
+  $abs-size: round($reference * nth($factors, index($size-options, $size)));
+  @return $abs-size;
 }
 
 
 /**
- * @name size
- * @alias spacing
+ * @name spacing
+ * @alias size
  */
 
-@function size($args...) {
-  @include spacing($args...);
+@function spacing($args...) {
+  @include size($args...);
 }
 
 
 /**
  * @name width
- * @alias spacing
+ * @alias size
  */
 
 @function width($args...) {
-  @include spacing($args...);
+  @include size($args...);
 }
 
 

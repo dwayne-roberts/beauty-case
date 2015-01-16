@@ -1,0 +1,44 @@
+/**
+ * @name establish-baseline
+ * @description Set the base vertical rhythm
+ * This mixin sets the vertical baseline on the html element. Setting the font-size and line-height in pixels
+ *
+ * @param {Number} $font-size ($base-font-size) - the base font size
+ * @param {Number} $line-height ($base-line-height) - the base line height
+ *
+ * @example http://sassmeister.com/gist/4678b89874466d2a6fb0
+ */
+
+$base-font-size   : 16px !default;
+$base-line-height : 24px !default;
+
+@mixin establish-baseline($font-size: $base-font-size, $line-height: $base-line-height) {
+
+  $exception: false;
+
+  // Error checking
+  @if type-of($font-size) != 'number' {
+    @warn "Type Error: Expected a $font-size of type 'number', provided (#{type-of($font-size)}) #{$font-size}";
+    $exception: true;
+  }
+
+  @if type-of($line-height) != 'number' {
+    @warn "Type Error: Expected a $line-height of type 'number', provided (#{type-of($line-height)}) #{$line-height}";
+    $exception: true;
+  }
+
+  // Logic
+  @if unitless($line-height) and $line-height < 3 {
+    $line-height: $font-size * $line-height;
+  }
+
+  @if not $exception {
+    html {
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+
+    $base-font-size   : $font-size !global;
+    $base-line-height : $line-height !global;
+  }
+}

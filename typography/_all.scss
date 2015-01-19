@@ -10,6 +10,7 @@
   headings .................................... (fn) Generate a list of headings
   link-hover/hover-link ....................... (fn) Add the default hyperlink styling to an element
   link-unstyled/unstyled-link ................. (mx) Removes hyperlink styling from an element
+  text-hide/hide-text ......................... (mx) Hides text by either collapsing or indenting text off-canvas
   text-selection/selection .................... (mx) Set the text highlight color
 
 */
@@ -19,4 +20,5 @@
 @import 'headings';
 @import 'link-hover';
 @import 'link-unstyled';
+@import 'text-hide';
 @import 'text-selection';

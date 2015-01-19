@@ -1,0 +1,53 @@
+/**
+ * Text hide
+ * @description Hides text by either collapsing or indenting text off-canvas
+ *
+ * @param {String} $direction - (optional) direction in which text should be moved out of view
+ *
+ * @example http://sassmeister.com/gist/2424b3dcc4e0d34ff8ea
+ */
+
+@mixin text-hide($direction: left) {
+
+  $exception: false;
+  $direction-options: left, right, collapsed;
+
+  @if type-of($direction) != 'string' {
+    @warn "Type Error: Expected a $direction of type string, provided #{type-of($direction)} #{$direction}";
+    $exception: true;
+  }
+
+  @if not index($direction-options, $direction) {
+    @warn "Range Error: #{$direction} was not found among valid options: #{$direction-options}";
+    $exception: true;
+  }
+
+  @if not $exception {
+    overflow: hidden;
+    text-align: left;
+
+    @if $direction == 'left' {
+      text-indent: -1 * 9999em;
+    }
+
+    @if $direction == 'right' {
+      text-indent: 1 * 9999em;
+    }
+
+    @if $direction == 'collapsed' {
+      color: transparent;
+      font: #{0/0} a;
+      text-shadow: none;
+    }
+  }
+}
+
+
+/**
+ * Hide text
+ * @alias text-hide
+ */
+
+@mixin hide-text($args...) {
+  @include text-hide($args...);
+}

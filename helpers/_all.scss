@@ -5,6 +5,7 @@
 
 /*
 
+  contains .................................... (fn) Checks if a list contains one or more defined values
   data ........................................ (fn) Creates a straightforward data attribute selector
   list-reverse ................................ (fn) Reverses the values in a list
   list-to-str ................................. (fn) Converts a comma separated list to a "string"
@@ -15,11 +16,11 @@
 
   TODO: create functions to convert strings to numbers and vica versa
   TODO: create some basic append en prepend string functions
-  TODO: create a function to test if a list contains a group of values
   TODO: create a helper for asset paths
 
 */
 
+@import 'contains';
 @import 'data';
 @import 'list-reverse';
 @import 'list-to-str';

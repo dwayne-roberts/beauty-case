@@ -11,6 +11,7 @@
   link-hover/hover-link ....................... (fn) Add the default hyperlink styling to an element
   link-unstyled/unstyled-link ................. (mx) Removes hyperlink styling from an element
   text-hide/hide-text ......................... (mx) Hides text by either collapsing or indenting text off-canvas
+  text-overflow/overflow-text/truncate......... (mx) Truncates too long text with an ellipsis
   text-selection/selection .................... (mx) Set the text highlight color
 
 */
@@ -21,4 +22,5 @@
 @import 'link-hover';
 @import 'link-unstyled';
 @import 'text-hide';
+@import 'text-overflow';
 @import 'text-selection';

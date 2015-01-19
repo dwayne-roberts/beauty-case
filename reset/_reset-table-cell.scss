@@ -1,0 +1,42 @@
+/**
+ * @name reset-table-cell
+ * @description Resets the properties of table cells
+ * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+ *
+ * @example http://sassmeister.com/gist/7795e17901cb8276fe9d
+ */
+
+@mixin reset-table-cell {
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+
+/**
+ * @alias reset-table-cell
+ */
+
+@mixin table-cell-reset {
+  @include reset-table-cell;
+}
+
+
+/**
+ * @placeholder
+ * @alias reset-table-cell
+ */
+
+%reset-table-cell {
+  @include reset-table-cell;
+}
+
+
+/**
+ * @placeholder
+ * @alias table-cell-reset
+ */
+
+%table-cell-reset {
+  @include reset-table-cell;
+}

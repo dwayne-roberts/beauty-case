@@ -7,8 +7,12 @@
 
   reset-layout/layout-reset ................... (mx) Resets the borders, margins and padding on the box-model
   reset-list/list-reset ....................... (mx) Resets the list-style for list elements
+  reset-table ................................. (mx) Resets a table's properties
+  reset-table-cell ............................ (mx) Resets the properties of table cells
 
 */
 
 @import 'reset-layout';
 @import 'reset-list';
+@import 'reset-table';
+@import 'reset-table-cell';

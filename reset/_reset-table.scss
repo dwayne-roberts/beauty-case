@@ -1,0 +1,42 @@
+/**
+ * @name reset-table
+ * @description Resets a table's properties
+ * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+ *
+ * @example http://sassmeister.com/gist/7795e17901cb8276fe9d
+ */
+
+@mixin reset-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/**
+ * @alias reset-table
+ *
+ */
+
+@mixin table-reset {
+  @include reset-table;
+}
+
+
+/**
+ * @placeholder
+ * @alias reset-table-cell
+ */
+
+%reset-table {
+  @include reset-table;
+}
+
+
+/**
+ * @placeholder
+ * @alias table-reset
+ */
+
+%table-reset {
+  @include reset-table;
+}

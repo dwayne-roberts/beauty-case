@@ -1,0 +1,42 @@
+/**
+ * @name reset-layout
+ * @description Resets the borders, margins and padding on the box-model
+ * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+ *
+ * @example http://sassmeister.com/gist/96a0665a8349280219c6
+ */
+
+@mixin reset-layout {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+/**
+ * @alias reset-layout
+ */
+
+@mixin layout-reset {
+  @include reset-layout;
+}
+
+
+/**
+ * @placeholder
+ * @alias reset-layout
+ */
+
+%reset-layout {
+  @include reset-layout;
+}
+
+
+/**
+ * @placeholder
+ * @alias layout-reset
+ */
+
+%layout-reset {
+  @include reset-layout;
+}

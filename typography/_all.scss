@@ -8,6 +8,7 @@
   establish-baseline .......................... (mx) Set the base vertical rhythm
   font-face/face .............................. (mx) Shorthand font-face declaration
   headings .................................... (fn) Generate a list of headings
+  letterpress ................................. (mx) Create a letterpress text effect
   link-hover/hover-link ....................... (fn) Add the default hyperlink styling to an element
   link-unstyled/unstyled-link ................. (mx) Removes hyperlink styling from an element
   text-hide/hide-text ......................... (mx) Hides text by either collapsing or indenting text off-canvas
@@ -19,6 +20,7 @@
 @import 'establish-baseline';
 @import 'font-face';
 @import 'headings';
+@import 'letterpress';
 @import 'link-hover';
 @import 'link-unstyled';
 @import 'text-hide';

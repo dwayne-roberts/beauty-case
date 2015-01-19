@@ -1,0 +1,52 @@
+/**
+ * @name letterpress
+ * @description Create a letterpress text effect
+ * By adding a thin white line around text it makes the text more readable by providing a sharper
+ * separation between the letters and their background
+ *
+ * @param {Number} $opacity (45%) - the opacity of the shadow
+ * @param {Color} $background (false) - a reference color for determining the font color
+ *
+ * @example http://sassmeister.com/gist/6482d67de0da17b2ba94
+ */
+
+@mixin letterpress($opacity: 45%, $background: false) {
+
+  $exception: false;
+
+  @if type-of($opacity) != 'number' {
+    @warn "Type Error: Expected a $opacity of type 'number', provided #{type-of($opacity)} #{$opacity}";
+    $exception: true;
+  }
+
+  @if unit($opacity) != '%' {
+    @warn "Unit Error: Unit of $opacity - (#{unit($opacity)}) was incorrect, expected '%'";
+    $exception: true;
+  }
+
+  @if $background and type-of($background) != 'color' {
+    @warn "Type Error: Expected a $background of type 'color', provided #{type-of($background)} #{$background}";
+    $exception: true;
+  }
+
+  @if not $exception {
+
+    $alpha: $opacity / 100%;
+
+    @if ($background) {
+      color: darken($background, 35%);
+    }
+
+    text-shadow: rgba(255, 255, 255, $alpha) 0 1px 0;
+  }
+}
+
+
+/**
+ * @placeholder
+ * @alias letterpress
+ */
+
+%letterpress {
+  @include letterpress;
+}

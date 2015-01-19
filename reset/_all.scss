@@ -6,8 +6,9 @@
 /*
 
   reset-layout/layout-reset ................... (mx) Resets the borders, margins and padding on the box-model
-
+  reset-list/list-reset ....................... (mx) Resets the list-style for list elements
 
 */
 
 @import 'reset-layout';
+@import 'reset-list';

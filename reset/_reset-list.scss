@@ -1,0 +1,41 @@
+/**
+ * @name reset-list
+ * @description Resets the list-style for list elements
+ * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+ *
+ * @example http://sassmeister.com/gist/9588a8c972092513349d
+ */
+
+@mixin reset-list {
+  list-style: none;
+}
+
+
+/**
+ * @alias reset-list
+ *
+ */
+
+@mixin list-reset {
+  @include reset-list;
+}
+
+
+/**
+ * @placeholder
+ * @alias reset-list
+ */
+
+%reset-list {
+  @include reset-list;
+}
+
+
+/**
+ * @placeholder
+ * @alias list-reset
+ */
+
+%list-reset {
+  @include reset-list;
+}

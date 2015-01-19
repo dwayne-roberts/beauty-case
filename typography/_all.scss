@@ -6,9 +6,10 @@
 /*
 
   establish-baseline .......................... (mx) Set the base vertical rhythm
-  font-face ................................... (mx) Shorthand font-face declaration
+  font-face/face .............................. (mx) Shorthand font-face declaration
   headings .................................... (fn) Generate a list of headings
-  link-hover .................................. (fn) Add the default hyperlink styling to an element
+  link-hover/hover-link ....................... (fn) Add the default hyperlink styling to an element
+  link-unstyled/unstyled-link ................. (mx) Removes hyperlink styling from an element
   text-selection/selection .................... (mx) Set the text highlight color
 
 */
@@ -17,4 +18,5 @@
 @import 'font-face';
 @import 'headings';
 @import 'link-hover';
+@import 'link-unstyled';
 @import 'text-selection';

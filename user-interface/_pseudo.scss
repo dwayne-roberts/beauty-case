@@ -1,0 +1,35 @@
+/**
+ * @name pseudo
+ * @description Creates a pseudo selector element
+ *
+ * @param {String} $element
+ * @param {String} $content
+ *
+ * @example http://sassmeister.com/gist/282da1d8cf5d8f768cce
+ */
+
+@mixin pseudo($element, $content: false) {
+
+  $exception: false;
+  $element-options: before, after;
+
+  @if type-of($element) != 'string' {
+    @warn "Type Error: Expected a $post of type 'string', provided #{type-of($element)} #{$element}";
+    $exception: true;
+  }
+
+  @if not index($element-options, $element) {
+    @warn "Range Error: #{$element} was not found among valid options: #{$element-options}";
+    $exception: true;
+  }
+
+  @if not $exception {
+    position: relative;
+
+    &:#{$element} {
+      content: if($content, $content, ' ');
+      position: absolute;
+      @content;
+    }
+  }
+}

@@ -10,6 +10,7 @@
   impress ..................................... (mx) Stylize an object to look slightly sunken
   material-shadow ............................. (mx) Create a material design inspired drop-shadow
   media-queries ............................... (ex) Create semantic breakpoints via Breakpoint-Sass Susy 2 @see http://breakpoint-sass.com/
+  pseudo ...................................... (mx) Creates a pseudo selector element
 
 */
 
@@ -18,3 +19,6 @@
 @import 'impress';
 @import 'material-design';
 @import 'media-queries';
+@import 'pseudo';
+
+

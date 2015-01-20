@@ -5,6 +5,7 @@
 
 /*
 
+  reset-focus/focus-reset ..................... (mx) Resets the outline property when focussed
   reset-layout/layout-reset ................... (mx) Resets the borders, margins and padding on the box-model
   reset-list/list-reset ....................... (mx) Resets the list-style for list elements
   reset-table ................................. (mx) Resets a table's properties
@@ -12,6 +13,7 @@
 
 */
 
+@import 'reset-focus';
 @import 'reset-layout';
 @import 'reset-list';
 @import 'reset-table';

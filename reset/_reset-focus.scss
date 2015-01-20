@@ -1,0 +1,41 @@
+/**
+ * @name reset-focus
+ * @description Resets the outline property when focussed
+ * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+ *
+ */
+
+@mixin reset-focus {
+  outline: 0;
+}
+
+
+/**
+ * @name focus-reset
+ * @alias reset-focus
+ *
+ */
+
+@mixin focus-reset {
+  @include reset-focus;
+}
+
+
+/**
+ * @placeholder
+ * @alias reset-focus
+ */
+
+%reset-focus {
+  @include reset-focus;
+}
+
+
+/**
+ * @placeholder
+ * @alias focus-reset
+ */
+
+%focus-reset {
+  @include reset-focus;
+}

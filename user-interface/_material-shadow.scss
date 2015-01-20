@@ -1,0 +1,55 @@
+/**
+ * Material Shadow
+ * @description Create a material design inspired drop-shadow
+ * The mixin takes a value between 1 and 5 for $depth, where 1 is closest to the surface and 5 is the farthest
+ *
+ * @param {Number} $depth - the depth of the shadow
+ *
+ * @example http://sassmeister.com/gist/20182275ea36b9257d0c
+ */
+
+@mixin material-shadow($depth: 1) {
+
+  $exception: false;
+  $depth-options: 1, 2, 3, 4, 5;
+
+  // Error checking
+  @if type-of($depth) != 'number' {
+    @warn "Type Error: Expected a $depth of type number, provided #{type-of($depth)} #{$depth}";
+    $exception: true;
+  }
+
+  @if $depth < 1 or $depth > 5 {
+    @warn "Range Error: #{$depth} was not found among valid options: #{$depth-options}";
+    $exception: true;
+  }
+
+  // Logic
+  @if not $exception {
+
+    @if $depth == 1 {
+      box-shadow: 0 1.5px 3px rgba(#000, .24),
+                  0 3px 8px rgba(#000, .05);
+    }
+
+    @if $depth == 2 {
+      box-shadow: 0 4px 7px rgba(#000, .23),
+                  0 8px 25px rgba(#000, .05);
+    }
+
+    @if $depth == 3 {
+      box-shadow: 0 7px 10px rgba(#000, .30),
+                  0 10px 50px rgba(#000, .12);
+    }
+
+    @if $depth == 4 {
+      box-shadow: 0 10px 15px rgba(#000, .28),
+                  0 15px 60px rgba(#000, .18);
+    }
+
+    @if $depth == 5 {
+      box-shadow: 0 16px 20px rgba(#000, .29),
+                  0 20px 65px rgba(#000, .18);
+    }
+  }
+}

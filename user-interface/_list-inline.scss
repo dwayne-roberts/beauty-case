@@ -1,0 +1,53 @@
+/**
+ * @name list-inline
+ * @description An inline list with an optional delimiter
+ *
+ * @param {String} $delimiter - the delimiter to use
+ *
+ * @example http://sassmeister.com/gist/690469a83d1c93b815e7
+ */
+
+@mixin list-inline($delimiter: false) {
+
+  $exception: false;
+
+  @if not $delimiter and type-of($delimiter) != 'string' {
+    @warn "Type Error: Expected a $delimiter of type string, provided #{type-of($delimiter)} #{$delimiter}";
+    $exception: true;
+  }
+
+  @if not $exception {
+    list-style-type: none;
+
+    &,
+    & li {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+
+    @if $delimiter {
+      li {
+        &:after {
+          content: $delimiter;
+        }
+
+        &:last-child {
+          &:after {
+            content: '';
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * @name inline-list
+ * @alias list-inline
+ */
+
+@mixin inline-list {
+  @include list-inline;
+}

@@ -5,10 +5,12 @@
 
 /*
 
+  caret ....................................... (mx) Create a caret in a specified direction
   emboss ...................................... (mx) Stylize an object to look slightly raised
   impress ..................................... (mx) Stylize an object to look slightly sunken
 
 */
 
+@import 'caret';
 @import 'emboss';
 @import 'impress';

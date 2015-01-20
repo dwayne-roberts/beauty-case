@@ -1,0 +1,108 @@
+/**
+ * @name caret
+ * @description Create a caret in a specified direction
+ *
+ * @param {String} $direction - the direction the caret needs to point
+ * @param {Number} $size - the width of the caret
+ * @param {Color} $color - the color of the caret
+ *
+ * http://sassmeister.com/gist/8015c1e0a3060660c8b8
+ */
+
+// TODO: Refactor this to work with carets inline as well as centered on block elements
+@mixin caret ($direction, $size, $color) {
+
+  $exception: false;
+  $direction-options: up, down, left, right;
+
+  @if type-of($direction) != 'string' {
+    @warn "Type Error: Expected a $direction of type 'string, provided #{type-of($direction)} #{$direction}";
+    $exception: true;
+  }
+
+  @if not index($direction-options, $direction) {
+    @warn "Range Error: #{$direction} was not found among valid options: #{$direction-options}";
+    $exception: true;
+  }
+
+  @if type-of($size) != 'number' {
+    @warn "Type Error: Expected a $size of type 'number', provided #{type-of($size)} #{$size}";
+    $exception: true;
+  }
+
+  @if type-of($color) != 'color' {
+    @warn "Type Error: Expected a $color of type 'color', provided #{type-of($color)} #{$color}";
+    $exception: true;
+  }
+
+
+  @if not $exception {
+
+    position: relative;
+
+    &:after {
+      content: ' ';
+      display: block;
+      height: 0;
+      position: absolute;
+      width: 0;
+
+      @if ($direction == 'up') {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        bottom: 100%;
+        left: 50%;
+        margin-left: ($size * -1);
+
+      }
+
+      @if ($direction == 'down') {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+        left: 50%;
+        margin-left: ($size * -1);
+        top: 100%;
+      }
+
+      @if ($direction == 'left') {
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        border-top: $size solid transparent;
+        margin-top: ($size * -1);
+        right: 100%;
+        top: 50%;
+      }
+
+      @if ($direction == 'right') {
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        border-top: $size solid transparent;
+        left: 100%;
+        margin-top: ($size * -1);
+        top: 50%;
+      }
+    }
+  }
+}
+
+
+/**
+ * @name triangle
+ * @alias caret
+ */
+
+@mixin triangle($args...) {
+  @include caret($args...);
+}
+
+
+/**
+ * @name arrow-head
+ * @alias caret
+ */
+
+@mixin arrow-head($args...) {
+  @include caret($args...);
+}

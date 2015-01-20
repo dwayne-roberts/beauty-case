@@ -1,0 +1,149 @@
+// scss-lint:disable QualifyingElement
+
+/**
+ * @description Visually detect invalid markup
+ * A stylesheet to visually detect any improperly nested or potentially invalid markup, or any potentially inaccessible code.
+ *
+ * RED    --> Error
+ * YELLOW --> Warning/Double check
+ * NONE   --> Should be fine
+ *
+ */
+
+$enable-debug-mode: false !default;
+
+@if $enable-debug-mode == true {
+
+  // Add an outline class to show it
+  .outline {
+    outline: 1px solid #0000ff;
+  }
+
+  // Are there any empty elements in your page?
+  :empty {
+    outline: 5px solid #ffff00;
+  }
+
+  // Images require `alt` attributes, empty `alt`s are fine but should be double-checked, no `alt` is bad and is flagged #ff0000
+  img {
+    outline: 5px solid #ff0000;
+  }
+
+  img[alt] {
+    outline: none;
+  }
+
+  img[alt=''] {
+    outline: 5px solid #ffff00;
+  }
+
+  // Links sometimes, though not always, benefit from `title` attributes. Links without are never invalid but it’s a good idea to check
+  a {
+    outline: 5px solid #ffff00;
+  }
+
+  a[title] {
+    outline: none;
+  }
+
+  // Double-check any links whose `href` is something questionable
+  a[href='#'],
+  a[href*='javascript'] {
+    outline: 5px solid #ffff00;
+  }
+
+  // The `target` attribute ain’t too nice...
+  a[target] {
+    outline: 5px solid #ffff00;
+  }
+
+  // Ensure any lists only contain `li`s as children
+  ul,
+  ol {
+    > *:not(li) {
+      outline: 5px solid #ff0000;
+    }
+  }
+
+  // It’s always nice to give `th`s `scope` attributes
+  th {
+    outline: 5px solid #ffff00;
+  }
+
+  th[scope] {
+    outline: none;
+  }
+
+  // `tr`s as children of `table`s ain’t great, did you need a `thead`/`tbody`
+  table > tr {
+    outline: 5px solid #ffff00;
+  }
+
+  // `tfoot` needs to come *before* `tbody`.
+  tbody + tfoot {
+    outline: 5px solid #ffff00;
+  }
+
+  // Forms require `action` attributes
+  form {
+    outline: 5px solid #ff0000;
+  }
+
+  form[action] {
+    outline: none;
+  }
+
+
+  // Various form-field types have required attributes. `input`s need `type` attributes, `textarea`s need `rows` and `cols` attributes and submit buttons need a `value` attribute.
+  textarea,
+  input {
+    outline: 5px solid #ff0000;
+  }
+
+  input[type] {
+    outline: none;
+  }
+
+  textarea[rows][cols] {
+    outline: none;
+  }
+
+  input[type=submit] {
+    outline: 5px solid #ff0000;
+  }
+
+  input[type=submit][value] {
+    outline: none;
+  }
+
+  // Avoid inline styles where possible.
+  [style] {
+    outline: 5px solid #ffff00;
+  }
+}
+
+
+//  Vertical Base line Grid
+$enable-vertical-grid: false !default;
+
+@if $enable-vertical-grid == true {
+
+  $guide-color: 13ca58;
+  $guide-rhythm: strip-unit($base-line-height);
+
+  body {
+    position: relative;
+
+    &::after {
+      background-image: url('http://basehold.it/i/#{$guide-rhythm}/#{$guide-color}');
+      bottom: 0;
+      content: '';
+      display: block;
+      height: auto;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}

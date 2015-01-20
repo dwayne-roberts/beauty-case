@@ -7,6 +7,7 @@
 
   caret ....................................... (mx) Create a caret in a specified direction
   emboss ...................................... (mx) Stylize an object to look slightly raised
+  focus ....................................... (mx) Set the outline style for focussed elements
   impress ..................................... (mx) Stylize an object to look slightly sunken
   list-inline/inline-list ..................... (mx) An inline list with an optional delimiter
   material-shadow ............................. (mx) Create a material design inspired drop-shadow
@@ -17,6 +18,7 @@
 
 @import 'caret';
 @import 'emboss';
+@import 'focus';
 @import 'impress';
 @import 'material-design';
 @import 'media-queries';

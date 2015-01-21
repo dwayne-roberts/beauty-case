@@ -12,17 +12,6 @@
 
 
 /**
- * @name focus-reset
- * @alias reset-focus
- *
- */
-
-@mixin focus-reset {
-  @include reset-focus;
-}
-
-
-/**
  * @placeholder
  * @alias reset-focus
  */
@@ -31,12 +20,3 @@
   @include reset-focus;
 }
 
-
-/**
- * @placeholder
- * @alias focus-reset
- */
-
-%focus-reset {
-  @include reset-focus;
-}

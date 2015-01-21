@@ -14,15 +14,6 @@
 
 
 /**
- * @alias reset-table-cell
- */
-
-@mixin table-cell-reset {
-  @include reset-table-cell;
-}
-
-
-/**
  * @placeholder
  * @alias reset-table-cell
  */
@@ -31,12 +22,3 @@
   @include reset-table-cell;
 }
 
-
-/**
- * @placeholder
- * @alias table-cell-reset
- */
-
-%table-cell-reset {
-  @include reset-table-cell;
-}

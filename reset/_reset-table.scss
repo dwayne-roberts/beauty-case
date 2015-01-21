@@ -13,30 +13,10 @@
 
 
 /**
- * @alias reset-table
- *
- */
-
-@mixin table-reset {
-  @include reset-table;
-}
-
-
-/**
  * @placeholder
  * @alias reset-table-cell
  */
 
 %reset-table {
-  @include reset-table;
-}
-
-
-/**
- * @placeholder
- * @alias table-reset
- */
-
-%table-reset {
   @include reset-table;
 }

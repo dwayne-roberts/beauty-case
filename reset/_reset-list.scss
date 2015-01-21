@@ -12,30 +12,10 @@
 
 
 /**
- * @alias reset-list
- *
- */
-
-@mixin list-reset {
-  @include reset-list;
-}
-
-
-/**
  * @placeholder
  * @alias reset-list
  */
 
 %reset-list {
-  @include reset-list;
-}
-
-
-/**
- * @placeholder
- * @alias list-reset
- */
-
-%list-reset {
   @include reset-list;
 }

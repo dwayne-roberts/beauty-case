@@ -14,29 +14,10 @@
 
 
 /**
- * @alias reset-layout
- */
-
-@mixin layout-reset {
-  @include reset-layout;
-}
-
-
-/**
  * @placeholder
  * @alias reset-layout
  */
 
 %reset-layout {
-  @include reset-layout;
-}
-
-
-/**
- * @placeholder
- * @alias layout-reset
- */
-
-%layout-reset {
   @include reset-layout;
 }

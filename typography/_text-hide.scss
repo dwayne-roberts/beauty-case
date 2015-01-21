@@ -44,10 +44,10 @@
 
 
 /**
- * Hide text
+ * @placeholder
  * @alias text-hide
  */
 
-@mixin hide-text($args...) {
-  @include text-hide($args...);
+%text-hide {
+  @include text-hide;
 }

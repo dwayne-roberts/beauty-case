@@ -41,13 +41,3 @@
     }
   }
 }
-
-
-/**
- * @name inline-list
- * @alias list-inline
- */
-
-@mixin inline-list {
-  @include list-inline;
-}

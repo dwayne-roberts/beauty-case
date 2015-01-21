@@ -48,19 +48,3 @@
 
   @return ($red + $green + $blue) / 255 * 100%;
 }
-
-
-/**
- * @name is-bright
- * @description Checks if the brightness is greater than 60%
- *
- * @requires {Function} brightness()
- * @param {Color} $color - the color you wish to check
- * @returns {Boolean}
- *
- * @example http://sassmeister.com/gist/80f095fdf2e8fc2dfba9
- */
-
-@function is-bright($color) {
-  @return brightness($color) > 60%;
-}

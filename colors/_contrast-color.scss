@@ -44,15 +44,3 @@ $color-almost-black: #0d0d0d !default;
 
   @return $contrast-color;
 }
-
-
-/**
- * @name readable
- * @alias contrast-color
- *
- */
-
-@function readable($args...) {
-  @return contrast-color($args...);
-}
-

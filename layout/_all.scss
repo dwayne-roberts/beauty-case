@@ -1,19 +1,30 @@
 // =================================================================================================
-// A collection of layout related functions and mixins
+// A collection of page layout related functions and mixins
 //
 // =================================================================================================
 
 /*
 
   box-sizing .................................. (mx) Sets the box-sizing property on an element
+  block-center ................................ (mx) Visually center a block-level element
+    %block-center
+  block-left .................................. (mx) Align a block-level element to the left without floating
+    %block-left
+  block-right ................................. (mx) Align a block-level element to the right without floating
+    %block-right
   clearfix .................................... (mx) Forces an element to clear itself and its children
-  clearfix .................................... (%.) alternative to the mixin
+    %clearfix
   grid ........................................ (ex) Susy 2 grid library for semantic grids @see http://susydocs.oddbird.net/en/latest/
-  size/spacing/width .......................... (fn) A size in relation to some reference
+  size ........................................ (fn) A size in relation to some reference
+    spacing()
+    width()
 
 */
 
 
+@import 'block-center';
+@import 'block-left';
+@import 'block-right';
 @import 'box-sizing';
 @import 'clearfix';
 @import 'grid';

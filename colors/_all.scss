@@ -12,7 +12,8 @@
   gradient-horizontal ......................... (mx) Creates a uniform horizontal gradient
   gradient-radial ............................. (mx) Creates a uniform radial gradient
   gradient-vertical ........................... (mx) Creates a uniform vertical gradient
-  palette/swatch .............................. (fn) A specific tint or shade within a palette
+  palette ..................................... (fn) A specific tint or shade within a palette
+    swatch()
   random-color ................................ (fn) A random color
   shade ....................................... (fn) A darker shade of a given color
   tint ........................................ (fn) A lighter tint of a given color

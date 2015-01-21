@@ -6,14 +6,22 @@
 /*
 
   establish-baseline .......................... (mx) Set the base vertical rhythm
-  font-face/face .............................. (mx) Shorthand font-face declaration
+  font-face ................................... (mx) Shorthand font-face declaration
+    face()
   headings .................................... (fn) Generate a list of headings
   letterpress ................................. (mx) Create a letterpress text effect
-  link-hover/hover-link ....................... (fn) Add the default hyperlink styling to an element
-  link-unstyled/unstyled-link ................. (mx) Removes hyperlink styling from an element
-  text-hide/hide-text ......................... (mx) Hides text by either collapsing or indenting text off-canvas
-  text-overflow/overflow-text/truncate......... (mx) Truncates too long text with an ellipsis
-  text-selection/selection .................... (mx) Set the text highlight color
+  link-hover .................................. (fn) Add the default hyperlink styling to an element
+    %link-hover
+  link-unstyled ............................... (mx) Removes hyperlink styling from an element
+    %link-unstyled
+  text-hide ................................... (mx) Hides text by either collapsing or indenting text off-canvas
+    %text-hide
+  text-overflow ............................... (mx) Truncates too long text with an ellipsis
+    truncate()
+    %truncate
+    %text-overflow
+  text-selection .............................. (mx) Set the text highlight color
+    selection()
 
 */
 

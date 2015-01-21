@@ -10,8 +10,10 @@
   debug ....................................... (mx) Visually detect invalid markup
   list-reverse ................................ (fn) Reverses the values in a list
   list-to-str ................................. (fn) Converts a comma separated list to a "string"
-  px-to-em/em ................................. (fn) Converts a fixed px value to a relative em
-  px-to-rem/rem ............................... (fn) Converts a fixed px value to a relative root em
+  px-to-em .................................... (fn) Converts a fixed px value to a relative em
+    em()
+  px-to-rem ................................... (fn) Converts a fixed px value to a relative root em
+    rem()
   str-to-list ................................. (fn) Converts a "string" like list to a comma seperated list
   strip-unit .................................. (fn) Strips the unit from a number
 

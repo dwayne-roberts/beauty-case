@@ -1,0 +1,28 @@
+/**
+ * @name square
+ * @description Create a square
+ *
+ * @param {Number} $size - the size of the square
+ *
+ * @example http://sassmeister.com/gist/4a6e65b5455cd2509a63
+ */
+
+@mixin square($size) {
+
+  $exception: false;
+
+  @if type-of($size) != 'number' {
+    @warn "Type Error: Expected a $size of type 'number', provided #{type-of($size)} #{$size}";
+    $exception: true;
+  }
+
+  @if not $exception {
+
+    @if unitless($size) {
+      $size: $size * 1px;
+    }
+
+    height: $size;
+    width: $size;
+  }
+}

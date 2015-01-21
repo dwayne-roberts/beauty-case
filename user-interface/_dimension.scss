@@ -1,0 +1,38 @@
+/**
+ * @name dimension
+ * @description Set the dimensions of an element
+ *
+ * @param {Number} $width - the width of the element
+ * @param {Number} $height - the height of the element
+ *
+ * @example http://sassmeister.com/gist/5f9b38a6a223731c8227
+ */
+
+@mixin dimension($width, $height: $width) {
+
+  $exception: false;
+
+  @if type-of($width) != 'number' {
+    @warn "Type Error: Expected a $width of type 'number', provided #{type-of($width)} #{$width}";
+    $exception: true;
+  }
+
+  @if type-of($height) != 'number' {
+    @warn "Type Error: Expected a $height of type 'number', provided #{type-of($height)} #{$height}";
+    $exception: true;
+  }
+
+  @if not $exception {
+
+    @if unitless($width) {
+      $width: $width * 1px;
+    }
+
+    @if unitless($height) {
+      $height: $height * 1px;
+    }
+
+    height: $height;
+    width: $width;
+  }
+}

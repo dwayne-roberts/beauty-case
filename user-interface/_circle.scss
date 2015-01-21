@@ -1,0 +1,29 @@
+/**
+ * @name circle
+ * @description Create a uniform circle
+ *
+ * @param {Number} $size - the size of the sq
+ *
+ * @example http://sassmeister.com/gist/34b10b734344ceec4917
+ */
+
+@mixin circle($size) {
+
+  $exception: false;
+
+  @if type-of($size) != 'number' {
+    @warn "Type Error: Expected a $size of type 'number', provided #{type-of($size)} #{$size}";
+    $exception: true;
+  }
+
+  @if not $exception {
+
+    @if unitless($size) {
+      $size: $size * 1px;
+    }
+
+    border-radius: 50%;
+    height: $size;
+    width: $size;
+  }
+}

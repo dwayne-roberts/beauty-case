@@ -5,6 +5,7 @@
 
 /*
 
+  circle ...................................... (mx) Create a uniform circle
   caret ....................................... (mx) Create a caret in a specified direction
   emboss ...................................... (mx) Stylize an object to look slightly raised
   focus ....................................... (mx) Set the outline style for focussed elements
@@ -13,10 +14,13 @@
   material-shadow ............................. (mx) Create a material design inspired drop-shadow
   media-queries ............................... (ex) Create semantic breakpoints via Breakpoint-Sass Susy 2 @see http://breakpoint-sass.com/
   pseudo ...................................... (mx) Creates a pseudo selector element
+  dimension ................................... (mx) Set the dimensions of an element
+  square ...................................... (mx) Create a square
 
 */
 
 @import 'caret';
+@import 'circle';
 @import 'emboss';
 @import 'focus';
 @import 'impress';
@@ -24,5 +28,5 @@
 @import 'material-design';
 @import 'media-queries';
 @import 'pseudo';
-
-
+@import 'dimension';
+@import 'square';

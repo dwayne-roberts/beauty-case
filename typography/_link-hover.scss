@@ -18,30 +18,10 @@
 
 
 /**
- * @name hover-link
- * @alias link-hover
- */
-
-@mixin hover-link {
-  @include link-hover;
-}
-
-
-/**
  * @placeholder
  * @alias link-hover
  */
 
 %link-hover {
-  @include link-hover;
-}
-
-
-/**
- * @placeholder
- * @alias link-hover
- */
-
-%hover-link {
   @include link-hover;
 }

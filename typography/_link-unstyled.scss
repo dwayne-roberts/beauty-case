@@ -23,30 +23,10 @@
 
 
 /**
- * @alias link-unstyled
- *
- */
-
-@mixin unstyled-link {
-  @include link-unstyled;
-}
-
-
-/**
  * @placeholder
  * @alias link-unstyled
  */
 
 %link-unstyled {
-  @include link-unstyled;
-}
-
-
-/**
- * @placeholder
- * @alias link-unstyled
- */
-
-%unstyled-link {
   @include link-unstyled;
 }

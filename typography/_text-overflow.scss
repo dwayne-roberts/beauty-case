@@ -18,16 +18,6 @@
 
 
 /**
- * Overflow text
- * @alias text-overflow
- */
-
-@mixin overflow-text {
-  @include text-overflow;
-}
-
-
-/**
  * Truncate
  * @alias text-overflow
  */
@@ -43,16 +33,6 @@
  */
 
 %text-overflow {
-  @include text-overflow;
-}
-
-
-/**
- * @placeholder
- * @alias text-overflow
- */
-
-%overflow-text {
   @include text-overflow;
 }
 

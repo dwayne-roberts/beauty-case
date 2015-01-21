@@ -1,0 +1,36 @@
+/**
+ * @name block-left
+ * @description Align a block-level element to the left without floating
+ * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+ *
+ * @example http://sassmeister.com/gist/1950579de152b4ef631a
+ */
+
+@mixin block-left($max-width: false) {
+
+  $exception: false;
+
+  @if $max-width and type-of($max-width) != 'number' {
+    @warn "Type Error: Expected a $max-width of type 'number', provided #{type-of($max-width)} #{$max-width}";
+    $exception: true;
+  }
+
+  @if not $exception {
+    display: block;
+    margin-right: auto;
+
+    @if $max-width {
+      max-width: $max-width;
+    }
+  }
+}
+
+
+/**
+ * @placeholder
+ * @alias block-left
+ */
+
+%block-left {
+  @include block-left;
+}

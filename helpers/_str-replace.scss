@@ -1,0 +1,57 @@
+/**
+ * @name str-replace
+ * @description Replace all occurrences of a search string with the replacement
+ *
+ * @param   {String} $str          - the string being searched
+ * @param   {String} $search       - the value being searched for
+ * @param   {String} $replace      - the replacement value
+ * @returns {String} $str-replaced - the replaced string
+ *
+ * @example http://sassmeister.com/gist/b39e2112dfb6175fd5a8
+ */
+
+@function str-replace($str, $search, $replace) {
+
+  // Error checking
+  @if type-of($str) != 'string' {
+    @warn "Type Error: Expected a $str of type 'string', provided #{type-of($str)} #{$str}";
+    @return false;
+  }
+
+  @if type-of($search) != 'string' {
+    @warn "Type Error: Expected a $search of type 'string', provided #{type-of($search)} #{$search}";
+    @return false;
+  }
+
+  @if type-of($replace) != 'string' {
+    @warn "Type Error: Expected a $replace of type 'string', provided #{type-of($replace)} #{$replace}";
+    @return false;
+  }
+
+  @if str-length($search) == 0 {
+    @warn "Value Error: Incorrect value (#{$search}) supplied for $search";
+    @return false;
+  }
+
+
+  // Logic
+  $length-search  : str-length($search);
+  $length-replace : str-length($replace);
+  $index          : str-index($str, $search);
+  $str-replaced   : $str;
+
+  @while $index != null {
+    $str-replaced : str-slice($str-replaced, 1, $index - 1) + str-slice($str-replaced, $index + $length-search, -1);
+    $str-replaced : str-insert($str-replaced, $replace, $index);
+    $slice        : str-slice($str-replaced, $index + $length-replace, -1);
+    $index-slice  : str-index($slice, $search);
+
+    @if $index-slice != null {
+      $index: $index-slice + $index + $length-replace - 1;
+    } @else {
+      $index: null;
+    }
+  }
+
+  @return $str-replaced;
+}

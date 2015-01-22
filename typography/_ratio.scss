@@ -1,0 +1,45 @@
+/**
+ * @name ratio
+ * @description Decimal value of a named ratio
+ *
+ * @param   {String} $name  - the name
+ * @returns {Number} $ratio - the decimal value
+ *
+ * @example http://sassmeister.com/gist/fee156a78bd0f0212f77
+ */
+
+@function ratio($name) {
+
+  $ratios: (
+    minor-second     : 1.067,
+    major-second     : 1.125,
+    minor-third      : 1.200,
+    major-third      : 1.250,
+    perfect-fourth   : 1.333,
+    augmented-fourth : 1.414,
+    perfect-fifth    : 1.500,
+    golden-ratio     : 1.618,
+    major-sixth      : 1.667,
+    major-seventh    : 1.875,
+    octave           : 2,
+    major-tenth      : 2.5,
+    major-eleventh   : 2.667
+  );
+
+  $ratio-options: map-keys($ratios);
+
+  // Error checking
+  @if type-of($name) != 'string' {
+    @warn "Type Error: Expected a $name of type 'string', provided (#{type-of($name)}) #{$name}";
+    @return false;
+  }
+
+  @if not index($ratio-options, $name) {
+    @warn "Range Error: #{$name} was not found among valid options: #{$ratio-options}";
+    @return false;
+  }
+
+  // Logic
+  $ratio: map-get($ratios, $name);
+  @return $ratio;
+}

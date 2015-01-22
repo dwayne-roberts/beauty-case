@@ -1,0 +1,50 @@
+/**
+ * @name position
+ * @description Shorthand for setting the position of an element
+ *
+ * @param {String} $method
+ * @param {Number|List} $positions
+ *
+ * @example http://sassmeister.com/gist/bfe3bff7dd7cff537114
+ */
+
+@mixin position($method, $positions) {
+
+  $exception      : false;
+  $method-options : fixed, absolute, relative;
+  $directions     : top, right, bottom, left;
+
+  // Error checking
+  @if length($positions) > 4 {
+    @warn "Syntax Error: Incorrect number of arguments provided. Provided #{length($positions)}, required 4 or less";
+    $exception: true;
+  }
+
+  @if type-of($method) != 'string' {
+    @warn "Type Error: Expected a $method of type 'string', provided #{type-of($method)} #{$method}";
+    $exception: true;
+  }
+
+  @if not index($method-options, $method) {
+    @warn "Range Error: #{$method} was not found among valid options: #{$method-options}";
+    $exception: true;
+  }
+
+  // Logic
+  @if not $exception {
+    position: $method;
+
+    @for $i from 1 through length($positions) {
+
+      $pos: nth($positions, $i);
+
+      @if type-of($pos) == 'number' {
+        @if unitless($pos) {
+          $pos: $pos * 1px;
+        }
+
+        #{nth($directions, $i)}: $pos;
+      }
+    }
+  }
+}

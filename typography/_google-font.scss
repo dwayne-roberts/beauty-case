@@ -1,0 +1,60 @@
+/**
+ * Google Font
+ * @description Declare and import Google fonts
+ *
+ * @requires {Function} str-replace()
+ * @requires {Function} str-to-list()
+ * @param    {String}   $font-family           - the name of the font family
+ * @param    {List}     $font-weights (normal) - the font weights to include
+ *
+ * @example http://sassmeister.com/gist/b39e2112dfb6175fd5a8
+ */
+
+@mixin google-font($font-family, $font-weights: false) {
+
+  $exception           : false;
+  $font-weight-options : 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+  // Error checking
+  @if type-of($font-family) != 'string' {
+    @warn "Type Error: Expected a $font-family of type 'string', provided #{type-of($font-family)} #{$font-family}";
+    $exception: true;
+  }
+
+  @if $font-weights {
+    @if type-of($font-weights) != 'list' and type-of($font-weights) != 'number' {
+      @warn "Type Error: Expected a $font-weights of type 'list' or 'number', provided #{type-of($font-weights)} #{$font-weights}";
+      $exception: true;
+    }
+
+    @for $i from 1 through length($font-weights) {
+      @if not index($font-weight-options, nth($font-weights, $i)) {
+        @warn "Range Error: #{$nth($font-weights, $i)} was not found among valid options: #{$font-weight-options}";
+        $exception: true;
+      }
+    }
+  }
+
+  // Logic
+  @if not $exception {
+
+    $url: '//fonts.googleapis.com/css?family=';
+    $family: str-replace($font-family, ' ', '+');
+
+    $url: $url + $family;
+
+    @if $font-weights {
+      $weights: ':';
+
+      @if type-of($font-weights) == 'list' {
+        $weights: $weights + str-to-list($font-weights);
+      } @else {
+        $weights: $weights + $font-weights;
+      }
+
+      $url: $url + $weights;
+    }
+
+    @import url(quote($url));
+  }
+}

@@ -15,6 +15,7 @@
   link-unstyled ............................... (mx) Removes hyperlink styling from an element
     %link-unstyled
   ratio ....................................... (fn) Decimal value of a named ratio
+  stack ....................................... (fn) Return a full font-stack
   text-hide ................................... (mx) Hides text by either collapsing or indenting text off-canvas
     %text-hide
   text-overflow ............................... (mx) Truncates too long text with an ellipsis
@@ -33,6 +34,7 @@
 @import 'link-hover';
 @import 'link-unstyled';
 @import 'ratio';
+@import 'stack';
 @import 'text-hide';
 @import 'text-overflow';
 @import 'text-selection';

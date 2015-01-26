@@ -1,0 +1,42 @@
+/**
+ * @name stack
+ * @description Return a full font-stack
+ *
+ * @param   {String} $name  - the name
+ * @returns {List}   $stack - the font-stack
+ *
+ * @example http://sassmeister.com/gist/ed056395c050788884a4
+ */
+
+@function stack($name) {
+
+  $stacks: (
+    times-new-roman : ('Times New Roman', Times, Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', serif),
+    georgia         : (Georgia, Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'Bitstream Vera Serif', 'Liberation Serif', serif),
+    garamond        : (Garamond, 'Apple Garamond', 'ITC Garamond Narrow', 'Century Schoolbook', 'Palatino Linotype', Palatino, Baskerville, serif),
+    helvetica       : ('Helvetica Neue', Helvetica, Arial, 'Lucida Grande', Univers, Calibri, sans-serif),
+    arial           : (Arial, 'Helvetica Neue', Helvetica, sans-serif),
+    verdana         : (Verdana, Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Bitstream Vera Sans', 'Liberation Sans', sans-serif),
+    trebuchet       : ('Trebuchet MS', 'Segoe UI', Candara, 'Bitstream Vera Sans', 'Bitstream Vera Sans', 'Verdana Ref', sans-serif),
+    impact          : (Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', sans-serif),
+    consolas        : (Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Bitstream Vera Sans Mono', Monaco, monospace),
+    courier-new     : ('Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace)
+  );
+
+  $stack-options: map-keys($stacks);
+
+  // Error checking
+  @if type-of($name) != 'string' {
+    @warn "Type Error: Expected a $name of type 'string', provided (#{type-of($name)}) #{$name}";
+    @return false;
+  }
+
+  @if not index($stack-options, $name) {
+    @warn "Range Error: #{$name} was not found among valid options: #{$stack-options}";
+    @return false;
+  }
+
+  // Logic
+  $stack: map-get($stacks, $name);
+  @return $stack;
+}

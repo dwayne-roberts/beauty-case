@@ -24,6 +24,7 @@
     %text-overflow
   text-selection .............................. (mx) Set the text highlight color
     selection()
+  weight ...................................... (fn) Decimal equivalent of a font weight
 
 */
 
@@ -38,3 +39,4 @@
 @import 'text-hide';
 @import 'text-overflow';
 @import 'text-selection';
+@import 'weight';

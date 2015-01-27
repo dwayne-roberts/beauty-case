@@ -10,8 +10,6 @@
  *
  */
 
-$enable-debug-mode: false !default;
-
 @if $enable-debug-mode == true {
 
   // Add an outline class to show it
@@ -124,8 +122,6 @@ $enable-debug-mode: false !default;
 
 
 //  Vertical Base line Grid
-$enable-vertical-grid: false !default;
-
 @if $enable-vertical-grid == true {
 
   $guide-color: 13ca58;

@@ -11,8 +11,6 @@
  * @example http://sassmeister.com/gist/4d83f80f8e21e8ca16bd
  */
 
-$base-font-size: 16px !default;
-
 @function px-to-em($size, $root: $base-font-size) {
 
   // Error checking

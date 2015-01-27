@@ -9,9 +9,6 @@
  * @example http://sassmeister.com/gist/4678b89874466d2a6fb0
  */
 
-$base-font-size   : 16px !default;
-$base-line-height : 24px !default;
-
 @mixin establish-baseline($font-size: $base-font-size, $line-height: $base-line-height) {
 
   $exception: false;

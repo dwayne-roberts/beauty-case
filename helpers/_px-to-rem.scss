@@ -11,8 +11,6 @@
  * @example http://sassmeister.com/gist/f3b0c2f2935f0cc75005
  */
 
-$base-font-size: 16px !default;
-
 @function px-to-rem($size, $root: $base-font-size) {
 
   // Error checking

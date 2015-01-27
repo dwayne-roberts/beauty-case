@@ -6,17 +6,14 @@
  *
  * @requires {Function} is-bright()
  * @param {Color} $background-color - background color
- * @param {Color} $dark-color ($off-black) - a darker color
- * @param {Color} $light-color ($off-white) - a lighter color
+ * @param {Color} $dark-color ($color-off-black) - a darker color
+ * @param {Color} $light-color ($color-off-white) - a lighter color
  * @returns {Color} $contrast-color - a contrasting lighter or darker color
  *
- * @example http://sassmeister.com/gist/24b6af6596bc3e0fb894
+ * @example http://sassmeister.com/gist/24b6af6596b1c3e0fb894
  */
 
-$off-white: #f5f5f5 !default;
-$off-black: #1a1a1a !default;
-
-@function contrast-color($background-color, $dark-color: $off-black, $light-color: $off-white) {
+@function contrast-color($background-color, $dark-color: $color-off-black, $light-color: $color-off-white) {
 
   // Error checking
   @if type-of($background-color) != 'color' {

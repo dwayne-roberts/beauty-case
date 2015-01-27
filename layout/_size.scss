@@ -10,8 +10,6 @@
  * @example http://sassmeister.com/gist/b13daa8b281c8d6da6d8
  */
 
-$grid-gutter-width: 30px !default;
-
 @function size($size, $reference: $grid-gutter-width) {
 
   $size-options : xxs, xs, sm, md, lg, xl, xxl;

@@ -9,8 +9,6 @@
  * @example http://sassmeister.com/gist/d6b81a42517d12c4f4ef
  */
 
-$data-namespace: false !default;
-
 @function data($attr, $value: false, $namespace: $data-namespace) {
 
   // Error checking

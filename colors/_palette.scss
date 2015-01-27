@@ -45,27 +45,27 @@
   $shades: (
     light: (
       function: tint,
-      value: 20%
+      value: 25%
     ),
     lighter: (
       function: tint,
-      value: 40%
+      value: 50%
     ),
     lightest: (
       function: tint,
-      value: 60%
+      value: 75%
     ),
     dark: (
       function: shade,
-      value: 20%
+      value: 25%
     ),
     darker: (
       function: shade,
-      value: 40%
+      value: 50%
     ),
     darkest: (
       function: shade,
-      value: 60%
+      value: 75%
     )
   );
 

@@ -1,0 +1,44 @@
+/**
+ * @name brand-color
+ * @description The primary color of a popular brand
+ *
+ * @param {String} $brand - the brand name
+ * @returns {Color} $color - the color
+ *
+ * @example http://sassmeister.com/gist/b560679bf2d9b4717437
+ */
+
+@function brand-color($brand) {
+
+  // Brands
+  $brands   : (
+    facebook    : #3b5998,
+    twitter     : #00aced,
+    googleplus  : #dd4b39,
+    youtube     : #bb0000,
+    linkedin    : #007bb6,
+    instagram   : #517fa4,
+    pinterest   : #cb2027,
+    flickr      : #ff0084,
+    vimeo       : #aad450,
+    fouresquare : #0072b1,
+    soundcloud  : #ff5500,
+    whatsapp    : #169c0d
+  );
+
+  $brand-options: map-keys($brands);
+
+  @if type-of($brand) != 'string' {
+    @warn "Type Error: Expected a $brand of type 'string', provided #{type-of($brand)} #{$brand}";
+    @return false;
+  }
+
+  @if not index($brand-options, $brand) {
+    @warn "Range Error: #{$brand} was not found among valid options: #{$brand-options}";
+    @return false;
+  }
+
+  $color: map-get($brands, $brand);
+
+  @return $color;
+}

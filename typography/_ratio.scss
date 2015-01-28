@@ -11,19 +11,23 @@
 @function ratio($name) {
 
   $ratios: (
-    minor-second     : 1.067,
-    major-second     : 1.125,
-    minor-third      : 1.200,
-    major-third      : 1.250,
-    perfect-fourth   : 1.333,
-    augmented-fourth : 1.414,
-    perfect-fifth    : 1.500,
-    golden-ratio     : 1.618,
-    major-sixth      : 1.667,
-    major-seventh    : 1.875,
-    octave           : 2,
+    double-octave    : 4,
+    major-twelfth    : 3,
+    major-eleventh   : 2.666666667,
     major-tenth      : 2.5,
-    major-eleventh   : 2.667
+    octave           : 2,
+    major-seventh    : 1.875,
+    minor-seventh    : 1.777777778,
+    major-sixth      : 1.667,
+    minor-sixth      : 1.6,
+    golden-ratio     : 1.618034,
+    perfect-fifth    : 1.5,
+    augmented-fourth : 1.41421,
+    perfect-fourth   : 1.333333333,
+    major-third      : 1.250,
+    minor-third      : 1.200,
+    major-second     : 1.125,
+    minor-second     : 1.066666667
   );
 
   $ratio-options: map-keys($ratios);

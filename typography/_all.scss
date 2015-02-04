@@ -24,6 +24,7 @@
     %text-overflow
   text-selection .............................. (mx) Set the text highlight color
     selection()
+  type-scale .................................. (ex) Modular Scale for type setting to a semantic scale @see https://github.com/at-import/modular-scale
   weight ...................................... (fn) Decimal equivalent of a font weight
 
 */
@@ -39,4 +40,5 @@
 @import 'text-hide';
 @import 'text-overflow';
 @import 'text-selection';
+@import 'type-scale';
 @import 'weight';

@@ -14,6 +14,8 @@
     em()
   px-to-rem ................................... (fn) Converts a fixed px value to a relative root em
     rem()
+  rem-to-px ................................... (fn) Converts a relative rem value to a fixed px value
+    px()
   str-replace ................................. (fn) Replace all occurrences of a search string with the replacement
   str-to-list ................................. (fn) Converts a "string" like list to a comma seperated list
   strip-unit .................................. (fn) Strips the unit from a number
@@ -29,6 +31,7 @@
 @import 'list-to-str';
 @import 'px-to-em';
 @import 'px-to-rem';
+@import 'rem-to-px';
 @import 'str-replace';
 @import 'str-to-list';
 @import 'strip-unit';

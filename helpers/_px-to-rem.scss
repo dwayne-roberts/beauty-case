@@ -46,6 +46,6 @@
  *
  */
 
-@mixin rem($args...) {
-  @include px-to-rem($args...);
+@function rem($args...) {
+  @return px-to-rem($args...);
 }

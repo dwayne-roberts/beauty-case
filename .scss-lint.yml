@@ -2,6 +2,8 @@
 
 exclude:
 - './vendor/**'
+- './bower_components/**'
+
 
 linters:
   BorderZero: # Prefer border: 0 over border: none.

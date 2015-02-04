@@ -5,6 +5,7 @@
 
 /*
 
+  adjust-to-baseline .......................... (fx) A line-height ratio that matches the baseline rhythm
   establish-baseline .......................... (mx) Set the base vertical rhythm
   font-face ................................... (mx) Shorthand font-face declaration
     face()
@@ -30,6 +31,7 @@
 
 */
 
+@import 'adjust-to-baseline';
 @import 'establish-baseline';
 @import 'font-face';
 @import 'headings';

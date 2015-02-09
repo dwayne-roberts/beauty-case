@@ -15,6 +15,9 @@
   clearfix .................................... (mx) Forces an element to clear itself and its children
     %clearfix
   grid ........................................ (ex) Susy 2 grid library for semantic grids @see http://susydocs.oddbird.net/en/latest/
+  hspace ...................................... (mx) Add horizontal space, margin or padding, following a layout style
+    horizontal-margin()
+    horizontal-padding()
   position .................................... (mx) Shorthand for setting the position of an element
   size ........................................ (fn) A size in relation to some reference
     spacing()
@@ -32,6 +35,7 @@
 @import 'box-sizing';
 @import 'clearfix';
 @import 'grid';
+@import 'hspace';
 @import 'position';
 @import 'size';
 @import 'vspace';

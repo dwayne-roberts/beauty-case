@@ -19,6 +19,9 @@
   size ........................................ (fn) A size in relation to some reference
     spacing()
     width()
+  vspace ...................................... (mx) Add vertical space, margin or padding, following a layout style
+    vertical-margin()
+    vertical-padding()
 
 */
 
@@ -31,3 +34,4 @@
 @import 'grid';
 @import 'position';
 @import 'size';
+@import 'vspace';

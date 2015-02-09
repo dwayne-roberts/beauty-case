@@ -10,7 +10,7 @@
  *
  */
 
-@if $enable-debug-mode == true {
+@if $debug-mode-enabled == true {
 
   // Add an outline class to show it
   .outline {
@@ -120,9 +120,14 @@
   }
 }
 
+// Horizontal Grid
+@if $debug-show-grid == true {
+
+  // TODO show Susy grid
+}
 
 //  Vertical Base line Grid
-@if $enable-vertical-grid == true {
+@if $debug-show-baseline == true {
 
   $guide-color: 13ca58;
   $guide-rhythm: strip-unit($base-line-height);

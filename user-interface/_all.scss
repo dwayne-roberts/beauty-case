@@ -18,6 +18,7 @@
   media-queries ............................... (ex) Create semantic breakpoints via Breakpoint-Sass Susy 2 @see http://breakpoint-sass.com/
   photo-effect ................................ (mx) Stylize an image using one of the photo filters
   pseudo ...................................... (mx) Creates a pseudo selector element
+  responsive-image ............................ (mx) Keep images from scaling beyond the width of their parents
   square ...................................... (mx) Create a square
 
 */
@@ -35,4 +36,5 @@
 @import 'media-queries';
 @import 'pseudo';
 @import 'photo-effect';
+@import 'responsive-image';
 @import 'square';

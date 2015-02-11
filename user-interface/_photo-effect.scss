@@ -1,12 +1,11 @@
-/**
- * @name photo-effect
- * @description Stylize an image using one of the photo filters
- *
- * @param {String} $effect - the name of the effect
- *
- * @example http://sassmeister.com/gist/f0e20f2749b773d955bc
- */
-
+///
+/// @name photo-effect
+/// @description Stylize an image using one of the photo filters
+///
+/// @param {String} $effect - the name of the effect
+///
+/// @example http://sassmeister.com/gist/f0e20f2749b773d955bc
+///
 @mixin photo-effect($effect) {
 
   $exception: false;

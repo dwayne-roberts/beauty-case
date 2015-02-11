@@ -1,16 +1,15 @@
 // scss-lint:disable ZeroUnit
 
-/**
- * @name px-to-rem
- * @description Converts a fixed px value to a relative root em
- *
- * @requires {function} strip-unit
- * @param {Number} $size - a fixed size value to convert
- * @returns {number} $rem - the rem equivalent
- *
- * @example http://sassmeister.com/gist/f3b0c2f2935f0cc75005
- */
-
+///
+/// @name px-to-rem
+/// @description Converts a fixed px value to a relative root em
+///
+/// @requires {function} strip-unit
+/// @param {Number} $size - a fixed size value to convert
+/// @returns {number} $rem - the rem equivalent
+///
+/// @example http://sassmeister.com/gist/f3b0c2f2935f0cc75005
+///
 @function px-to-rem($size, $root: $base-font-size) {
 
   // Error checking
@@ -40,12 +39,10 @@
 }
 
 
-/**
- * rem
- * @alias px-to-rem
- *
- */
-
+///
+/// rem
+/// @alias px-to-rem
+///
 @function rem($args...) {
   @return px-to-rem($args...);
 }

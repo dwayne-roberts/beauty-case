@@ -1,15 +1,14 @@
-/**
- * @name shade
- * @description A darker shade of a given color
- * This function darkens a color by mixing it with black as specified by percentage.
- *
- * @param {Color} $color - the color you wish to darken
- * @param {Number} $percentage - a percentage  ranging from 0% to 100%
- * @returns {Color} $darker-color - the darker color
- *
- * @example http://sassmeister.com/gist/b99ca625cada3e3a7c81
- */
-
+///
+/// @name shade
+/// @description A darker shade of a given color
+/// This function darkens a color by mixing it with black as specified by percentage.
+///
+/// @param {Color} $color - the color you wish to darken
+/// @param {Number} $percentage - a percentage  ranging from 0% to 100%
+/// @returns {Color} $darker-color - the darker color
+///
+/// @example http://sassmeister.com/gist/b99ca625cada3e3a7c81
+///
 @function shade($color, $percentage) {
 
   // Error checking

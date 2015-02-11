@@ -1,13 +1,12 @@
-/**
- * @name position
- * @description Shorthand for setting the position of an element
- *
- * @param {String} $method
- * @param {Number|List} $positions
- *
- * @example http://sassmeister.com/gist/bfe3bff7dd7cff537114
- */
-
+///
+/// @name position
+/// @description Shorthand for setting the position of an element
+///
+/// @param {String} $method
+/// @param {Number|List} $positions
+///
+/// @example http://sassmeister.com/gist/bfe3bff7dd7cff537114
+///
 @mixin position($method, $positions) {
 
   $exception      : false;

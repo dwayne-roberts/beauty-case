@@ -1,16 +1,15 @@
 // scss-lint:disable ZeroUnit
 
-/**
- * @name px-to-em
- * @description Converts a fixed px value to a relative em
- *
- * @requires {function} strip-unit
- * @param {Number} $size - a fixed size value to convert
- * @returns {number} $em - the em equivalent
- *
- * @example http://sassmeister.com/gist/4d83f80f8e21e8ca16bd
- */
-
+///
+/// @name px-to-em
+/// @description Converts a fixed px value to a relative em
+///
+/// @requires {function} strip-unit
+/// @param {Number} $size - a fixed size value to convert
+/// @returns {number} $em - the em equivalent
+///
+/// @example http://sassmeister.com/gist/4d83f80f8e21e8ca16bd
+///
 @function px-to-em($size, $root: $base-font-size) {
 
   // Error checking
@@ -40,12 +39,11 @@
 }
 
 
-/**
- * em
- * @alias px-to-em
- *
- */
-
+///
+/// em
+/// @alias px-to-em
+///
+///
 @mixin em($args...) {
   @include px-to-em($args...);
 }

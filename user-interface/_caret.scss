@@ -1,14 +1,13 @@
-/**
- * @name caret
- * @description Create a caret in a specified direction
- *
- * @param {String} $direction - the direction the caret needs to point
- * @param {Number} $size - the width of the caret
- * @param {Color} $color - the color of the caret
- *
- * http://sassmeister.com/gist/8015c1e0a3060660c8b8
- */
-
+///
+/// @name caret
+/// @description Create a caret in a specified direction
+///
+/// @param {String} $direction - the direction the caret needs to point
+/// @param {Number} $size - the width of the caret
+/// @param {Color} $color - the color of the caret
+///
+/// http://sassmeister.com/gist/8015c1e0a3060660c8b8
+///
 // TODO: Refactor this to work with carets inline as well as centered on block elements
 @mixin caret ($direction, $size, $color) {
 
@@ -88,21 +87,19 @@
 }
 
 
-/**
- * @name triangle
- * @alias caret
- */
-
+///
+/// @name triangle
+/// @alias caret
+///
 @mixin triangle($args...) {
   @include caret($args...);
 }
 
 
-/**
- * @name arrow-head
- * @alias caret
- */
-
+///
+/// @name arrow-head
+/// @alias caret
+///
 @mixin arrow-head($args...) {
   @include caret($args...);
 }

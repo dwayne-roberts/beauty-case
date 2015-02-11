@@ -1,18 +1,17 @@
-/**
- * @name brightness
- * @description The brightness of a color
- * It works just like the native lightness() Sass function but adheres more closely to how the human
- * eye perceives light.
- *
- * @param {Color} $color - the color you wish to check
- * @param {String} $method (rec709) - the method used to calculate the luminence
- * @returns {Number} - a percentage ranging from dark 0% to bright 100%
- *
- * @see http://en.wikipedia.org/wiki/Luma_(video)
- * @see http://www.w3.org/TR/AERT#color-contrast
- * @example http://sassmeister.com/gist/80f095fdf2e8fc2dfba9
- */
-
+///
+/// @name brightness
+/// @description The brightness of a color
+/// It works just like the native lightness() Sass function but adheres more closely to how the human
+/// eye perceives light.
+///
+/// @param {Color} $color - the color you wish to check
+/// @param {String} $method (rec709) - the method used to calculate the luminence
+/// @returns {Number} - a percentage ranging from dark 0% to bright 100%
+///
+/// @see http://en.wikipedia.org/wiki/Luma_(video)
+/// @see http://www.w3.org/TR/AERT#color-contrast
+/// @example http://sassmeister.com/gist/80f095fdf2e8fc2dfba9
+///
 @function brightness($color, $method: rec709) {
 
   $method-options: w3c, rec709, none;

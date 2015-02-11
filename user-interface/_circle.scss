@@ -1,12 +1,11 @@
-/**
- * @name circle
- * @description Create a uniform circle
- *
- * @param {Number} $size - the size of the sq
- *
- * @example http://sassmeister.com/gist/34b10b734344ceec4917
- */
-
+///
+/// @name circle
+/// @description Create a uniform circle
+///
+/// @param {Number} $size - the size of the sq
+///
+/// @example http://sassmeister.com/gist/34b10b734344ceec4917
+///
 @mixin circle($size) {
 
   $exception: false;

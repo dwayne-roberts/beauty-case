@@ -3,25 +3,24 @@
 //
 // =================================================================================================
 
-/*
 
-  caret ....................................... (mx) Create a caret in a specified direction
-  circle ...................................... (mx) Create a uniform circle
-  dimension ................................... (mx) Set the dimensions of an element
-  emboss ...................................... (mx) Stylize an object to look slightly raised
-  focus ....................................... (mx) Set the outline style for focussed elements
-  hidden ...................................... (mx) Hide content visually and from screen readers
-  impress ..................................... (mx) Stylize an object to look slightly sunken
-  invisible ................................... (mx) Hide content only visually, but have it available for screen readers
-  list-inline ................................. (mx) An inline list with an optional delimiter
-  material-shadow ............................. (mx) Create a material design inspired drop-shadow
-  media-queries ............................... (ex) Create semantic breakpoints via Breakpoint-Sass Susy 2 @see http://breakpoint-sass.com/
-  photo-effect ................................ (mx) Stylize an image using one of the photo filters
-  pseudo ...................................... (mx) Creates a pseudo selector element
-  responsive-image ............................ (mx) Keep images from scaling beyond the width of their parents
-  square ...................................... (mx) Create a square
+// caret ....................................... (mx) Create a caret in a specified direction
+// circle ...................................... (mx) Create a uniform circle
+// dimension ................................... (mx) Set the dimensions of an element
+// emboss ...................................... (mx) Stylize an object to look slightly raised
+// focus ....................................... (mx) Set the outline style for focussed elements
+// hidden ...................................... (mx) Hide content visually and from screen readers
+// impress ..................................... (mx) Stylize an object to look slightly sunken
+// invisible ................................... (mx) Hide content only visually, but have it available for screen readers
+// list-inline ................................. (mx) An inline list with an optional delimiter
+// material-shadow ............................. (mx) Create a material design inspired drop-shadow
+// media-queries ............................... (ex) Create semantic breakpoints via Breakpoint-Sass Susy 2 @see http://breakpoint-sass.com/
+// photo-effect ................................ (mx) Stylize an image using one of the photo filters
+// pseudo ...................................... (mx) Creates a pseudo selector element
+// responsive-image ............................ (mx) Keep images from scaling beyond the width of their parents
+// square ...................................... (mx) Create a square
 
-*/
+
 
 @import 'caret';
 @import 'circle';

@@ -1,13 +1,12 @@
-/**
- * @name is-odd
- * @description Check if a number is odd
- *
- * @param {Number} $number
- * @returns {Boolean} $eval
- *
- * @example http://sassmeister.com/gist/1b5acc85c9494fef7445
- */
-
+///
+/// @name is-odd
+/// @description Check if a number is odd
+///
+/// @param {Number} $number
+/// @returns {Boolean} $eval
+///
+/// @example http://sassmeister.com/gist/1b5acc85c9494fef7445
+///
 @function is-odd($number) {
 
   @if type-of($number) != 'number' {

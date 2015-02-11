@@ -1,15 +1,14 @@
-/**
- * @name tint
- * @description A lighter tint of a given color
- * Lightens a color by mixing it with white as specified by a percentage.
- *
- * @param {Color} $color - the color you wish to lighten
- * @param {Number} $percentage - a percentage  ranging from 0% to 100%
- * @returns {Color} $lighter-color - the lighter color
- *
- * @example http://sassmeister.com/gist/30b89e594becc3e70dc3
- */
-
+///
+/// @name tint
+/// @description A lighter tint of a given color
+/// Lightens a color by mixing it with white as specified by a percentage.
+///
+/// @param {Color} $color - the color you wish to lighten
+/// @param {Number} $percentage - a percentage  ranging from 0% to 100%
+/// @returns {Color} $lighter-color - the lighter color
+///
+/// @example http://sassmeister.com/gist/30b89e594becc3e70dc3
+///
 @function tint($color, $percentage) {
 
   // Error checking

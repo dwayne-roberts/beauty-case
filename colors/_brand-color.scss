@@ -1,13 +1,12 @@
-/**
- * @name brand-color
- * @description The primary color of a popular brand
- *
- * @param {String} $brand - the brand name
- * @returns {Color} $color - the color
- *
- * @example http://sassmeister.com/gist/b560679bf2d9b4717437
- */
-
+///
+/// @name brand-color
+/// @description The primary color of a popular brand
+///
+/// @param {String} $brand - the brand name
+/// @returns {Color} $color - the color
+///
+/// @example http://sassmeister.com/gist/b560679bf2d9b4717437
+///
 @function brand-color($brand) {
 
   // Brands

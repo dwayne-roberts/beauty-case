@@ -1,13 +1,12 @@
-/**
- * @name dimension
- * @description Set the dimensions of an element
- *
- * @param {Number} $width - the width of the element
- * @param {Number} $height - the height of the element
- *
- * @example http://sassmeister.com/gist/5f9b38a6a223731c8227
- */
-
+///
+/// @name dimension
+/// @description Set the dimensions of an element
+///
+/// @param {Number} $width - the width of the element
+/// @param {Number} $height - the height of the element
+///
+/// @example http://sassmeister.com/gist/5f9b38a6a223731c8227
+///
 @mixin dimension($width, $height: $width) {
 
   $exception: false;

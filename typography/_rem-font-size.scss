@@ -1,14 +1,12 @@
-/**
- * @name rem-font-size
- * @description Set the font-size in rems with a px fallback
- *
- * @requires {Function} px-to-rem
- * @param {Number} $size - the font-size in pixels
- *
- * @example http://sassmeister.com/gist/c6886aa3ecf7dbef7fa8
- */
-
-
+///
+/// @name rem-font-size
+/// @description Set the font-size in rems with a px fallback
+///
+/// @requires {Function} px-to-rem
+/// @param {Number} $size - the font-size in pixels
+///
+/// @example http://sassmeister.com/gist/c6886aa3ecf7dbef7fa8
+///
 @mixin rem-font-size($size) {
 
   $exception: false;

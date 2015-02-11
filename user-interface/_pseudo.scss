@@ -1,13 +1,12 @@
-/**
- * @name pseudo
- * @description Creates a pseudo selector element
- *
- * @param {String} $element
- * @param {String} $content
- *
- * @example http://sassmeister.com/gist/282da1d8cf5d8f768cce
- */
-
+///
+/// @name pseudo
+/// @description Creates a pseudo selector element
+///
+/// @param {String} $element
+/// @param {String} $content
+///
+/// @example http://sassmeister.com/gist/282da1d8cf5d8f768cce
+///
 @mixin pseudo($element, $content: false) {
 
   $exception: false;

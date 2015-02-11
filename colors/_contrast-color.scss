@@ -1,18 +1,17 @@
-/**
- * @name contrast-color
- * @description  The color with the highest contrast
- * Given two colors this function checks which of the two has a higher contrast in relation to a
- * background color.
- *
- * @requires {Function} is-bright()
- * @param {Color} $background-color - background color
- * @param {Color} $dark-color ($color-off-black) - a darker color
- * @param {Color} $light-color ($color-off-white) - a lighter color
- * @returns {Color} $contrast-color - a contrasting lighter or darker color
- *
- * @example http://sassmeister.com/gist/44b3b844c6a4b5acc3e3
- */
-
+///
+/// @name contrast-color
+/// @description  The color with the highest contrast
+/// Given two colors this function checks which of the two has a higher contrast in relation to a
+/// background color.
+///
+/// @requires {Function} is-bright()
+/// @param {Color} $background-color - background color
+/// @param {Color} $dark-color ($color-off-black) - a darker color
+/// @param {Color} $light-color ($color-off-white) - a lighter color
+/// @returns {Color} $contrast-color - a contrasting lighter or darker color
+///
+/// @example http://sassmeister.com/gist/44b3b844c6a4b5acc3e3
+///
 @function contrast-color($background-color, $dark-color: $color-off-black, $light-color: $color-off-white) {
 
   // Error checking

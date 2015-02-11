@@ -3,20 +3,19 @@
 //
 // =================================================================================================
 
-/*
 
-  reset-focus ................................. (mx) Resets the outline property when focussed
-    %reset-focus
-  reset-layout ................................ (mx) Resets the borders, margins and padding on the box-model
-    %reset-layout
-  reset-list .................................. (mx) Resets the list-style for list elements
-    %reset-list
-  reset-table ................................. (mx) Resets a table's properties
-    %reset-table
-  reset-table-cell ............................ (mx) Resets the properties of table cells
-    %reset-table-cell
+// reset-focus ................................. (mx) Resets the outline property when focussed
+//   %reset-focus
+// reset-layout ................................ (mx) Resets the borders, margins and padding on the box-model
+//   %reset-layout
+// reset-list .................................. (mx) Resets the list-style for list elements
+//   %reset-list
+// reset-table ................................. (mx) Resets a table's properties
+//   %reset-table
+// reset-table-cell ............................ (mx) Resets the properties of table cells
+//   %reset-table-cell
 
-*/
+
 
 @import 'reset-focus';
 @import 'reset-layout';

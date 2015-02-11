@@ -1,13 +1,12 @@
-/**
- * @name ratio
- * @description Decimal value of a named ratio
- *
- * @param   {String} $name  - the name
- * @returns {Number} $ratio - the decimal value
- *
- * @example http://sassmeister.com/gist/fee156a78bd0f0212f77
- */
-
+///
+/// @name ratio
+/// @description Decimal value of a named ratio
+///
+/// @param   {String} $name  - the name
+/// @returns {Number} $ratio - the decimal value
+///
+/// @example http://sassmeister.com/gist/fee156a78bd0f0212f77
+///
 @function ratio($name) {
 
   $ratios: (

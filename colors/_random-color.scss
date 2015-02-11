@@ -1,12 +1,11 @@
-/**
- * @name random color
- * @description A random color
- *
- * @returns {Color} $color
- *
- * @example http://sassmeister.com/gist/e969d1ab07c76bcf5e09
- */
-
+///
+/// @name random color
+/// @description A random color
+///
+/// @returns {Color} $color
+///
+/// @example http://sassmeister.com/gist/e969d1ab07c76bcf5e09
+///
 @function random-color() {
 
   $red   : random(255);

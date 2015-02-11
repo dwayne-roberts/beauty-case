@@ -1,13 +1,12 @@
-/**
- * @name str-to-list
- * @description Converts a "string" like list to a comma seperated list
- *
- * @param {List} $str - a space seperated list of values
- * @returns {List} $comma-list
- *
- * @example http://sassmeister.com/gist/14bcd53827e03dc8849a
- */
-
+///
+/// @name str-to-list
+/// @description Converts a "string" like list to a comma seperated list
+///
+/// @param {List} $str - a space seperated list of values
+/// @returns {List} $comma-list
+///
+/// @example http://sassmeister.com/gist/14bcd53827e03dc8849a
+///
 @function str-to-list($str) {
 
   // Error checking

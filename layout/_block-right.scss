@@ -1,11 +1,10 @@
-/**
- * @name block-right
- * @description Align a block-level element to the right without floating
- * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
- *
- * @example http://sassmeister.com/gist/1950579de152b4ef631a
- */
-
+///
+/// @name block-right
+/// @description Align a block-level element to the right without floating
+/// @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+///
+/// @example http://sassmeister.com/gist/1950579de152b4ef631a
+///
 @mixin block-right($max-width: false) {
 
   $exception: false;
@@ -26,11 +25,10 @@
 }
 
 
-/**
- * @placeholder
- * @alias block-right
- */
-
+///
+/// @placeholder
+/// @alias block-right
+///
 %block-right {
   @include block-right;
 }

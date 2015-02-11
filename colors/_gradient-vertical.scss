@@ -1,13 +1,12 @@
-/**
- * @name gradient-vertical
- * @description Create a uniform vertical gradient
- * Creates a linear gradient from top to bottom with uniformly spaced color stops
- *
- * @params {List} $color-stops - a list of colors
- *
- * @example http://sassmeister.com/gist/4b0f20e99d546cf02140
- */
-
+///
+/// @name gradient-vertical
+/// @description Create a uniform vertical gradient
+/// Creates a linear gradient from top to bottom with uniformly spaced color stops
+///
+/// @params {List} $color-stops - a list of colors
+///
+/// @example http://sassmeister.com/gist/4b0f20e99d546cf02140
+///
 @mixin gradient-vertical($color-stops) {
 
   $exception: false;

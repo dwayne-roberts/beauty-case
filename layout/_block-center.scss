@@ -1,11 +1,10 @@
-/**
- * @name block-center
- * @description Visually center a block-level element
- * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
- *
- * @example http://sassmeister.com/gist/1950579de152b4ef631a
- */
-
+///
+/// @name block-center
+/// @description Visually center a block-level element
+/// @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+///
+/// @example http://sassmeister.com/gist/1950579de152b4ef631a
+///
 @mixin block-center($max-width: false) {
 
   $exception: false;
@@ -27,11 +26,10 @@
 }
 
 
-/**
- * @placeholder
- * @alias block-center
- */
-
+///
+/// @placeholder
+/// @alias block-center
+///
 %block-center {
   @include block-center;
 }

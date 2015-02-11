@@ -1,13 +1,12 @@
-/**
- * @name weight
- * @description Decimal equivalent of a font weight
- *
- * @param   {String} $name  - the name
- * @returns {Number} $ratio - the decimal value
- *
- * @example http://sassmeister.com/gist/c58fae94c689f97ad0bb
- */
-
+///
+/// @name weight
+/// @description Decimal equivalent of a font weight
+///
+/// @param   {String} $name  - the name
+/// @returns {Number} $ratio - the decimal value
+///
+/// @example http://sassmeister.com/gist/c58fae94c689f97ad0bb
+///
 @function weight($name) {
 
   // Weights

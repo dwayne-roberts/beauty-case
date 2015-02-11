@@ -1,14 +1,13 @@
-/**
- * @name gradient-radial
- * @description Create a uniform radial gradient
- * Creates a radial gradient from outside to inside with uniformly spaced color stops
- *
- * @requires {Function} reverse-list()
- * @params {List} $color-stops - a list of colors
- *
- * @example http://sassmeister.com/gist/51870f70870b7c101c1e
- */
-
+///
+/// @name gradient-radial
+/// @description Create a uniform radial gradient
+/// Creates a radial gradient from outside to inside with uniformly spaced color stops
+///
+/// @requires {Function} reverse-list()
+/// @params {List} $color-stops - a list of colors
+///
+/// @example http://sassmeister.com/gist/51870f70870b7c101c1e
+///
 @mixin gradient-radial($color-stops) {
 
   $exception: false;
@@ -38,10 +37,6 @@
   }
 
   @if not $exception {
-    /* TODO: Change the uniformity of the color stops. Visually the outer most color should have a
-       larger area than the inner most. At the moment since it's uniformly spaced only when using two
-       colors does the gradient
-    */
     $color-stops: reverse-list($color-stops);
     background-image: radial-gradient(circle, $color-stops);
   }

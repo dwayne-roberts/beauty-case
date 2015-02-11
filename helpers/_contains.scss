@@ -1,13 +1,12 @@
-/**
- * @name contains
- * @description Checks if a list contains one or more defined values
- *
- * @param {List} $list - the list to search
- * @returns {List} $values - the values to search for
- *
- * @example http://sassmeister.com/gist/e5cedf866fbaec0d3cdb
- */
-
+///
+/// @name contains
+/// @description Checks if a list contains one or more defined values
+///
+/// @param {List} $list - the list to search
+/// @returns {List} $values - the values to search for
+///
+/// @example http://sassmeister.com/gist/e5cedf866fbaec0d3cdb
+///
 @function contains($list, $values) {
 
   @if type-of($list) != 'list' {

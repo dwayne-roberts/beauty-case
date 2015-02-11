@@ -1,15 +1,14 @@
-/**
- * @name str-replace
- * @description Replace all occurrences of a search string with the replacement
- *
- * @param   {String} $str          - the string being searched
- * @param   {String} $search       - the value being searched for
- * @param   {String} $replace      - the replacement value
- * @returns {String} $str-replaced - the replaced string
- *
- * @example http://sassmeister.com/gist/b39e2112dfb6175fd5a8
- */
-
+///
+/// @name str-replace
+/// @description Replace all occurrences of a search string with the replacement
+///
+/// @param   {String} $str          - the string being searched
+/// @param   {String} $search       - the value being searched for
+/// @param   {String} $replace      - the replacement value
+/// @returns {String} $str-replaced - the replaced string
+///
+/// @example http://sassmeister.com/gist/b39e2112dfb6175fd5a8
+///
 @function str-replace($str, $search, $replace) {
 
   // Error checking

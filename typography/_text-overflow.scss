@@ -1,13 +1,12 @@
-/**
- * @name text-overflow
- * @description Truncates too long text with an ellipsis.
- * Sets the overflow of text adding an elipsis for text that goes beyond it's container.
- * Requires element to have a display of block of inline-block.
- * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed
- *
- * @example http://sassmeister.com/gist/dc695612ae5d238994cd
- */
-
+///
+/// @name text-overflow
+/// @description Truncates too long text with an ellipsis.
+/// Sets the overflow of text adding an elipsis for text that goes beyond it's container.
+/// Requires element to have a display of block of inline-block.
+/// @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed
+///
+/// @example http://sassmeister.com/gist/dc695612ae5d238994cd
+///
 @mixin text-overflow {
   overflow: hidden;
   overflow-wrap: break-word;
@@ -17,31 +16,28 @@
 }
 
 
-/**
- * Truncate
- * @alias text-overflow
- */
-
+///
+/// Truncate
+/// @alias text-overflow
+///
 @mixin truncate {
   @include text-overflow;
 }
 
 
-/**
- * @placeholder
- * @alias text-overflow
- */
-
+///
+/// @placeholder
+/// @alias text-overflow
+///
 %text-overflow {
   @include text-overflow;
 }
 
 
-/**
- * @placeholder
- * @alias text-overflow
- */
-
+///
+/// @placeholder
+/// @alias text-overflow
+///
 %truncate {
   @include text-overflow;
 }

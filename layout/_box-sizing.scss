@@ -1,14 +1,13 @@
-/**
- * @name box-sizing
- * @description Sets the box-sizing property on an element
- * This mixin sets the  box-sizing property on an element and sets it childeren to inherit the property
- *
- * @param {String} $selector (html) - the CSS selector on which to set the property
- * @param {String} $box-sizing - a valid box-sizing value
- *
- * @example http://sassmeister.com/gist/db21d4d01b41bb72294a
- */
-
+///
+/// @name box-sizing
+/// @description Sets the box-sizing property on an element
+/// This mixin sets the  box-sizing property on an element and sets it childeren to inherit the property
+///
+/// @param {String} $selector (html) - the CSS selector on which to set the property
+/// @param {String} $box-sizing - a valid box-sizing value
+///
+/// @example http://sassmeister.com/gist/db21d4d01b41bb72294a
+///
 @mixin box-sizing($selector: html, $box-sizing: $base-box-sizing) {
 
   $exception          : false;

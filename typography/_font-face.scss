@@ -1,15 +1,14 @@
-/**
- * @name font-face
- * @description Shorthand font-face declaration
- *
- * @param {String} $family - an alias reference to the font
- * @param {String} $file-path - full path to the file, assuming only extensions will differ
- * @param {String} $weight (normal) - font weight
- * @param {String} $style (normal) - font variant/style
- *
- * @example http://sassmeister.com/gist/79ddc3119c4b4266da2d
- */
-
+///
+/// @name font-face
+/// @description Shorthand font-face declaration
+///
+/// @param {String} $family - an alias reference to the font
+/// @param {String} $file-path - full path to the file, assuming only extensions will differ
+/// @param {String} $weight (normal) - font weight
+/// @param {String} $style (normal) - font variant/style
+///
+/// @example http://sassmeister.com/gist/79ddc3119c4b4266da2d
+///
 @mixin font-face ($font-family, $file-path, $font-weight: normal, $font-style: normal) {
 
   $exception           : false;
@@ -63,12 +62,10 @@
 }
 
 
-/**
- * @name face
- * @alias font-face
- *
- */
-
+///
+/// @name face
+/// @alias font-face
+///
 @mixin face($args...) {
   @include font-face($args...);
 }

@@ -1,13 +1,12 @@
-/**
- * @name list-reverse
- * @description Reverses the values in a list
- *
- * @param {List} $list - a list with values to reverse
- * @returns {List} $reversed-list
- *
- * @example http://sassmeister.com/gist/51870f70870b7c101c1e
- */
-
+///
+/// @name list-reverse
+/// @description Reverses the values in a list
+///
+/// @param {List} $list - a list with values to reverse
+/// @returns {List} $reversed-list
+///
+/// @example http://sassmeister.com/gist/51870f70870b7c101c1e
+///
 @function reverse-list($list) {
 
   // Error checking

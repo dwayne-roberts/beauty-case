@@ -1,12 +1,11 @@
-/**
- * @name text-hide
- * @description Hides text by either collapsing or indenting text off-canvas
- *
- * @param {String} $direction - (optional) direction in which text should be moved out of view
- *
- * @example http://sassmeister.com/gist/2424b3dcc4e0d34ff8ea
- */
-
+///
+/// @name text-hide
+/// @description Hides text by either collapsing or indenting text off-canvas
+///
+/// @param {String} $direction - (optional) direction in which text should be moved out of view
+///
+/// @example http://sassmeister.com/gist/2424b3dcc4e0d34ff8ea
+///
 @mixin text-hide($direction: left) {
 
   $exception: false;
@@ -43,11 +42,10 @@
 }
 
 
-/**
- * @placeholder
- * @alias text-hide
- */
-
+///
+/// @placeholder
+/// @alias text-hide
+///
 %text-hide {
   @include text-hide;
 }

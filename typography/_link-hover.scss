@@ -1,12 +1,11 @@
-/**
- * @name link-hover
- * @description Add the default hyperlink styling to an element
- * This adds the standard hyperlink style showing underlined text on mouse hover
- * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed
- *
- * @example http://sassmeister.com/gist/8a03e97b19d2d8c0fa0c
- */
-
+///
+/// @name link-hover
+/// @description Add the default hyperlink styling to an element
+/// This adds the standard hyperlink style showing underlined text on mouse hover
+/// @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed
+///
+/// @example http://sassmeister.com/gist/8a03e97b19d2d8c0fa0c
+///
 @mixin link-hover {
   text-decoration: none;
 
@@ -17,11 +16,10 @@
 }
 
 
-/**
- * @placeholder
- * @alias link-hover
- */
-
+///
+/// @placeholder
+/// @alias link-hover
+///
 %link-hover {
   @include link-hover;
 }

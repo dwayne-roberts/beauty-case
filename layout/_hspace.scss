@@ -1,15 +1,14 @@
-/**
- * @name hspace
- * @description Add horizontal space, margin or padding, following a layout style
- * Divide a given width over an elements horizontal margin or padding based on a certain style, top, bottom, or split
- *
- * @param {Number} $width    - the total width of the margins or padding
- * @param {String} $style    - the layout style left, right of split
- * @param {String} $property - the property margin or padding
- *
- * @example http://sassmeister.com/gist/d58f3bdf2378475a51db
- */
-
+///
+/// @name hspace
+/// @description Add horizontal space, margin or padding, following a layout style
+/// Divide a given width over an elements horizontal margin or padding based on a certain style, top, bottom, or split
+///
+/// @param {Number} $width    - the total width of the margins or padding
+/// @param {String} $style    - the layout style left, right of split
+/// @param {String} $property - the property margin or padding
+///
+/// @example http://sassmeister.com/gist/d58f3bdf2378475a51db
+///
 @mixin hspace($width, $style: split, $property: margin) {
 
   $exception: false;
@@ -47,21 +46,19 @@
 }
 
 
-/**
- * @name horizontal-margin
- * @alias horizontal-margin
- */
-
+///
+/// @name horizontal-margin
+/// @alias horizontal-margin
+///
 @mixin hspace($args...) {
   @include horizontal-margin($args...);
 }
 
 
-/**
- * @name horizontal-padding
- * @alias horizontal-padding
- */
-
+///
+/// @name horizontal-padding
+/// @alias horizontal-padding
+///
 @mixin hspace($args...) {
   @include horizontal-padding($args...);
 }

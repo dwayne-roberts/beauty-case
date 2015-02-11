@@ -1,15 +1,14 @@
-/**
- * @name letterpress
- * @description Create a letterpress text effect
- * By adding a thin white line around text it makes the text more readable by providing a sharper
- * separation between the letters and their background
- *
- * @param {Number} $opacity (45%) - the opacity of the shadow
- * @param {Color} $background (false) - a reference color for determining the font color
- *
- * @example http://sassmeister.com/gist/6482d67de0da17b2ba94
- */
-
+///
+/// @name letterpress
+/// @description Create a letterpress text effect
+/// By adding a thin white line around text it makes the text more readable by providing a sharper
+/// separation between the letters and their background
+///
+/// @param {Number} $opacity (45%) - the opacity of the shadow
+/// @param {Color} $background (false) - a reference color for determining the font color
+///
+/// @example http://sassmeister.com/gist/6482d67de0da17b2ba94
+///
 @mixin letterpress($opacity: 45%, $background: false) {
 
   $exception: false;
@@ -42,11 +41,10 @@
 }
 
 
-/**
- * @placeholder
- * @alias letterpress
- */
-
+///
+/// @placeholder
+/// @alias letterpress
+///
 %letterpress {
   @include letterpress;
 }

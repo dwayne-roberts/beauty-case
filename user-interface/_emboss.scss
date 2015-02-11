@@ -1,10 +1,9 @@
-/**
- * @name emboss
- * @description Stylize an object to look slightly raised
- *
- * @example http://sassmeister.com/gist/5bcbdb1f1df5bdfc1523
- */
-
+///
+/// @name emboss
+/// @description Stylize an object to look slightly raised
+///
+/// @example http://sassmeister.com/gist/5bcbdb1f1df5bdfc1523
+///
 @mixin emboss {
   box-shadow: rgba(0, 0, 0, .8) 1px 1px 0, inset rgba(255, 255, 255, .8) 2px 1px 0;
 }

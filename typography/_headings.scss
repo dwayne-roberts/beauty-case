@@ -1,14 +1,13 @@
-/**
- * @name headings
- * @description Generate a list of headings
- *
- * @param {Number} $from - the heading level to start from
- * @param {Number} $to - the heading level to stop at
- * @return {List} $headings - a list of headings
- *
- * @example http://sassmeister.com/gist/a267f756f3c6c0cf0c3b
- */
-
+///
+/// @name headings
+/// @description Generate a list of headings
+///
+/// @param {Number} $from - the heading level to start from
+/// @param {Number} $to - the heading level to stop at
+/// @return {List} $headings - a list of headings
+///
+/// @example http://sassmeister.com/gist/a267f756f3c6c0cf0c3b
+///
 @function headings($from: 1, $to: 6) {
 
   // Error checking

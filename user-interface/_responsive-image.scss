@@ -1,12 +1,10 @@
-/**
- * @name responsive-image
- * @description Keep images from scaling beyond the width of their parents
- * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed
- *
- * @example http://sassmeister.com/gist/26815f64f8ace22fc570
- */
-
-
+///
+/// @name responsive-image
+/// @description Keep images from scaling beyond the width of their parents
+/// @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed
+///
+/// @example http://sassmeister.com/gist/26815f64f8ace22fc570
+///
 @mixin responsive-image {
   display: block;
   height: auto;
@@ -14,11 +12,10 @@
 }
 
 
-/**
- * @placeholder
- * @alias responsive-image
- */
-
+///
+/// @placeholder
+/// @alias responsive-image
+///
 %responsive-image {
   @include responsive-image;
 }

@@ -3,27 +3,26 @@
 //
 // =================================================================================================
 
-/*
 
-  contains .................................... (fn) Checks if a list contains one or more defined values
-  data ........................................ (fn) Creates a straightforward data attribute selector
-  debug ....................................... (mx) Visually detect invalid markup
-  list-reverse ................................ (fn) Reverses the values in a list
-  list-to-str ................................. (fn) Converts a comma separated list to a "string"
-  px-to-em .................................... (fn) Converts a fixed px value to a relative em
-    em()
-  px-to-rem ................................... (fn) Converts a fixed px value to a relative root em
-    rem()
-  rem-to-px ................................... (fn) Converts a relative rem value to a fixed px value
-    px()
-  str-replace ................................. (fn) Replace all occurrences of a search string with the replacement
-  str-to-list ................................. (fn) Converts a "string" like list to a comma seperated list
-  strip-unit .................................. (fn) Strips the unit from a number
+// contains .................................... (fn) Checks if a list contains one or more defined values
+// data ........................................ (fn) Creates a straightforward data attribute selector
+// debug ....................................... (mx) Visually detect invalid markup
+// list-reverse ................................ (fn) Reverses the values in a list
+// list-to-str ................................. (fn) Converts a comma separated list to a "string"
+// px-to-em .................................... (fn) Converts a fixed px value to a relative em
+//   em()
+// px-to-rem ................................... (fn) Converts a fixed px value to a relative root em
+//   rem()
+// rem-to-px ................................... (fn) Converts a relative rem value to a fixed px value
+//   px()
+// str-replace ................................. (fn) Replace all occurrences of a search string with the replacement
+// str-to-list ................................. (fn) Converts a "string" like list to a comma seperated list
+// strip-unit .................................. (fn) Strips the unit from a number
 
-  TODO: create functions to convert strings to numbers and vica versa
-  TODO: create some basic append en prepend string functions
+// TODO: create functions to convert strings to numbers and vica versa
+// TODO: create some basic append en prepend string functions
 
-*/
+
 
 @import 'contains';
 @import 'data';

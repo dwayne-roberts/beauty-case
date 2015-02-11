@@ -1,15 +1,14 @@
-/**
- * @name vspace
- * @description Add vertical space, margin or padding, following a layout style
- * Divide a given height over an elements vertical margin or padding based on a certain style, top, bottom, or split
- *
- * @param {Number} $height   - the total height of the margin or padding
- * @param {String} $style    - the layout style top, bottom or split
- * @param {String} $property - the property margin or padding
- *
- * @example http://sassmeister.com/gist/a3fcac9200198181d1ed
- */
-
+///
+/// @name vspace
+/// @description Add vertical space, margin or padding, following a layout style
+/// Divide a given height over an elements vertical margin or padding based on a certain style, top, bottom, or split
+///
+/// @param {Number} $height   - the total height of the margin or padding
+/// @param {String} $style    - the layout style top, bottom or split
+/// @param {String} $property - the property margin or padding
+///
+/// @example http://sassmeister.com/gist/a3fcac9200198181d1ed
+///
 @mixin vspace($height, $style: split, $property: margin) {
 
   $exception: false;
@@ -47,21 +46,19 @@
 }
 
 
-/**
- * @name vertical-margin
- * @alias vertical-margin
- */
-
+///
+/// @name vertical-margin
+/// @alias vertical-margin
+///
 @mixin vspace($args...) {
   @include vertical-margin($args...);
 }
 
 
-/**
- * @name vertical-padding
- * @alias vertical-padding
- */
-
+///
+/// @name vertical-padding
+/// @alias vertical-padding
+///
 @mixin vspace($args...) {
   @include vertical-padding($args...);
 }

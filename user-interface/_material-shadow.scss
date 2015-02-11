@@ -1,13 +1,12 @@
-/**
- * Material Shadow
- * @description Create a material design inspired drop-shadow
- * The mixin takes a value between 1 and 5 for $depth, where 1 is closest to the surface and 5 is the farthest
- *
- * @param {Number} $depth - the depth of the shadow
- *
- * @example http://sassmeister.com/gist/20182275ea36b9257d0c
- */
-
+///
+/// Material Shadow
+/// @description Create a material design inspired drop-shadow
+/// The mixin takes a value between 1 and 5 for $depth, where 1 is closest to the surface and 5 is the farthest
+///
+/// @param {Number} $depth - the depth of the shadow
+///
+/// @example http://sassmeister.com/gist/20182275ea36b9257d0c
+///
 @mixin material-shadow($depth: 1) {
 
   $exception: false;

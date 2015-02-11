@@ -1,13 +1,12 @@
-/**
- * @name gradient-diagonal
- * @description Create a uniform diagonal gradient
- * Creates a linear gradient from the top left to the bottom right with uniformly spaced color stops
- *
- * @params {List} $color-stops - a list of colors
- *
- * @example http://sassmeister.com/gist/e56e25ad10ebcd4acac5
- */
-
+///
+/// @name gradient-diagonal
+/// @description Create a uniform diagonal gradient
+/// Creates a linear gradient from the top left to the bottom right with uniformly spaced color stops
+///
+/// @params {List} $color-stops - a list of colors
+///
+/// @example http://sassmeister.com/gist/e56e25ad10ebcd4acac5
+///
 @mixin gradient-diagonal($color-stops) {
 
   $exception: false;

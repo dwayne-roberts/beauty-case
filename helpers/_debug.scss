@@ -1,14 +1,13 @@
 // scss-lint:disable QualifyingElement
 
-/**
- * @description Visually detect invalid markup
- * A stylesheet to visually detect any improperly nested or potentially invalid markup, or any potentially inaccessible code.
- *
- * RED    --> Error
- * YELLOW --> Warning/Double check
- * NONE   --> Should be fine
- *
- */
+///
+/// @description Visually detect invalid markup
+/// A stylesheet to visually detect any improperly nested or potentially invalid markup, or any potentially inaccessible code.
+///
+/// RED    --> Error
+/// YELLOW --> Warning/Double check
+/// NONE   --> Should be fine
+///
 
 @if $debug-mode-enabled == true {
 

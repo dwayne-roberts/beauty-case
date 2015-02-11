@@ -1,14 +1,13 @@
-/**
- * @name establish-baseline
- * @description Set the base vertical rhythm
- * This mixin sets the vertical baseline on the html element. Setting the font-size and line-height in pixels
- *
- * @param {Number} $font-size ($base-font-size) - the base font size
- * @param {Number} $line-height ($base-line-height) - the base line height
- *
- * @example http://sassmeister.com/gist/4678b89874466d2a6fb0
- */
-
+///
+/// @name establish-baseline
+/// @description Set the base vertical rhythm
+/// This mixin sets the vertical baseline on the html element. Setting the font-size and line-height in pixels
+///
+/// @param {Number} $font-size ($base-font-size) - the base font size
+/// @param {Number} $line-height ($base-line-height) - the base line height
+///
+/// @example http://sassmeister.com/gist/4678b89874466d2a6fb0
+///
 @mixin establish-baseline($font-size: $base-font-size, $line-height: $base-line-height) {
 
   $exception: false;

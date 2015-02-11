@@ -1,13 +1,12 @@
-/**
- * @name stack
- * @description Return a full font-stack
- *
- * @param   {String} $name  - the name
- * @returns {List}   $stack - the font-stack
- *
- * @example http://sassmeister.com/gist/ed056395c050788884a4
- */
-
+///
+/// @name stack
+/// @description Return a full font-stack
+///
+/// @param   {String} $name  - the name
+/// @returns {List}   $stack - the font-stack
+///
+/// @example http://sassmeister.com/gist/ed056395c050788884a4
+///
 @function stack($name) {
 
   $stacks: (

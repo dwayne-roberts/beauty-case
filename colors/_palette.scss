@@ -1,16 +1,15 @@
-/**
- * @name palette
- * @description A specific tint or shade within a palette
- * Based on a specific scale, this function calculates a color adjustment for a given color
- *
- * @requires {Function} tint
- * @requires {Function} shade
- * @param {Color} $color - the base color
- * @returns {Color} $shade
- *
- * @example http://sassmeister.com/gist/13267d5819362a9a5640
- */
-
+///
+/// @name palette
+/// @description A specific tint or shade within a palette
+/// Based on a specific scale, this function calculates a color adjustment for a given color
+///
+/// @requires {Function} tint
+/// @requires {Function} shade
+/// @param {Color} $color - the base color
+/// @returns {Color} $shade
+///
+/// @example http://sassmeister.com/gist/13267d5819362a9a5640
+///
 @function palette($color, $shade: false) {
 
   $shade-options: lightest, lighter, light, dark, darker, darkest;
@@ -78,12 +77,10 @@
 
 
 
-/**
- * @name swatch
- * @alias palette
- *
- */
-
+///
+/// @name swatch
+/// @alias palette
+///
 @function swatch($args...) {
   @return palette($args...);
 }

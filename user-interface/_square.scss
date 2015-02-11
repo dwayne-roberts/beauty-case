@@ -1,12 +1,11 @@
-/**
- * @name square
- * @description Create a square
- *
- * @param {Number} $size - the size of the square
- *
- * @example http://sassmeister.com/gist/4a6e65b5455cd2509a63
- */
-
+///
+/// @name square
+/// @description Create a square
+///
+/// @param {Number} $size - the size of the square
+///
+/// @example http://sassmeister.com/gist/4a6e65b5455cd2509a63
+///
 @mixin square($size) {
 
   $exception: false;

@@ -1,14 +1,13 @@
-/**
- * @name text-selection
- * @description Set the text highlight color
- *
- * @param {Color} $bg-color - the color of the background after selection
- * @param {Color} $text-color - the color of the text after selection
- * @param {Color} $text-shadow (none) - the text shadow after selection
- *
- * @example http://sassmeister.com/gist/b7c558e9fce48c436875
- */
-
+///
+/// @name text-selection
+/// @description Set the text highlight color
+///
+/// @param {Color} $bg-color - the color of the background after selection
+/// @param {Color} $text-color - the color of the text after selection
+/// @param {Color} $text-shadow (none) - the text shadow after selection
+///
+/// @example http://sassmeister.com/gist/b7c558e9fce48c436875
+///
 @mixin text-selection($bg-color, $text-color, $text-shadow: 'none') {
 
   $exception: false;
@@ -33,11 +32,10 @@
 }
 
 
-/**
- * @name selection
- * @alias text-selection
- */
-
+///
+/// @name selection
+/// @alias text-selection
+///
 @mixin selection($args...) {
   @include text-selection($args...);
 }

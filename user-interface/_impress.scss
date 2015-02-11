@@ -1,10 +1,9 @@
-/**
- * @name impress
- * @description Stylize an object to look slightly sunken
- *
- * @example http://sassmeister.com/gist/5bcbdb1f1df5bdfc1523
- */
-
+///
+/// @name impress
+/// @description Stylize an object to look slightly sunken
+///
+/// @example http://sassmeister.com/gist/5bcbdb1f1df5bdfc1523
+///
 @mixin impress {
   box-shadow: rgba(255, 255, 255, .8) 1px 2px 0, inset rgba(0, 0, 0, .5) 1px 1px 0;
 }

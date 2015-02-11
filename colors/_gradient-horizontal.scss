@@ -1,13 +1,12 @@
-/**
- * @name gradient-horizontal
- * @description Create a uniform horizontal gradient
- * Creates a linear gradient from left to right with uniformly spaced color stops
- *
- * @params {List} $color-stops - a list of colors
- *
- * @example http://sassmeister.com/gist/5fd737e04a77d21ece39
- */
-
+///
+/// @name gradient-horizontal
+/// @description Create a uniform horizontal gradient
+/// Creates a linear gradient from left to right with uniformly spaced color stops
+///
+/// @params {List} $color-stops - a list of colors
+///
+/// @example http://sassmeister.com/gist/5fd737e04a77d21ece39
+///
 @mixin gradient-horizontal($color-stops) {
 
   $exception: false;

@@ -1,10 +1,9 @@
-/**
- * @name invisible
- * @description Hide content only visually, but have it available for screen readers
- *
- * @example http://sassmeister.com/gist/8055585ec1d8475941b4
- */
-
+///
+/// @name invisible
+/// @description Hide content only visually, but have it available for screen readers
+///
+/// @example http://sassmeister.com/gist/8055585ec1d8475941b4
+///
 @mixin invisible {
   border: 0;
   clip: rect(0 0 0 0);

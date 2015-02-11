@@ -1,11 +1,10 @@
-/**
- * @name link-unstyled
- * @description Removes hyperlink styling from an element
- * @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
- *
- * @example http://sassmeister.com/gist/8a03e97b19d2d8c0fa0c
- */
-
+///
+/// @name link-unstyled
+/// @description Removes hyperlink styling from an element
+/// @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+///
+/// @example http://sassmeister.com/gist/8a03e97b19d2d8c0fa0c
+///
 @mixin link-unstyled {
   color: inherit;
   cursor: text;
@@ -22,11 +21,10 @@
 }
 
 
-/**
- * @placeholder
- * @alias link-unstyled
- */
-
+///
+/// @placeholder
+/// @alias link-unstyled
+///
 %link-unstyled {
   @include link-unstyled;
 }

@@ -1,13 +1,12 @@
-/**
- * @name strip-unit
- * @description Strips the unit from a number
- *
- * @param {Number} $number - The number to strip the unit from
- * @returns {number} $unitless-number
- *
- * @example http://sassmeister.com/gist/2d58f71c52e4ecd6e809
- */
-
+///
+/// @name strip-unit
+/// @description Strips the unit from a number
+///
+/// @param {Number} $number - The number to strip the unit from
+/// @returns {number} $unitless-number
+///
+/// @example http://sassmeister.com/gist/2d58f71c52e4ecd6e809
+///
 @function strip-unit($number) {
 
   @if type-of($number) != 'number' {

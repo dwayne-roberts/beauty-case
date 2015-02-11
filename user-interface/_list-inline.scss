@@ -1,12 +1,11 @@
-/**
- * @name list-inline
- * @description An inline list with an optional delimiter
- *
- * @param {String} $delimiter - the delimiter to use
- *
- * @example http://sassmeister.com/gist/690469a83d1c93b815e7
- */
-
+///
+/// @name list-inline
+/// @description An inline list with an optional delimiter
+///
+/// @param {String} $delimiter - the delimiter to use
+///
+/// @example http://sassmeister.com/gist/690469a83d1c93b815e7
+///
 @mixin list-inline($delimiter: false) {
 
   $exception: false;

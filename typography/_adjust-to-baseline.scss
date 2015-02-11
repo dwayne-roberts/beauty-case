@@ -1,15 +1,14 @@
-/**
- * @name adjust-to-baseline
- * @description A line-height ratio that matches the baseline rhythm
- *
- * @param   {Number}  $height            - the height of the object
- * @param   {Boolean} $use-half-lines    - whether or not to round off to the nearest half line
- * @param   {Number}  $base-line         - the base-line height to set the object to
- * @returns {Number}  $line-height-ratio - the line-height-ratio
- *
- * @example http://sassmeister.com/gist/fd9683f018c8a63b8079
- */
-
+///
+/// @name adjust-to-baseline
+/// @description A line-height ratio that matches the baseline rhythm
+///
+/// @param   {Number}  $height            - the height of the object
+/// @param   {Boolean} $use-half-lines    - whether or not to round off to the nearest half line
+/// @param   {Number}  $base-line         - the base-line height to set the object to
+/// @returns {Number}  $line-height-ratio - the line-height-ratio
+///
+/// @example http://sassmeister.com/gist/fd9683f018c8a63b8079
+///
 @function adjust-to-baseline($height, $use-half-lines: $round-to-nearest-half-line, $base-line: $base-line-height) {
 
   // Error checking

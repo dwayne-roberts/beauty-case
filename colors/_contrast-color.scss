@@ -10,7 +10,7 @@
  * @param {Color} $light-color ($color-off-white) - a lighter color
  * @returns {Color} $contrast-color - a contrasting lighter or darker color
  *
- * @example http://sassmeister.com/gist/24b6af6596b1c3e0fb894
+ * @example http://sassmeister.com/gist/44b3b844c6a4b5acc3e3
  */
 
 @function contrast-color($background-color, $dark-color: $color-off-black, $light-color: $color-off-white) {

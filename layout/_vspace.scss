@@ -48,17 +48,17 @@
 
 ///
 /// @name vertical-margin
-/// @alias vertical-margin
+/// @alias vspace
 ///
-@mixin vspace($args...) {
-  @include vertical-margin($args...);
+@mixin vertical-margin($args...) {
+  @include vspace($args...);
 }
 
 
 ///
 /// @name vertical-padding
-/// @alias vertical-padding
+/// @alias vspace
 ///
-@mixin vspace($args...) {
-  @include vertical-padding($args...);
+@mixin vertical-padding($args...) {
+  @include vspace($args...);
 }

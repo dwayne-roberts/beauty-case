@@ -35,8 +35,8 @@
   $headings: ();
 
   @for $i from $from through $to {
-    $heading: h + $i
-    append($headings, $heading);
+    $heading: h + $i;
+    $headings: append($headings, $heading);
   }
 
   @return $headings;

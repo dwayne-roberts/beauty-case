@@ -9,7 +9,7 @@
 ///
 /// @example http://sassmeister.com/gist/a3fcac9200198181d1ed
 ///
-@mixin vspace($height, $style: split, $property: margin) {
+@mixin vspace($height, $style: bottom, $property: margin) {
 
   $exception: false;
   $property-options: margin, padding;

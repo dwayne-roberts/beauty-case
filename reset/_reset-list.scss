@@ -6,7 +6,10 @@
 /// @example http://sassmeister.com/gist/9588a8c972092513349d
 ///
 @mixin reset-list {
-  list-style: none;
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 

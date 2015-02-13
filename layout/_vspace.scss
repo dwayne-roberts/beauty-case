@@ -36,7 +36,9 @@
   @if not $exception {
     @if $style == bottom {
       #{$property}-bottom: $height;
+      #{$property}-top: 0;
     } @else if $style == top {
+      #{$property}-bottom: 0;
       #{$property}-top: $height;
     } @else {
       #{$property}-bottom: floor($height/2);

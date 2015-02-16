@@ -8,9 +8,10 @@
 ///
 /// @example http://sassmeister.com/gist/4678b89874466d2a6fb0
 ///
-@mixin establish-baseline($font-size: $base-font-size, $line-height: $base-line-height) {
+@mixin establish-baseline($font-size: $base-font-size, $line-height-ratio: $base-line-ratio) {
 
   $exception: false;
+  $browser-default-font-size: 16px;
 
   // Error checking
   @if type-of($font-size) != 'number' {
@@ -18,23 +19,26 @@
     $exception: true;
   }
 
-  @if type-of($line-height) != 'number' {
-    @warn "Type Error: Expected a $line-height of type 'number', provided (#{type-of($line-height)}) #{$line-height}";
+  @if type-of($line-height-ratio) != 'number' {
+    @warn "Type Error: Expected a $line-height-ratio of type 'number', provided (#{type-of($line-height-ratio)}) #{$line-height-ratio}";
     $exception: true;
   }
 
   // Logic
-  @if unitless($line-height) and $line-height < 3 {
-    $line-height: $font-size * $line-height;
+  @if not unitless($line-height-ratio) {
+    $line-height-ratio: $line-height-ratio/$font-size;
   }
 
   @if not $exception {
+
+    $relative-font-size: 100% * $font-size/$browser-default-font-size;
+
     html {
-      font-size: $font-size;
-      line-height: $line-height;
+      font-size: $relative-font-size;
+      line-height: $line-height-ratio;
     }
 
-    $base-font-size   : $font-size !global;
-    $base-line-height : $line-height !global;
+    $base-font-size  : $font-size !global;
+    $base-line-ratio : $line-height-ratio !global;
   }
 }

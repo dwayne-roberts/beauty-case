@@ -23,7 +23,7 @@
   }
 
   @if not $exception {
-    &::selection {
+    ::selection {
       background: $bg-color;
       color: $text-color;
       text-shadow: $text-shadow;

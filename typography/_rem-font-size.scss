@@ -33,3 +33,14 @@
     font-size: px-to-rem($size);
   }
 }
+
+
+
+///
+/// @name font-size
+/// @alias rem-font-size
+///
+@mixin font-size($args...) {
+  @include rem-font-size($args...);
+}
+

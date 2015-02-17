@@ -1,18 +1,18 @@
 ///
 /// @name size
 /// @description  A size in relation to some reference
-/// Returns a size from xxs to xxl that is factor of a maximum reference size
+/// Returns a size from xxs to xxl that is factor of a medium/base reference size
 ///
 /// @param {String} $size - the size to return
-/// @param {Number} $reference ($grid-gutter-width) - the reference to use
+/// @param {Number} $reference - the reference to use
 /// @return {Number} $abs-size
 ///
 /// @example http://sassmeister.com/gist/b13daa8b281c8d6da6d8
 ///
-@function size($size, $reference: $grid-gutter-width) {
+@function size($size, $reference) {
 
   $size-options : xxs, xs, sm, md, lg, xl, xxl;
-  $factors : 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875;
+  $factors : 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75;
 
   // Error checking
   @if type-of($size) != 'string' {

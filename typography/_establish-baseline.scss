@@ -8,7 +8,7 @@
 ///
 /// @example http://sassmeister.com/gist/4678b89874466d2a6fb0
 ///
-@mixin establish-baseline($font-size: $base-font-size, $line-height-ratio: $base-line-ratio) {
+@mixin establish-baseline($font-size: $base-font-size, $line-height-ratio: $base-line-height-relative) {
 
   $exception: false;
   $browser-default-font-size: 16px;
@@ -38,7 +38,7 @@
       line-height: $line-height-ratio;
     }
 
-    $base-font-size  : $font-size !global;
-    $base-line-ratio : $line-height-ratio !global;
-  }
+    $base-font-size            : $font-size !global;
+    $base-line-height-relative : $line-height-ratio !global;
+    }
 }

@@ -9,6 +9,7 @@
 // font-face ................................... (mx) Shorthand font-face declaration
 //   face()
 // font-size ................................... (mx) Set the font-size in rems with a px fallback
+// google-font ................................. (mx) Declare and import Google fonts
 // headings .................................... (fn) Generate a list of headings
 // letterpress ................................. (mx) Create a letterpress text effect
 // link-hover .................................. (fn) Add the default hyperlink styling to an element
@@ -34,6 +35,7 @@
 @import 'establish-baseline';
 @import 'font-face';
 @import 'font-size';
+@import 'google-font';
 @import 'headings';
 @import 'letterpress';
 @import 'link-hover';

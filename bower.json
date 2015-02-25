@@ -1,7 +1,7 @@
 {
   "name": "beauty-case",
   "description": "A toolkit for the make-up artists of the world wide web. A lightweight library of mixins, functions, helpers and placeholders which can be used throughout our Sass (MaxFactor) projects.",
-  "homepage": "https://bitbucket.org/dwayne-roberts/beauty-case/",
+  "homepage": "https://github.com/sky-radio-group/beauty-case/",
   "private": true,
   "main": "beauty-case.scss",
   "version": "1.0.0",

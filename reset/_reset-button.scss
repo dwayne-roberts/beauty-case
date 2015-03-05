@@ -1,0 +1,20 @@
+///
+/// @name reset-button
+/// @description Resets the style for buttons
+/// @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+///
+@mixin reset-button {
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  padding: 0;
+}
+
+
+///
+/// @placeholder
+/// @alias reset-button
+///
+%reset-button {
+  @include reset-button;
+}

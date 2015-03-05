@@ -1,0 +1,57 @@
+///
+/// @name base-lines
+/// @description  Height over a number of base-lines
+///
+/// @param  {Number} $lines
+/// @param  {Number} $base-line-height ($base-line-height-absolute)
+/// @return {Number} $height
+///
+/// @example http://sassmeister.com/gist/5ccab76a4f885275fe76
+///
+///
+@function base-lines($lines, $base-line-height: $base-line-height-absolute) {
+
+  // Error checking
+  @if type-of($lines) != 'number' {
+    @warn "Type Error: Expected a $lines of type 'number', provided #{type-of($lines)} #{$lines}";
+    @return false;
+  }
+
+  @if not unitless($lines) {
+    @warn "Unit Error: Unit of $lines - (#{unit($lines)}) was incorrect, expected a unitless";
+    @return false;
+  }
+
+  @if type-of($base-line-height) != 'number' {
+    @warn "Type Error: Expected a $base-line-height of type number, provided #{type-of($base-line-height)} #{$base-line-height}";
+    @return false;
+  }
+
+  @if unitless($base-line-height) {
+    @warn "Unit Error: Unit of $base-line-height - (#{unit($base-line-height)}) was incorrect, expected 'px or em'";
+    @return false;
+  }
+
+  // Logic
+  $height: $lines * $base-line-height;
+
+  @return $height;
+}
+
+
+///
+/// @name lines
+/// @alias base-lines
+///
+@function lines($args...) {
+  @return base-lines($args...);
+}
+
+
+///
+/// @name rows
+/// @alias base-lines
+///
+@function rows($args...) {
+  @return base-lines($args...);
+}

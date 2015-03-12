@@ -39,10 +39,17 @@
     }
   }
 
+  @if $use-px-fallback {
+    @if not function-exists(even-px) {
+      @warn 'Reference Error: Requirement; even-px() not found';
+      $exception: true;
+    }
+  }
+
   // Logic
   @if not $exception {
     @if not $use-rem-units or $use-px-fallback {
-      font-size: $size;
+      font-size: even-px($size); // oneven font sizes don't render well
     }
 
     @if $use-rem-units {

@@ -10,7 +10,7 @@
 
   $exception: false;
 
-  @if not $delimiter and type-of($delimiter) != 'string' {
+  @if not not $delimiter and type-of($delimiter) != 'string' {
     @warn "Type Error: Expected a $delimiter of type string, provided #{type-of($delimiter)} #{$delimiter}";
     $exception: true;
   }

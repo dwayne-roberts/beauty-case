@@ -14,6 +14,10 @@
     @return false;
   }
 
+  @if not unitless($number) {
+    $number: $number / ($number * 0 + 1);
+  }
+
   $eval: $number % 2 == 0;
 
   @return $eval;

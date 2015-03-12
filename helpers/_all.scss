@@ -7,6 +7,7 @@
 // contains .................................... (fn) Checks if a list contains one or more defined values
 // data ........................................ (fn) Creates a straightforward data attribute selector
 // debug ....................................... (mx) Visually detect invalid markup
+// even-px ..................................... (fn) A rounded up even pixel value
 // list-reverse ................................ (fn) Reverses the values in a list
 // list-to-str ................................. (fn) Converts a comma separated list to a "string"
 // px-to-em .................................... (fn) Converts a fixed px value to a relative em
@@ -26,6 +27,7 @@
 
 @import 'contains';
 @import 'data';
+@import 'even-px';
 @import 'list-reverse';
 @import 'list-to-str';
 @import 'px-to-em';

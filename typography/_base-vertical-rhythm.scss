@@ -1,14 +1,15 @@
 ///
-/// @name establish-baseline
+/// @name base-vertical-rhythm
 /// @description Set the base vertical rhythm
 /// This mixin sets the vertical baseline on the html element. Setting the font-size and line-height in pixels
 ///
-/// @param {Number} $font-size ($base-font-size) - the base font size
-/// @param {Number} $line-height ($base-line-height) - the base line height
+/// @param {Number}  $font-size    - the base font size
+/// @param {Number}  $line-height  - the base line height
+/// @param {Boolean} $use-relative - use a relative font size
 ///
 /// @example http://sassmeister.com/gist/4678b89874466d2a6fb0
 ///
-@mixin establish-baseline($font-size: $base-font-size, $line-height-ratio: $base-line-height-relative) {
+@mixin base-vertical-rhythm($font-size, $line-height-ratio, $use-relative: true) {
 
   $exception: false;
   $browser-default-font-size: 16px;
@@ -31,14 +32,11 @@
 
   @if not $exception {
 
-    $relative-font-size: 100% * $font-size/$browser-default-font-size;
-
-    html {
-      font-size: $relative-font-size;
-      line-height: $line-height-ratio;
+    @if $use-relative {
+      $font-size: 100% * $font-size/$browser-default-font-size;
     }
 
-    $base-font-size            : $font-size !global;
-    $base-line-height-relative : $line-height-ratio !global;
-    }
+    font-size: $relative-font-size;
+    line-height: $line-height-ratio;
+  }
 }

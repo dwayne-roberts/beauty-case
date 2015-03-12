@@ -5,7 +5,7 @@
 
 
 // adjust-to-baseline .......................... (fx) A line-height ratio that matches the baseline rhythm
-// establish-baseline .......................... (mx) Set the base vertical rhythm
+// base-vertical-rhythm ........................ (mx) Set the base vertical rhythm
 // font-face ................................... (mx) Shorthand font-face declaration
 //   face()
 // font-size ................................... (mx) Set the font-size in rems with a px fallback
@@ -32,7 +32,7 @@
 
 
 @import 'adjust-to-baseline';
-@import 'establish-baseline';
+@import 'base-vertical-rhythm';
 @import 'font-face';
 @import 'font-size';
 @import 'google-font';

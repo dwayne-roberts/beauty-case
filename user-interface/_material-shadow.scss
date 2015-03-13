@@ -27,28 +27,28 @@
   @if not $exception {
 
     @if $depth == 1 {
-      box-shadow: 0 1.5px 3px rgba(#000, .24),
-                  0 3px 8px rgba(#000, .05);
+      box-shadow: 0 2px 5px rgba(#000, .16),
+                  0 2px 10px rgba(#000, .12);
     }
 
     @if $depth == 2 {
-      box-shadow: 0 4px 7px rgba(#000, .23),
-                  0 8px 25px rgba(#000, .05);
+      box-shadow: 0 8px 17px rgba(#000, .20),
+                  0 6px 20px rgba(#000, .19);
     }
 
     @if $depth == 3 {
-      box-shadow: 0 7px 10px rgba(#000, .30),
-                  0 10px 50px rgba(#000, .12);
+      box-shadow: 0 12px 15px rgba(#000, .24),
+                  0 17px 50px rgba(#000, .19);
     }
 
     @if $depth == 4 {
-      box-shadow: 0 10px 15px rgba(#000, .28),
-                  0 15px 60px rgba(#000, .18);
+      box-shadow: 0 16px 28px rgba(#000, .22),
+                  0 25px 55px rgba(#000, .21);
     }
 
     @if $depth == 5 {
-      box-shadow: 0 16px 20px rgba(#000, .29),
-                  0 20px 65px rgba(#000, .18);
+      box-shadow: 0 27px 24px rgba(#000, .20),
+                  0 40px 77px rgba(#000, .22);
     }
   }
 }

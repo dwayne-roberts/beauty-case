@@ -1,59 +1,73 @@
 ///
 /// @name font-size
-/// @description Set the font-size in rems with a px fallback
+/// @description Safe method for setting the font-size
 ///
 /// @requires {Function} px-to-rem
-/// @param {Number} $size - the font-size in pixels
+/// @param {Number} $size - the font-size
 ///
 /// @example http://sassmeister.com/gist/c6886aa3ecf7dbef7fa8
 ///
 @mixin font-size($size) {
 
   $exception: false;
+  $eval: false;
+  $size-string-options: 'medium','xx-small','x-small','small','large','x-large','xx-large','smaller','larger','initial','inherit';
 
   // Error checking {
-  @if type-of($size) != 'number' {
-    @warn "Type Error: Expected a $size of type 'number', provided #{type-of($size)} #{$size}";
+  @if type-of($size) == 'string' {
+
+    @if not index($size-string-options, $size) {
+      @warn "Range Error: #{$size} was not found among valid options: #{$size-string-options}";
+      $exception: true;
+    }
+
+  } @else if type-of($size) == 'number' {
+
+    @if unit($size) == 'px' {
+      $eval: true;
+      @if not variable-exists(use-rem-units) {
+        @warn 'Reference Error: Requirement; $us-rem-units not found';
+        $use-rem-units: false !global;
+      }
+
+      @if not variable-exists(use-px-fallback) {
+        @warn 'Reference Error: Requirement; $use-px-fallback not found';
+        $use-px-fallback: false !global;
+      }
+
+      @if $use-rem-units {
+        @if not function-exists(px-to-rem) {
+          @warn 'Reference Error: Requirement; px-to-rem() not found';
+          $exception: true;
+        }
+      }
+
+      @if $use-px-fallback {
+        @if not function-exists(even-px) {
+          @warn 'Reference Error: Requirement; even-px() not found';
+          $exception: true;
+        }
+      }
+
+    }
+  } @else {
+    @warn "Type Error: Expected a $size of type 'number' or 'string', provided #{type-of($size)} #{$size}";
     $exception: true;
   }
 
-  @if unit($size) != 'px' {
-    @warn "Unit Error: Unit of $size - (#{unit($size)}) was incorrect, expected 'px'";
-    $exception: true;
-  }
-
-  @if not variable-exists(use-rem-units) {
-    @warn 'Reference Error: Requirement; $us-rem-units not found';
-    $use-rem-units: false !global;
-  }
-
-  @if not variable-exists(use-px-fallback) {
-    @warn 'Reference Error: Requirement; $use-px-fallback not found';
-    $use-px-fallback: false !global;
-  }
-
-  @if $use-rem-units {
-    @if not function-exists(px-to-rem) {
-      @warn 'Reference Error: Requirement; px-to-rem() not found';
-      $exception: true;
-    }
-  }
-
-  @if $use-px-fallback {
-    @if not function-exists(even-px) {
-      @warn 'Reference Error: Requirement; even-px() not found';
-      $exception: true;
-    }
-  }
 
   // Logic
   @if not $exception {
-    @if not $use-rem-units or $use-px-fallback {
-      font-size: even-px($size); // oneven font sizes don't render well
-    }
+    @if $eval {
+      @if not $use-rem-units or $use-px-fallback {
+        font-size: even-px($size); // oneven font sizes don't render well
+      }
 
-    @if $use-rem-units {
-      font-size: px-to-rem($size);
+      @if $use-rem-units {
+        font-size: px-to-rem($size);
+      }
+    } @else {
+      font-size: $size;
     }
   }
 }

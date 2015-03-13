@@ -1,0 +1,22 @@
+///
+/// @name inline-block
+/// @description Reset an inline-block element to defaults
+/// @deprecated Convert to placeholder as soon as placeholder scoping issues are fixed.
+///
+/// @example
+///
+@mixin inline-block {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+
+///
+/// @placeholder
+/// @alias inline-block
+///
+%inline-block {
+  @include inline-block;
+}
+

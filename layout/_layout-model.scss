@@ -1,5 +1,6 @@
+
 ///
-/// @name layout
+/// @name layout-model
 /// @description Set the padding of margins of an element using a list or string
 ///
 /// @requires {Function} list-to-str()
@@ -8,7 +9,7 @@
 ///
 /// http://sassmeister.com/gist/fdf22aa4fd1c27295346
 ///
-@mixin layout($property, $value) {
+@mixin layout-model($property, $value) {
 
   $exception: false;
   $property-options: margin, padding;
@@ -46,3 +47,5 @@
   }
 }
 
+
+// Had to change name to layout-model to prevent collision with Susy's layout() mixin

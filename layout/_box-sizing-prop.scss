@@ -1,5 +1,5 @@
 ///
-/// @name box-sizing
+/// @name box-sizing-prop
 /// @description Sets the box-sizing property on an element
 /// This mixin sets the  box-sizing property on an element and sets it childeren to inherit the property
 ///
@@ -8,7 +8,7 @@
 ///
 /// @example http://sassmeister.com/gist/db21d4d01b41bb72294a
 ///
-@mixin box-sizing($selector: html, $box-sizing: $base-box-sizing) {
+@mixin box-sizing-prop($selector: html, $box-sizing: $base-box-sizing) {
 
   $exception          : false;
   $box-sizing-options : content-box, border-box, inherit, initial;

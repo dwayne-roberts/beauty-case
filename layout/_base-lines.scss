@@ -40,15 +40,6 @@
 
 
 ///
-/// @name lines
-/// @alias base-lines
-///
-@function lines($args...) {
-  @return base-lines($args...);
-}
-
-
-///
 /// @name rows
 /// @alias base-lines
 ///

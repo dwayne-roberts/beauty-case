@@ -1,0 +1,41 @@
+///
+/// @name bounce
+/// @description In place animation which bounces an element vertically
+///
+/// @param {Number} $duration - the length of time the animation should run
+/// @param {Number} $delay - the time to delay the animation before it start
+/// @returns {Number} $count - the number of times an animation should run
+///
+/// @example http://sassmeister.com/gist/8b8731a932f83647454e
+///
+
+
+@if $animation-use-bounce == true {
+  @keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+      transform: translate3d(0 ,0, 0);
+    }
+
+    40%, 43% {
+      transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+      transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+      transform: translate3d(0,-4px, 0);
+    }
+  }
+}
+
+@mixin bounce($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
+  @if $animation-use-bounce == true {
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-iteration-count: $count;
+    animation-name: bounce;
+    transform-origin: center bottom;
+  }
+}

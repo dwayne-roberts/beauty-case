@@ -29,6 +29,7 @@
 // =============================================
 //
 // fall-out .................................... (mx) Animate an element elastically dropping out of view
+// zoom-out .................................... (mx) Animate an element elastically zooming it out
 
 
 @import 'attention-seekers/blink';
@@ -46,4 +47,5 @@
 @import 'entrances/slide-in-right';
 
 @import 'exits/fall-out';
+@import 'exits/zoom-out';
 

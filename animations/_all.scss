@@ -19,6 +19,7 @@
 // =============================================
 //
 // drop in ..................................... (mx) Animate an element elastically dropping it into view
+// fade in ..................................... (mx) Animate an element fading it into view
 // pop in ...................................... (mx) Animate an element elastically popping it into view
 // rotate-in ................................... (mx) Animate an element rotating it into view
 // slide-in-left ............................... (mx) Animate an element elastically sliding in view from the left
@@ -41,6 +42,7 @@
 @import 'attention-seeker/stretch';
 
 @import 'entrances/drop-in';
+@import 'entrances/fade-in';
 @import 'entrances/pop-in';
 @import 'entrances/rotate-in';
 @import 'entrances/slide-in-left';

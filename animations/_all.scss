@@ -15,6 +15,13 @@
 // stretch ..................................... (mx) Animate an element in-place stretching it horizontally
 
 
+// Entrances
+// =============================================
+//
+// pop in ...................................... (mx) Animate an element elastically popping it into view
+
+
+
 @import 'attention-seekers/blink';
 @import 'attention-seekers/bounce';
 @import 'attention-seeker/jelly';
@@ -22,3 +29,5 @@
 @import 'attention-seeker/rotate';
 @import 'attention-seeker/shake';
 @import 'attention-seeker/stretch';
+
+@import 'entrances/pop-in';

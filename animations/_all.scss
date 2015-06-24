@@ -8,6 +8,7 @@
 // bounce ...................................... (mx) Animate an element in-place vertically up and down
 // jelly ....................................... (mx) Animate an element in-place making it behave elastically like jelly
 // pulsate ..................................... (mx) Animate the pulsating of an element in-place making it grow and shrink
+// rotate ...................................... (mx) Animate an element in-place rotating it at it's centre
 // shake ....................................... (mx) Animate an element in-place shaking it horizontally
 // stretch ..................................... (mx) Animate an element in-place stretching it horizontally
 
@@ -16,5 +17,6 @@
 @import 'attention-seekers/bounce';
 @import 'attention-seeker/jelly';
 @import 'attention-seeker/pulsate';
+@import 'attention-seeker/rotate';
 @import 'attention-seeker/shake';
 @import 'attention-seeker/stretch';

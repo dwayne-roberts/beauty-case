@@ -9,6 +9,7 @@
 // jelly ....................................... (mx) Animate an element in-place making it behave elastically like jelly
 // pulsate ..................................... (mx) Animate the pulsating of an element in-place making it grow and shrink
 // shake ....................................... (mx) Animate an element in-place shaking it horizontally
+// stretch ..................................... (mx) Animate an element in-place stretching it horizontally
 
 
 @import 'attention-seekers/blink';
@@ -16,3 +17,4 @@
 @import 'attention-seeker/jelly';
 @import 'attention-seeker/pulsate';
 @import 'attention-seeker/shake';
+@import 'attention-seeker/stretch';

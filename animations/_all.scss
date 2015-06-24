@@ -4,11 +4,13 @@
 // =================================================================================================
 
 
-// blink ....................................... (mx) Animate fading in and out of an element in-place
+// blink ....................................... (mx) Animate the fading in and out of an element in-place
 // bounce ...................................... (mx) Animate an element in-place vertically up and down
 // jelly ....................................... (mx) Animate an element in-place making it behave elastically like jelly
+// pulsate ..................................... (mx) Animate the pulsating of an element in-place making it grow and shrink
 
 
 @import 'attention-seekers/blink';
 @import 'attention-seekers/bounce';
 @import 'attention-seeker/jelly';
+@import 'attention-seeker/pulsate';

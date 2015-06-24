@@ -18,6 +18,7 @@
 // Entrances
 // =============================================
 //
+// drop in ..................................... (mx) Animate an element elastically dropping it into view
 // pop in ...................................... (mx) Animate an element elastically popping it into view
 
 
@@ -30,4 +31,5 @@
 @import 'attention-seeker/shake';
 @import 'attention-seeker/stretch';
 
+@import 'entrances/drop-in';
 @import 'entrances/pop-in';

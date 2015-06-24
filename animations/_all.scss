@@ -25,6 +25,11 @@
 // slide-in-right .............................. (mx) Animate an element elastically sliding in view from the right
 
 
+// Exits
+// =============================================
+//
+// fall-out .................................... (mx) Animate an element elastically dropping out of view
+
 
 @import 'attention-seekers/blink';
 @import 'attention-seekers/bounce';
@@ -39,3 +44,6 @@
 @import 'entrances/rotate-in';
 @import 'entrances/slide-in-left';
 @import 'entrances/slide-in-right';
+
+@import 'exits/fall-out';
+

@@ -31,6 +31,7 @@
 //
 // fade-out .................................... (mx) Animate an element fading it out of view
 // fall-out .................................... (mx) Animate an element elastically dropping out of view
+// slide-out-left .............................. (mx) Animate an element elastically sliding it out of view to the left
 // vanish-out .................................. (mx) Animate an element zooming in and vanishing it out of view
 // zoom-out .................................... (mx) Animate an element elastically zooming it out
 
@@ -52,5 +53,6 @@
 
 @import 'exits/fade-out';
 @import 'exits/fall-out';
+@import 'exits/slide-out-left';
 @import 'exits/vanish-out';
 @import 'exits/zoom-out';

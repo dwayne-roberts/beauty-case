@@ -24,6 +24,7 @@
 // rotate-in ................................... (mx) Animate an element rotating it into view
 // slide-in-left ............................... (mx) Animate an element elastically sliding in view from the left
 // slide-in-right .............................. (mx) Animate an element elastically sliding in view from the right
+// vanish-in ................................... (mx) Animate an element zooming out and vanishing it into view
 
 
 // Exits
@@ -51,6 +52,7 @@
 @import 'entrances/rotate-in';
 @import 'entrances/slide-in-left';
 @import 'entrances/slide-in-right';
+@import 'entrances/vanish-in';
 
 @import 'exits/fade-out';
 @import 'exits/fall-out';

@@ -1,5 +1,5 @@
 ///
-/// @name zoom-out
+/// @name pop-out
 /// @description Hiding animation elastically zooming an element out
 ///
 /// @param {Number} $duration - the length of time the animation should run
@@ -9,8 +9,8 @@
 /// @example http://sassmeister.com/gist/9ffbfd7301cf91a17a77
 ///
 
-@if $animation-use-zoom-out == true {
-  @keyframes zoomOut {
+@if $animation-use-pop-out == true {
+  @keyframes popOut {
     20% {
       transform: scale3d(.9, .9, .9);
     }
@@ -27,12 +27,12 @@
   }
 }
 
-@mixin zoom-out($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
-  @if $animation-use-zoom-out == true {
+@mixin pop-out($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
+  @if $animation-use-pop-out == true {
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: forwards;
     animation-iteration-count: $count;
-    animation-name: zoomOut;
+    animation-name: popOut;
   }
 }

@@ -31,10 +31,10 @@
 //
 // fade-out .................................... (mx) Animate an element fading it out of view
 // fall-out .................................... (mx) Animate an element elastically dropping out of view
+// pop-out ..................................... (mx) Animate an element elastically zooming it out
 // slide-out-left .............................. (mx) Animate an element elastically sliding it out of view to the left
 // slide-out-right ............................. (mx) Animate an element elastically sliding it out of view to the right
 // vanish-out .................................. (mx) Animate an element zooming in and vanishing it out of view
-// zoom-out .................................... (mx) Animate an element elastically zooming it out
 
 
 @import 'attention-seekers/blink';
@@ -54,7 +54,7 @@
 
 @import 'exits/fade-out';
 @import 'exits/fall-out';
+@import 'exits/pop-out';
 @import 'exits/slide-out-left';
 @import 'exits/slide-out-right';
 @import 'exits/vanish-out';
-@import 'exits/zoom-out';

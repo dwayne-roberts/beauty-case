@@ -39,6 +39,7 @@
   @if $animation-use-slide-in-left == true {
     animation-delay: $delay;
     animation-duration: $duration;
+    animation-fill-mode: both;
     animation-iteration-count: $count;
     animation-name: slideInLeft;
   }

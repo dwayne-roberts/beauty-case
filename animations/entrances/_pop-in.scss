@@ -46,6 +46,7 @@
   @if $animation-use-pop-in == true {
     animation-delay: $delay;
     animation-duration: $duration;
+    animation-fill-mode: both;
     animation-iteration-count: $count;
     animation-name: popIn;
   }

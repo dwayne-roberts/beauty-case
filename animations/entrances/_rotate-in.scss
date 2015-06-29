@@ -27,6 +27,7 @@
   @if $animation-use-rotate-in == true {
     animation-delay: $delay;
     animation-duration: $duration;
+    animation-fill-mode: both;
     animation-iteration-count: $count;
     animation-name: rotateIn;
     backface-visibility: visible;

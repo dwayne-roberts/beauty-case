@@ -27,6 +27,7 @@
   @if $animation-use-vanish-out == true {
     animation-delay: $delay;
     animation-duration: $duration;
+    animation-fill-mode: forwards;
     animation-iteration-count: $count;
     animation-name: vanishOut;
     transform-origin: 50% 50%;

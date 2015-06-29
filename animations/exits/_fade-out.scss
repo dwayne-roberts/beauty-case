@@ -21,6 +21,7 @@
   @if $animation-use-fade-out == true {
     animation-delay: $delay;
     animation-duration: $duration;
+    animation-fill-mode: forwards;
     animation-iteration-count: $count;
     animation-name: fadeOut;
   }

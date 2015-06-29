@@ -27,6 +27,7 @@
   @if $animation-use-slide-out-right == true {
     animation-delay: $delay;
     animation-duration: $duration;
+    animation-fill-mode: forwards;
     animation-iteration-count: $count;
     animation-name: slideOutRight;
   }

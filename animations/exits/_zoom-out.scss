@@ -31,6 +31,7 @@
   @if $animation-use-zoom-out == true {
     animation-delay: $delay;
     animation-duration: $duration;
+    animation-fill-mode: forwards;
     animation-iteration-count: $count;
     animation-name: zoomOut;
   }

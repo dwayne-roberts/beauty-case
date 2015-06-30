@@ -47,6 +47,7 @@
 // background-sweep-left ...................... (mx) Hover animation which sweeps a background color from right to left
 // background-sweep-right ..................... (mx) Hover animation which sweeps a background color from left to right
 // background-sweep-up ........................ (mx) Hover animation which sweeps a background color from bottom top top
+// background-sweep-radial .................... (mx) Hover animation which sweeps a background color from the center outwards
 
 
 
@@ -79,3 +80,4 @@
 @import 'hovers/background-sweep-left';
 @import 'hovers/background-sweep-right';
 @import 'hovers/background-sweep-up';
+@import 'hovers/background-sweep-radial';

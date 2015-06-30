@@ -51,6 +51,7 @@
 // border-fade-in ............................. (mx) Hover animation which fades a border color in
 // underline-sweep-center ..................... (mx) Hover animation which sweeps a bottom border from its center
 // underline-sweep-left ....................... (mx) Hover animation which sweeps a border from right to left
+// underline-sweep-right ...................... (mx) Hover animation which sweeps a border from left to right
 
 
 
@@ -87,3 +88,4 @@
 @import 'hovers/border-fade-in';
 @import 'hovers/underline-sweep-center';
 @import 'hovers/underline-sweep-left';
+@import 'hovers/underline-sweep-right';

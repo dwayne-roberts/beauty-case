@@ -1,6 +1,6 @@
 ///
 /// @name background-fade-in
-/// @description Transitions which fades a background-color in
+/// @description Hover animation which fades a background-color in
 ///
 /// @param {Color} $color - the background color to fade to
 /// @param {Number} $duration - the length of time the transition should run
@@ -11,9 +11,15 @@
 
 @mixin background-fade-in($color, $duration: $transition-duration, $delay: $transition-delay) {
   @if $transition-use-background-fade-in == true {
-    background-color: $color;
     overflow: hidden;
     transition-delay: $delay;
     transition-duration: $duration;
+    transition-property: background-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color;
+    }
   }
 }

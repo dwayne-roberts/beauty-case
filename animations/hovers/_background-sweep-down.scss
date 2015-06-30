@@ -1,0 +1,41 @@
+///
+/// @name background-sweep-down
+/// @description Hover animation which sweeps a background color from top to bottom
+///
+/// @param {Color} $color - the background color to fade to
+/// @param {Number} $duration - the length of time the transition should run
+/// @param {Number} $delay - the time to delay the transition before it start
+///
+/// @example http://sassmeister.com/gist/1a9867958397da7b1610
+///
+
+@mixin background-sweep-down($color, $duration: $transition-duration, $delay: $transition-delay) {
+  @if $transition-use-background-sweep-down == true {
+    position: relative;
+    transform: translateZ(0);
+
+    &:before {
+      background-color: $color;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: scaleY(0);
+      transform-origin: 50% 0;
+      transition-delay: $delay;
+      transition-duration: $duration;
+      transition-property: transform;
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &:before {
+        transform: scaleY(1);
+      }
+    }
+  }
+}

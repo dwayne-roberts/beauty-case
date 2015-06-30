@@ -39,6 +39,15 @@
 // vanish-out .................................. (mx) Animate an element zooming in and vanishing it out of view
 
 
+// Hovers
+// =============================================
+//
+// background-fade-in ......................... (mx) Hover animation which fades a background color in
+// background-sweep-down ...................... (mx) Hover animation which sweeps a background color from top to bottom
+
+
+
+
 @import 'attention-seekers/blink';
 @import 'attention-seekers/bounce';
 @import 'attention-seeker/jelly';
@@ -62,3 +71,6 @@
 @import 'exits/slide-out-left';
 @import 'exits/slide-out-right';
 @import 'exits/vanish-out';
+
+@import 'hovers/background-fade-in';
+@import 'hovers/background-sweep-down';

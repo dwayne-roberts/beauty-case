@@ -1,0 +1,42 @@
+///
+/// @name underline-sweep-center
+/// @description Hover animation which reveals a bottom border from the center
+///
+/// @param {Color} $color - the border color to fade to
+/// @param {Number} $width - the border width
+/// @param {Number} $duration - the length of time the transition should run
+/// @param {Number} $delay - the time to delay the transition before it start
+///
+/// @example http://sassmeister.com/gist/ece74720bd16d8d9a36c
+///
+
+@mixin underline-sweep-center($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
+  @if $transition-use-underline-sweep-center == true {
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0);
+
+    &:before {
+      background-color: $color;
+      bottom: 0;
+      content: '';
+      height: $width;
+      left: 50%;
+      position: absolute;
+      right: 50%;
+      transition-delay: $delay;
+      transition-duration: $duration;
+      transition-property: left, right;
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &:before {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}

@@ -50,6 +50,7 @@
 // background-sweep-radial .................... (mx) Hover animation which sweeps a background color from the center outwards
 // border-fade-in ............................. (mx) Hover animation which fades a border color in
 // underline-sweep-center ..................... (mx) Hover animation which sweeps a bottom border from its center
+// underline-sweep-left ....................... (mx) Hover animation which sweeps a border from right to left
 
 
 
@@ -85,3 +86,4 @@
 @import 'hovers/background-sweep-radial';
 @import 'hovers/border-fade-in';
 @import 'hovers/underline-sweep-center';
+@import 'hovers/underline-sweep-left';

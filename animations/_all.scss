@@ -44,6 +44,7 @@
 //
 // background-fade-in ......................... (mx) Hover animation which fades a background color in
 // background-sweep-down ...................... (mx) Hover animation which sweeps a background color from top to bottom
+// background-sweep-left ...................... (mx) Hover animation which sweeps a background color from right to left
 
 
 
@@ -74,3 +75,4 @@
 
 @import 'hovers/background-fade-in';
 @import 'hovers/background-sweep-down';
+@import 'hovers/background-sweep-left';

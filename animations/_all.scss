@@ -48,6 +48,7 @@
 // background-sweep-right-hover ................. (mx) Hover animation which sweeps a background color from left to right
 // background-sweep-up-hover .................... (mx) Hover animation which sweeps a background color from bottom top top
 // background-sweep-radial-hover ................ (mx) Hover animation which sweeps a background color from the center outwards
+// border-hover ................................. (mx) Hover animation which reveals a border
 // border-fade-in-hover ......................... (mx) Hover animation which fades a border color in
 // overline-sweep-center-hover .................. (mx) Hover animation which sweeps a top border from its center
 // overline-sweep-left-hover .................... (mx) Hover animation which sweeps a top border from right to left
@@ -88,6 +89,7 @@
 @import 'hovers/background-sweep-right-hover';
 @import 'hovers/background-sweep-up-hover';
 @import 'hovers/background-sweep-radial-hover';
+@import 'hovers/border';
 @import 'hovers/border-fade-in-hover';
 @import 'hovers/overline-sweep-center-hover';
 @import 'hovers/overline-sweep-left-hover';

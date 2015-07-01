@@ -54,6 +54,7 @@
 // overline-sweep-center-hover .................. (mx) Hover animation which sweeps a top border from its center
 // overline-sweep-left-hover .................... (mx) Hover animation which sweeps a top border from right to left
 // overline-sweep-right-hover ................... (mx) Hover animation which sweeps a top border from left to right
+// underline-hover .............................. (mx) Hover animation which reveals a bottom border
 // underline-sweep-center-hover ................. (mx) Hover animation which sweeps a bottom border from its center
 // underline-sweep-left-hover ................... (mx) Hover animation which sweeps a bottom border from right to left
 // underline-sweep-right-hover .................. (mx) Hover animation which sweeps a bottom border from left to right
@@ -96,6 +97,7 @@
 @import 'hovers/overline-sweep-center-hover';
 @import 'hovers/overline-sweep-left-hover';
 @import 'hovers/overline-sweep-right-hover';
+@import 'hovers/underline';
 @import 'hovers/underline-sweep-center-hover';
 @import 'hovers/underline-sweep-left-hover';
 @import 'hovers/underline-sweep-right-hover';

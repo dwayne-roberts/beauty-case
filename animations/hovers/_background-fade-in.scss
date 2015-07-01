@@ -10,7 +10,7 @@
 ///
 
 @mixin background-fade-in($color, $duration: $transition-duration, $delay: $transition-delay) {
-  @if $transition-use-background-fade-in == true {
+  @if $animation-use-background-fade-in == true {
     overflow: hidden;
     transition-delay: $delay;
     transition-duration: $duration;

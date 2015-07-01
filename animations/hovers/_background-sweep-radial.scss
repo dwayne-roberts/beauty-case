@@ -10,7 +10,7 @@
 ///
 
 @mixin background-sweep-radial($color, $duration: $transition-duration, $delay: $transition-delay) {
-  @if $transition-use-background-sweep-radial == true {
+  @if $animation-use-background-sweep-radial == true {
     overflow: hidden;
     position: relative;
     transform: translateZ(0);

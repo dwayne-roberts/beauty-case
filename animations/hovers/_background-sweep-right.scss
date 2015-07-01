@@ -10,7 +10,7 @@
 ///
 
 @mixin background-sweep-right($color, $duration: $transition-duration, $delay: $transition-delay) {
-  @if $transition-use-background-sweep-right == true {
+  @if $animation-use-background-sweep-right == true {
     position: relative;
     transform: translateZ(0);
 

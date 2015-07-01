@@ -11,7 +11,7 @@
 ///
 
 @mixin underline-sweep-center($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
-  @if $transition-use-underline-sweep-center == true {
+  @if $animation-use-underline-sweep-center == true {
     overflow: hidden;
     position: relative;
     transform: translateZ(0);

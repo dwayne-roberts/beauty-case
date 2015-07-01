@@ -11,7 +11,7 @@
 ///
 
 @mixin border-fade-in($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
-  @if $transition-use-border-fade-in == true {
+  @if $animation-use-border-fade-in == true {
     border: $width solid transparent;
     transition-delay: $delay;
     transition-duration: $duration;

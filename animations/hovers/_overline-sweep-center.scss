@@ -5,12 +5,12 @@
 /// @param {Color} $color - the border color to fade to
 /// @param {Number} $width - the border width
 /// @param {Number} $duration - the length of time the transition should run
-/// @param {Number} $delay - the time to delay the transition before it start
+/// @param {Number} $delay - the time to delay the transition before it starts
 ///
 /// @example http://sassmeister.com/gist/c69624dd539d81f78978
 ///
 
-@mixin overline-sweep-center($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
+@mixin overline-sweep-center-hover($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-overline-sweep-center == true {
     overflow: hidden;
     position: relative;
@@ -18,12 +18,12 @@
 
     &:before {
       background-color: $color;
-      top: 0;
       content: '';
       height: $width;
       left: 50%;
       position: absolute;
       right: 50%;
+      top: 0;
       transition-delay: $delay;
       transition-duration: $duration;
       transition-property: left, right;

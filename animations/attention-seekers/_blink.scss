@@ -3,7 +3,7 @@
 /// @description In place animation which fades an element in and out
 ///
 /// @param {Number} $duration - the length of time the animation should run
-/// @param {Number} $delay - the time to delay the animation before it start
+/// @param {Number} $delay - the time to delay the animation before it starts
 /// @param {Number} $count - the number of times an animation should run
 ///
 /// @example http://sassmeister.com/gist/2a77a98e204d3698776b
@@ -22,7 +22,7 @@
   }
 }
 
-@mixin blink($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
+@mixin blink-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-blink == true {
     animation-delay: $delay;
     animation-duration: $duration;

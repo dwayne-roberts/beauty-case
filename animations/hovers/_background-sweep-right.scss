@@ -4,12 +4,12 @@
 ///
 /// @param {Color} $color - the background color to fade to
 /// @param {Number} $duration - the length of time the transition should run
-/// @param {Number} $delay - the time to delay the transition before it start
+/// @param {Number} $delay - the time to delay the transition before it starts
 ///
 /// @example http://sassmeister.com/gist/2424ecd16eb2b20757b6
 ///
 
-@mixin background-sweep-right($color, $duration: $transition-duration, $delay: $transition-delay) {
+@mixin background-sweep-right-hover($color, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-background-sweep-right == true {
     position: relative;
     transform: translateZ(0);

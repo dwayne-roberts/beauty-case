@@ -3,7 +3,7 @@
 /// @description Revealing animation rotating an element into view
 ///
 /// @param {Number} $duration - the length of time the animation should run
-/// @param {Number} $delay - the time to delay the animation before it start
+/// @param {Number} $delay - the time to delay the animation before it starts
 /// @param {Number} $count - the number of times an animation should run
 ///
 /// @example http://sassmeister.com/gist/ccb768983a971abde5bc
@@ -23,7 +23,7 @@
   }
 }
 
-@mixin rotate-in($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
+@mixin rotate-in-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-rotate-in == true {
     animation-delay: $delay;
     animation-duration: $duration;

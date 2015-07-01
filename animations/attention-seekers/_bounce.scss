@@ -3,7 +3,7 @@
 /// @description In place animation which bounces an element vertically
 ///
 /// @param {Number} $duration - the length of time the animation should run
-/// @param {Number} $delay - the time to delay the animation before it start
+/// @param {Number} $delay - the time to delay the animation before it starts
 /// @param {Number} $count - the number of times an animation should run
 ///
 /// @example http://sassmeister.com/gist/8b8731a932f83647454e
@@ -30,12 +30,12 @@
   }
 }
 
-@mixin bounce($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
+@mixin bounce-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-bounce == true {
     animation-delay: $delay;
     animation-duration: $duration;
     animation-iteration-count: $count;
     animation-name: bounce;
-    transform-origin: center bottom;
+    transform-origin: 50% 100%;
   }
 }

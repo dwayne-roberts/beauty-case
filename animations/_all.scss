@@ -6,88 +6,88 @@
 // Attention Seekers
 // =============================================
 //
-// blink ....................................... (mx) Animate the fading in and out of an element in-place
-// bounce ...................................... (mx) Animate an element in-place vertically up and down
-// jelly ....................................... (mx) Animate an element in-place making it behave elastically like jelly
-// pulsate ..................................... (mx) Animate the pulsating of an element in-place making it grow and shrink
-// rotate ...................................... (mx) Animate an element in-place rotating it at it's centre
-// shake ....................................... (mx) Animate an element in-place shaking it horizontally
-// stretch ..................................... (mx) Animate an element in-place stretching it horizontally
+// blink-animation .............................. (mx) Animate the fading in and out of an element in-place
+// bounce-animation ............................. (mx) Animate an element in-place vertically up and down
+// jelly-animation .............................. (mx) Animate an element in-place making it behave elastically like jelly
+// pulsate-animation ............................ (mx) Animate the pulsating of an element in-place making it grow and shrink
+// rotate-animation ............................. (mx) Animate an element in-place rotating it at it's centre
+// shake-animation .............................. (mx) Animate an element in-place shaking it horizontally
+// stretch-animation ............................ (mx) Animate an element in-place stretching it horizontally
 
 
 // Entrances
 // =============================================
 //
-// drop in ..................................... (mx) Animate an element elastically dropping it into view
-// fade in ..................................... (mx) Animate an element fading it into view
-// pop in ...................................... (mx) Animate an element elastically popping it into view
-// rotate-in ................................... (mx) Animate an element rotating it into view
-// slide-in-left ............................... (mx) Animate an element elastically sliding in view from the left
-// slide-in-right .............................. (mx) Animate an element elastically sliding in view from the right
-// vanish-in ................................... (mx) Animate an element zooming out and vanishing it into view
+// drop in-animation ............................ (mx) Animate an element elastically dropping it into view
+// fade in-animation ............................ (mx) Animate an element fading it into view
+// pop in-animation ............................. (mx) Animate an element elastically popping it into view
+// rotate-in-animation .......................... (mx) Animate an element rotating it into view
+// slide-in-left-animation ...................... (mx) Animate an element elastically sliding in view from the left
+// slide-in-right-animation ..................... (mx) Animate an element elastically sliding in view from the right
+// vanish-in-animation .......................... (mx) Animate an element zooming out and vanishing it into view
 
 
 // Exits
 // =============================================
 //
-// fade-out .................................... (mx) Animate an element fading it out of view
-// fall-out .................................... (mx) Animate an element elastically dropping out of view
-// pop-out ..................................... (mx) Animate an element elastically zooming it out
-// rotate-out .................................. (mx) Animate an element rotating it out of view
-// slide-out-left .............................. (mx) Animate an element elastically sliding it out of view to the left
-// slide-out-right ............................. (mx) Animate an element elastically sliding it out of view to the right
-// vanish-out .................................. (mx) Animate an element zooming in and vanishing it out of view
+// fade-out-animation ........................... (mx) Animate an element fading it out of view
+// fall-out-animation ........................... (mx) Animate an element elastically dropping out of view
+// pop-out-animation ............................ (mx) Animate an element elastically zooming it out
+// rotate-out-animation ......................... (mx) Animate an element rotating it out of view
+// slide-out-left-animation ..................... (mx) Animate an element elastically sliding it out of view to the left
+// slide-out-right-animation .................... (mx) Animate an element elastically sliding it out of view to the right
+// vanish-out-animation ......................... (mx) Animate an element zooming in and vanishing it out of view
 
 
 // Hovers
 // =============================================
 //
-// background-fade-in ......................... (mx) Hover animation which fades a background color in
-// background-sweep-down ...................... (mx) Hover animation which sweeps a background color from top to bottom
-// background-sweep-left ...................... (mx) Hover animation which sweeps a background color from right to left
-// background-sweep-right ..................... (mx) Hover animation which sweeps a background color from left to right
-// background-sweep-up ........................ (mx) Hover animation which sweeps a background color from bottom top top
-// background-sweep-radial .................... (mx) Hover animation which sweeps a background color from the center outwards
-// border-fade-in ............................. (mx) Hover animation which fades a border color in
-// overline-sweep-center ...................... (mx) Hover animation which sweeps a top border from its center
-// underline-sweep-center ..................... (mx) Hover animation which sweeps a bottom border from its center
-// underline-sweep-left ....................... (mx) Hover animation which sweeps a border from right to left
-// underline-sweep-right ...................... (mx) Hover animation which sweeps a border from left to right
+// background-fade-in-hover ..................... (mx) Hover animation which fades a background color in
+// background-sweep-down-hover .................. (mx) Hover animation which sweeps a background color from top to bottom
+// background-sweep-left-hover .................. (mx) Hover animation which sweeps a background color from right to left
+// background-sweep-right-hover ................. (mx) Hover animation which sweeps a background color from left to right
+// background-sweep-up-hover .................... (mx) Hover animation which sweeps a background color from bottom top top
+// background-sweep-radial-hover ................ (mx) Hover animation which sweeps a background color from the center outwards
+// border-fade-in-hover ......................... (mx) Hover animation which fades a border color in
+// overline-sweep-center-hover .................. (mx) Hover animation which sweeps a top border from its center
+// underline-sweep-center-hover ................. (mx) Hover animation which sweeps a bottom border from its center
+// underline-sweep-left-hover ................... (mx) Hover animation which sweeps a border from right to left
+// underline-sweep-right-hover .................. (mx) Hover animation which sweeps a border from left to right
 
 
 
-@import 'attention-seekers/blink';
-@import 'attention-seekers/bounce';
-@import 'attention-seeker/jelly';
-@import 'attention-seeker/pulsate';
-@import 'attention-seeker/rotate';
-@import 'attention-seeker/shake';
-@import 'attention-seeker/stretch';
+@import 'attention-seekers/blink-animation';
+@import 'attention-seekers/bounce-animation';
+@import 'attention-seeker/jelly-animation';
+@import 'attention-seeker/pulsate-animation';
+@import 'attention-seeker/rotate-animation';
+@import 'attention-seeker/shake-animation';
+@import 'attention-seeker/stretch-animation';
 
-@import 'entrances/drop-in';
-@import 'entrances/fade-in';
-@import 'entrances/pop-in';
-@import 'entrances/rotate-in';
-@import 'entrances/slide-in-left';
-@import 'entrances/slide-in-right';
-@import 'entrances/vanish-in';
+@import 'entrances/drop-in-animation';
+@import 'entrances/fade-in-animation';
+@import 'entrances/pop-in-animation';
+@import 'entrances/rotate-in-animation';
+@import 'entrances/slide-in-left-animation';
+@import 'entrances/slide-in-right-animation';
+@import 'entrances/vanish-in-animation';
 
-@import 'exits/fade-out';
-@import 'exits/fall-out';
-@import 'exits/pop-out';
-@import 'exits/rotate-out';
-@import 'exits/slide-out-left';
-@import 'exits/slide-out-right';
-@import 'exits/vanish-out';
+@import 'exits/fade-out-animation';
+@import 'exits/fall-out-animation';
+@import 'exits/pop-out-animation';
+@import 'exits/rotate-out-animation';
+@import 'exits/slide-out-left-animation';
+@import 'exits/slide-out-right-animation';
+@import 'exits/vanish-out-animation';
 
-@import 'hovers/background-fade-in';
-@import 'hovers/background-sweep-down';
-@import 'hovers/background-sweep-left';
-@import 'hovers/background-sweep-right';
-@import 'hovers/background-sweep-up';
-@import 'hovers/background-sweep-radial';
-@import 'hovers/border-fade-in';
-@import 'hovers/overline-sweep-center';
-@import 'hovers/underline-sweep-center';
-@import 'hovers/underline-sweep-left';
-@import 'hovers/underline-sweep-right';
+@import 'hovers/background-fade-in-hover';
+@import 'hovers/background-sweep-down-hover';
+@import 'hovers/background-sweep-left-hover';
+@import 'hovers/background-sweep-right-hover';
+@import 'hovers/background-sweep-up-hover';
+@import 'hovers/background-sweep-radial-hover';
+@import 'hovers/border-fade-in-hover';
+@import 'hovers/overline-sweep-center-hover';
+@import 'hovers/underline-sweep-center-hover';
+@import 'hovers/underline-sweep-left-hover';
+@import 'hovers/underline-sweep-right-hover';

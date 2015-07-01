@@ -5,12 +5,12 @@
 // @param {Color} $color - the border color to fade to
 /// @param {Number} $width - the border width
 /// @param {Number} $duration - the length of time the transition should run
-/// @param {Number} $delay - the time to delay the transition before it start
+/// @param {Number} $delay - the time to delay the transition before it starts
 ///
 /// @example http://sassmeister.com/gist/50672253b785142b5f1b
 ///
 
-@mixin underline-sweep-right($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
+@mixin underline-sweep-right-hover($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-underline-sweep-right == true {
     overflow: hidden;
     position: relative;

@@ -4,12 +4,12 @@
 ///
 /// @param {Color} $color - the background color to fade to
 /// @param {Number} $duration - the length of time the transition should run
-/// @param {Number} $delay - the time to delay the transition before it start
+/// @param {Number} $delay - the time to delay the transition before it starts
 ///
 /// @example http://sassmeister.com/gist/1a9867958397da7b1610
 ///
 
-@mixin background-sweep-down($color, $duration: $transition-duration, $delay: $transition-delay) {
+@mixin background-sweep-down-hover($color, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-background-sweep-down == true {
     position: relative;
     transform: translateZ(0);

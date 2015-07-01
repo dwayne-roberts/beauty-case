@@ -3,7 +3,7 @@
 /// @description Revealing animation elastically sliding in an element from the right
 ///
 /// @param {Number} $duration - the length of time the animation should run
-/// @param {Number} $delay - the time to delay the animation before it start
+/// @param {Number} $delay - the time to delay the animation before it starts
 /// @param {Number} $count - the number of times an animation should run
 ///
 /// @example http://sassmeister.com/gist/653214f484eedd830803
@@ -35,7 +35,7 @@
   }
 }
 
-@mixin slide-in-right($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
+@mixin slide-in-right-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-slide-in-right == true {
     animation-delay: $delay;
     animation-duration: $duration;

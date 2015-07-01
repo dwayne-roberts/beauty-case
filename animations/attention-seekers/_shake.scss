@@ -3,7 +3,7 @@
 /// @description In place animation which shakes an element horizontally
 ///
 /// @param {Number} $duration - the length of time the animation should run
-/// @param {Number} $delay - the time to delay the animation before it start
+/// @param {Number} $delay - the time to delay the animation before it starts
 /// @param {Number} $count - the number of times an animation should run
 ///
 /// @example http://sassmeister.com/gist/ab212c7d75e21993ff04
@@ -26,7 +26,7 @@
   }
 }
 
-@mixin shake($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
+@mixin shake-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-shake == true {
     animation-delay: $delay;
     animation-duration: $duration;

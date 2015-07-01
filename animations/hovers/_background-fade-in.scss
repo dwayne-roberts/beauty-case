@@ -4,12 +4,12 @@
 ///
 /// @param {Color} $color - the background color to fade to
 /// @param {Number} $duration - the length of time the transition should run
-/// @param {Number} $delay - the time to delay the transition before it start
+/// @param {Number} $delay - the time to delay the transition before it starts
 ///
 /// @example http://sassmeister.com/gist/f694a2552a7ca629c63e
 ///
 
-@mixin background-fade-in($color, $duration: $transition-duration, $delay: $transition-delay) {
+@mixin background-fade-in-hover($color, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-background-fade-in == true {
     overflow: hidden;
     transition-delay: $delay;

@@ -3,7 +3,7 @@
 /// @description Hiding animation fading an element out of view
 ///
 /// @param {Number} $duration - the length of time the animation should run
-/// @param {Number} $delay - the time to delay the animation before it start
+/// @param {Number} $delay - the time to delay the animation before it starts
 /// @param {Number} $count - the number of times an animation should run
 ///
 /// @example http://sassmeister.com/gist/9e79cdd97082f9f889ea
@@ -17,7 +17,7 @@
   }
 }
 
-@mixin fade-out($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
+@mixin fade-out-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-fade-out == true {
     animation-delay: $delay;
     animation-duration: $duration;

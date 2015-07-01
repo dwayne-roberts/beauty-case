@@ -3,7 +3,7 @@
 /// @description Revealing animation elastically popping in an element
 ///
 /// @param {Number} $duration - the length of time the animation should run
-/// @param {Number} $delay - the time to delay the animation before it start
+/// @param {Number} $delay - the time to delay the animation before it starts
 /// @param {Number} $count - the number of times an animation should run
 ///
 /// @example http://sassmeister.com/gist/2500f7f2a556c7db0970
@@ -42,7 +42,7 @@
   }
 }
 
-@mixin pop-in($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
+@mixin pop-in-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-pop-in == true {
     animation-delay: $delay;
     animation-duration: $duration;

@@ -1,0 +1,58 @@
+// =================================================================================================
+// Tables
+// Default styles for tables
+// =================================================================================================
+%table-base {
+  border-collapse: $table-border-layout;
+  border-spacing: $table-border-spacing;
+  margin-bottom: $default-vertical-rhythm;
+  max-width: $table-width;
+  width: $table-width;
+  word-wrap: break-word;
+
+  th {
+    text-align: nth($table-head-alignment, 2);
+    vertical-align: nth($table-head-alignment, 1);
+  }
+
+  td {
+    text-align: nth($table-cell-alignment, 2);
+    vertical-align: nth($table-cell-alignment, 1);
+  }
+}
+
+.#{$class-table} {
+  @extend %table-base;
+  background-color: $table-background-color;
+
+  th {
+    @include font-size($table-head-text-size);
+    background-color: $table-head-background-color;
+    @if $table-head-border-width > 0 {
+      border-bottom: {
+        color: $table-head-border-color;
+        style: solid;
+        width: $table-head-border-width;
+      }
+    }
+    font: {
+      family: $table-head-text-face;
+      weight: weight(bold);
+    }
+    padding: $table-head-padding;
+  }
+
+  td {
+    @include font-size($table-cell-text-size);
+    background-color: $table-cell-background-color;
+    @if $table-cell-border-width > 0 {
+      border-bottom: {
+        color: $table-cell-border-color;
+        style: solid;
+        width: $table-cell-border-width;
+      }
+    }
+    font-family: $table-cell-text-face;
+    padding: $table-cell-padding;
+  }
+}

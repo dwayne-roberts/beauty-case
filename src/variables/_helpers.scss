@@ -1,0 +1,20 @@
+
+// Debug
+$debug-mode-enabled  : false !default;
+$debug-show-baseline : false !default;
+$debug-show-grid     : false !default;
+
+// General
+$use-rem-units       : true !default;
+$use-px-fallback     : true !default;
+
+// Classnames
+$class-state         : state !default;
+$class-type          : text !default;
+$class-form          : form !default;
+$class-button        : btn !default;
+$class-table         : table !default;
+$class-list          : list !default;
+$class-def-list      : def-list !default;
+$class-image         : img !default;
+$class-figure        : fig !default;

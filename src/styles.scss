@@ -1,0 +1,12 @@
+// =================================================================================================
+// Beauty Case - Sass Starter Kit for the Sky Radio Group
+// This library forms the foundation for our websites. It is a Sass starter kit which contains the
+// scaffolding styles and a lightweight library full of mixins and helpers.
+// =================================================================================================
+
+@import 'library';
+
+@import 'variables/all';
+@import 'reset/all';
+@import 'base/all';
+@import 'print/print';

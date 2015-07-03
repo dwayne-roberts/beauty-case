@@ -1,0 +1,37 @@
+///
+/// @name rotate-out
+/// @description Hiding animation rotating an element out of view
+///
+/// @param {Number} $duration - the length of time the animation should run
+/// @param {Number} $delay - the time to delay the animation before it starts
+/// @param {Number} $count - the number of times an animation should run
+///
+/// @example http://sassmeister.com/gist/35d0af1a332785f79988
+///
+
+$animation-use-rotate-out: false !default;
+
+@if $animation-use-rotate-out == true {
+  @keyframes rotateOut {
+    0% {
+      opacity: 1;
+
+    }
+
+    100% {
+      opacity: 0;
+      transform: rotate3d(0, 1, 0, -180deg);
+    }
+  }
+}
+
+@mixin rotate-out-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
+  @if $animation-use-rotate-out == true {
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-fill-mode: forwards;
+    animation-iteration-count: $count;
+    animation-name: rotateOut;
+    backface-visibility: visible;
+  }
+}

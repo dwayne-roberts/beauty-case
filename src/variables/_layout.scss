@@ -1,0 +1,30 @@
+
+// Layout
+// --------------------------------------------------------------
+
+// Box sizing
+$base-box-sizing         : border-box !default;
+
+// Base sizes
+$padding-base            : 16px !default;
+$margin-base             : 24px !default;
+
+
+// Paddings
+$padding-xs              : size(xs, $padding-base) !default;
+$padding-sm              : size(sm, $padding-base) !default;
+$padding-md              : size(md, $padding-base) !default;
+$padding-lg              : size(lg, $padding-base) !default;
+$padding-xl              : size(xl, $padding-base) !default;
+
+
+// Margins
+$margin-xs               : size(xs, $margin-base) !default;
+$margin-sm               : size(sm, $margin-base) !default;
+$margin-md               : size(md, $margin-base) !default;
+$margin-lg               : size(lg, $margin-base) !default;
+$margin-xl               : size(xl, $margin-base) !default;
+
+
+// Vertical rhythm
+$default-vertical-rhythm : rows(1) !default;

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Lists</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 960px;
+    }
+
+    .example {
+      border: 4px solid #eee;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      padding: 32px 20px 20px;
+      position: relative;
+    }
+
+    .example > .title {
+      color: #ccc;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: -20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lists</h1>
+  <p>The starter kit includes default, inline and unstyled styles for ordered, unordered and definition lists.</p>
+  <div class="example">
+    <h2 class="title">Unorderd list</h2>
+    <ul class="list">
+      <li>Unordered List Item 1</li>
+      <li>Unordered List Item 2</li>
+      <li>Unordered List Item 3</li>
+      <li>Unordered List Item 4
+        <ul>
+          <li>Nested Unordered List Item 1</li>
+          <li>Nested Unordered List Item 2</li>
+        </ul>
+      </li>
+      <li>Unordered List Item 5</li>
+      <li>Unordered List Item 6</li>
+    </ul>
+  </div>
+
+  <div class="example">
+    <h2 class="title">Ordered list</h2>
+    <ol class="list">
+      <li>Ordered List Item 1</li>
+      <li>Ordered List Item 2</li>
+      <li>Ordered List Item 3</li>
+      <li>Ordered List Item 4
+        <ol>
+          <li>Nested Ordered List Item 1</li>
+          <li>Nested Ordered List Item 2</li>
+        </ol>
+      </li>
+      <li>Ordered List Item 5</li>
+      <li>Ordered List Item 6</li>
+    </ol>
+  </div>
+
+  <div class="example">
+    <h2 class="title">Unstyled lists</h2>
+    <ul class="list list-unstyled">
+      <li>Unstyled List Item 1</li>
+      <li>Unstyled List Item 2</li>
+      <li>Unstyled List Item 3</li>
+      <li>Unstyled List Item 4
+        <ul>
+          <li>Nested Styled List Item 1</li>
+          <li>Nested Styled List Item 2</li>
+        </ul>
+      </li>
+      <li>Unstyled List Item 5</li>
+      <li>Unstyled List Item 6</li>
+    </ul>
+  </div>
+
+  <div class="example">
+    <h2 class="title">Inline lists</h2>
+    <ul class="list list-inline">
+      <li>Inline List Item 1</li>
+      <li>Inline List Item 2</li>
+      <li>Inline List Item 3</li>
+      <li>Inline List Item 4</li>
+    </ul>
+  </div>
+
+  <div class="example">
+    <h2 class="title">Definition lists</h2>
+    <dl class="def-list">
+      <dt>Definition List</dt>
+      <dd>The DL element should be used when you want incorporate a definition of a term in your document, it is often used in glossaries to define many terms, it is also used in “normal” documents when the author wishes to explain a term in a more detail (Like this definition).</dd>
+      <dt>Definition List</dt>
+      <dd>The DL element should be used when you want incorporate a definition of a term in your document, it is often used in glossaries to define many terms, it is also used in “normal” documents when the author wishes to explain a term in a more detail (Like this definition).</dd>
+    </dl>
+  </div>
+</body>
+</html>

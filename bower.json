@@ -1,16 +1,17 @@
 {
   "name": "beauty-case",
-  "description": "A toolkit for the make-up artists of the world wide web. A lightweight library of mixins, functions, helpers and placeholders which can be used throughout our Sass (MaxFactor) projects.",
+  "description": "A Sass starter kit for the Sky Radio Group. This manifest manages the third party assets within this project.",
   "homepage": "https://github.com/sky-radio-group/beauty-case/",
   "private": true,
   "main": "beauty-case.scss",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "company": "Sky Radio Group",
   "author": "Dwayne Roberts <dwayne.roberts@skyradio.nl",
   "dependencies": {},
   "devDependencies": {
     "susy": "~2.2.1",
-    "breakpoint-sass": "~2.5.0"
+    "breakpoint-sass": "~2.5.0",
+    "modularized-normalize-scss": "~3.0.2"
   }
 }

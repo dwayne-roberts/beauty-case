@@ -1,0 +1,55 @@
+// =================================================================================================
+// Lists
+// Default styling for ordered, unordered and definition lists
+// =================================================================================================
+
+
+.#{$class-list} {
+  list-style-position: $list-bullet-position;
+  margin-bottom: $default-vertical-rhythm;
+  padding: $list-padding;
+  padding-left: 0;
+
+  // Nested
+  ul,
+  ol {
+    margin-bottom: 0;
+    padding-left: $list-indent-width;
+  }
+
+  ol {
+    list-style-type: lower-roman;
+  }
+
+  // Markers
+  &.marker-circle { list-style-type: disc; }
+  &.marker-circle-o { list-style-type: circle; }
+  &.marker-square { list-style-type: square; }
+  &.marker-decimal { list-style-type: decimal; }
+  &.marker-roman { list-style-type: lower-roman; }
+  &.marker-alpha { list-style-type: lower-alpha; }
+}
+
+// Unstyled
+.#{$class-list}-unstyled {
+  @extend %reset-list;
+}
+
+// Inline list
+.#{$class-list}-inline {
+  @include list-inline($list-inline-delimiter);
+}
+
+// Definition lists
+.#{$class-def-list} {
+  margin-bottom: $default-vertical-rhythm;
+
+  dt {
+    font-weight: bold;
+    margin-top: $margin-sm;
+  }
+
+  dd {
+    margin-left: 0;
+  }
+}

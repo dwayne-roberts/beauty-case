@@ -1,0 +1,43 @@
+///
+/// @name overline-sweep-right
+/// @description Hover animation which sweeps a bottom border from left to right
+///
+// @param {Color} $color - the border color to fade to
+/// @param {Number} $width - the border width
+/// @param {Number} $duration - the length of time the transition should run
+/// @param {Number} $delay - the time to delay the transition before it starts
+///
+/// @example http://sassmeister.com/gist/9d3abd1d8611564fcd86
+///
+
+$animation-use-overline-sweep-right: false !default;
+
+@mixin overline-sweep-right-hover($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
+  @if $animation-use-overline-sweep-right == true {
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0);
+
+    &:before {
+      background-color: $color;
+      content: '';
+      height: $width;
+      left: 0;
+      position: absolute;
+      right: 100%;
+      top: 0;
+      transition-delay: $delay;
+      transition-duration: $duration;
+      transition-property: right;
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &:before {
+        right: 0;
+      }
+    }
+  }
+}

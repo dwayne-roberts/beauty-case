@@ -1,0 +1,79 @@
+// =================================================================================================
+// Forms
+// Default styling for form elements, inputs, selects and text areas
+// =================================================================================================
+
+
+.#{$class-form} {
+  margin-bottom: $default-vertical-rhythm;
+
+  fieldset,
+  legend {
+    @extend %reset-layout;
+  }
+
+  legend {
+    @include font-size($form-legend-text-size);
+    color: $form-legend-text-color;
+    margin-bottom: $default-vertical-rhythm;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    @include reset-layout;
+    cursor: pointer;
+    line-height: normal;
+  }
+
+  input[type='email'],
+  input[type='text'],
+  input[type='password'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='number'],
+  input[type='url'],
+  input[type='color'],
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='month'],
+  input[type='time'],
+  input[type='week'],
+  select,
+  textarea {
+    @include font-size($input-text-size);
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: normal;
+    margin-bottom: $default-vertical-rhythm;
+    outline: none;
+    padding: $input-padding;
+    vertical-align: baseline;
+  }
+
+  input[type='file'] {
+    display: block;
+  }
+
+  select[multiple],
+  select[size] {
+    height: auto;
+  }
+
+  textarea {
+    min-height: $textarea-height;
+    resize: vertical; // Allow only vertical resizing of textareas
+    vertical-align: top;
+  }
+
+  label {
+    color: $input-label-text-color;
+    font-family: $input-label-text-face;
+
+    &.required::after {
+      color: #c00;
+      content: ' *';
+      font-family: $font-family-serif;
+    }
+  }
+}

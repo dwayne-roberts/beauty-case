@@ -2,8 +2,6 @@
 
 exclude:
 - './vendor/**'
-- './bower_components/**'
-
 
 linters:
   BorderZero: # Prefer border: 0 over border: none.
@@ -103,6 +101,12 @@ linters:
     enabled: true
     severity: warning
     extra_properties: []
+
+  QualifyingElement: # Avoid qualifying elements in selectors (also known as "tag-qualifying")
+    enabled: true
+    allow_element_with_attribute: true  # Allow elements to qualify attributes (default false)
+    allow_element_with_class: true      # Allow elements to qualify classes (default false)
+    allow_element_with_id: false        # Allow elements to qualify ids (default false)
 
   SelectorDepth: # Don't write selectors with a depth of applicability greater than x.
     enabled: true

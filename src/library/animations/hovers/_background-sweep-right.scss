@@ -1,0 +1,43 @@
+///
+/// @name background-sweep-right
+/// @description Hover animation which sweeps a background color from left to right
+///
+/// @param {Color} $color - the background color to fade to
+/// @param {Number} $duration - the length of time the transition should run
+/// @param {Number} $delay - the time to delay the transition before it starts
+///
+/// @example http://sassmeister.com/gist/2424ecd16eb2b20757b6
+///
+
+$animation-use-background-sweep-right: false !default;
+
+@mixin background-sweep-right-hover($color, $duration: $transition-duration, $delay: $transition-delay) {
+  @if $animation-use-background-sweep-right == true {
+    position: relative;
+    transform: translateZ(0);
+
+    &:before {
+      background-color: $color;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: scaleX(0);
+      transform-origin: 0% 50%;
+      transition-delay: $delay;
+      transition-duration: $duration;
+      transition-property: transform;
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

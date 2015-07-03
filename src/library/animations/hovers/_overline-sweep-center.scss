@@ -1,0 +1,44 @@
+///
+/// @name overline-sweep-center
+/// @description Hover animation which reveals a top border from the center
+///
+/// @param {Color} $color - the border color to fade to
+/// @param {Number} $width - the border width
+/// @param {Number} $duration - the length of time the transition should run
+/// @param {Number} $delay - the time to delay the transition before it starts
+///
+/// @example http://sassmeister.com/gist/c69624dd539d81f78978
+///
+
+$animation-use-overline-sweep-center: false !default;
+
+@mixin overline-sweep-center-hover($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
+  @if $animation-use-overline-sweep-center == true {
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0);
+
+    &:before {
+      background-color: $color;
+      content: '';
+      height: $width;
+      left: 50%;
+      position: absolute;
+      right: 50%;
+      top: 0;
+      transition-delay: $delay;
+      transition-duration: $duration;
+      transition-property: left, right;
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &:before {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}

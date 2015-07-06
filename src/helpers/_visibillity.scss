@@ -1,0 +1,41 @@
+// Hide an element
+%hidden {
+  @include hidden;
+}
+
+.hide,
+.hidden {
+  @extend %hidden;
+}
+
+
+// Show an element
+%shown {
+  display: block !important;
+}
+
+.show,
+.shown {
+  @extend %shown;
+}
+
+
+// Hide content visually
+%invisible {
+  @include invisible;
+}
+
+.invisible,
+.sr-only {
+  @extend %invisible;
+}
+
+
+// Hide text out of view
+%hidden-text {
+  @include text-hide;
+}
+
+.text-hide {
+  @extend %text-hide;
+}

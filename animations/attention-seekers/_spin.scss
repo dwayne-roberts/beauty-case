@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/66f50863cbaeff7b2c49
 ///
 
+$animation-use-spin: false !default;
 @if $animation-use-spin == true {
 
   @keyframes spin {

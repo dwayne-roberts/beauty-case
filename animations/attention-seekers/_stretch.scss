@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/34186eadbafdfd075489
 ///
 
+$animation-use-stretch: false !default;
 @if $animation-use-stretch == true {
 
   @keyframes stretch {

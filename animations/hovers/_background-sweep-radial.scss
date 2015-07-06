@@ -9,6 +9,8 @@
 /// @example http://sassmeister.com/gist/200e61bafabe87d88bf2
 ///
 
+$animation-use-background-sweep-radial: false !default;
+
 @mixin background-sweep-radial-hover($color, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-background-sweep-radial == true {
     overflow: hidden;

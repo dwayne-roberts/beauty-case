@@ -10,6 +10,8 @@
 /// @example http://sassmeister.com/gist/8af6f8449497ddbfe27d
 ///
 
+$animation-use-border-hover: false !default;
+
 @mixin border-hover($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-border-hover == true {
     overflow: hidden;

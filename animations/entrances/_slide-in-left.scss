@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/b98b4b97b42823a3a9c0
 ///
 
+$animation-use-slide-in-left: false !default;
 @if $animation-use-slide-in-left == true {
   @keyframes slideInLeft {
     0% {

@@ -10,6 +10,8 @@
 /// @example http://sassmeister.com/gist/e96bdfd2b38023ce2e22
 ///
 
+$animation-use-border-fade-in: false !default;
+
 @mixin border-fade-in-hover($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-border-fade-in == true {
     border: $width solid transparent;

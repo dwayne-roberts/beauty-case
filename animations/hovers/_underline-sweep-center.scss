@@ -10,6 +10,8 @@
 /// @example http://sassmeister.com/gist/ece74720bd16d8d9a36c
 ///
 
+$animation-use-underline-sweep-center: false !default;
+
 @mixin underline-sweep-center-hover($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-underline-sweep-center == true {
     overflow: hidden;

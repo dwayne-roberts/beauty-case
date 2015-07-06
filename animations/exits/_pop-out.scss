@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/9ffbfd7301cf91a17a77
 ///
 
+$animation-use-pop-out: false !default;
 @if $animation-use-pop-out == true {
   @keyframes popOut {
     20% {

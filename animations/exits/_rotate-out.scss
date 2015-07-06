@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/35d0af1a332785f79988
 ///
 
+$animation-use-rotate-out: false !default;
 @if $animation-use-rotate-out == true {
   @keyframes rotateOut {
     0% {

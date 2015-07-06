@@ -9,7 +9,7 @@
 /// @example http://sassmeister.com/gist/8b8731a932f83647454e
 ///
 
-
+$animation-use-bounce: false !default;
 @if $animation-use-bounce == true {
   @keyframes bounce {
     0%, 20%, 53%, 80%, 100% {

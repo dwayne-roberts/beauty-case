@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/ccb768983a971abde5bc
 ///
 
+$animation-use-rotate-in: false !default;
 @if $animation-use-rotate-in == true {
   @keyframes rotateIn {
     0% {

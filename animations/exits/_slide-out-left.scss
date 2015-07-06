@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/0cfa56732e02c3e8371f
 ///
 
+$animation-use-slide-out-left: false !default;
 @if $animation-use-slide-out-left == true {
   @keyframes slideOutLeft {
     20% {

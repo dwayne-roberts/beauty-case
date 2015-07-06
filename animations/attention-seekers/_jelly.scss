@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/429d71f9f5e1de4546d6
 ///
 
+$animation-use-jelly: false !default;
 @if $animation-use-jelly == true {
 
   @keyframes jelly  {

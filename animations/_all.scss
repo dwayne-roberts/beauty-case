@@ -21,7 +21,7 @@
 // drop in-animation ............................ (mx) Animate an element elastically dropping it into view
 // fade in-animation ............................ (mx) Animate an element fading it into view
 // pop in-animation ............................. (mx) Animate an element elastically popping it into view
-// rotate-in-animation .......................... (mx) Animate an element rotating it into view
+// spin-in-animation ............................ (mx) Animate an element rotating it into view
 // slide-in-left-animation ...................... (mx) Animate an element elastically sliding in view from the left
 // slide-in-right-animation ..................... (mx) Animate an element elastically sliding in view from the right
 // vanish-in-animation .......................... (mx) Animate an element zooming out and vanishing it into view
@@ -61,43 +61,43 @@
 
 
 
-@import 'attention-seekers/blink-animation';
-@import 'attention-seekers/bounce-animation';
-@import 'attention-seeker/jelly-animation';
-@import 'attention-seeker/pulsate-animation';
-@import 'attention-seeker/rotate-animation';
-@import 'attention-seeker/shake-animation';
-@import 'attention-seeker/stretch-animation';
+@import 'attention-seekers/blink';
+@import 'attention-seekers/bounce';
+@import 'attention-seekers/jelly';
+@import 'attention-seekers/pulsate';
+@import 'attention-seekers/spin';
+@import 'attention-seekers/shake';
+@import 'attention-seekers/stretch';
 
-@import 'entrances/drop-in-animation';
-@import 'entrances/fade-in-animation';
-@import 'entrances/pop-in-animation';
-@import 'entrances/rotate-in-animation';
-@import 'entrances/slide-in-left-animation';
-@import 'entrances/slide-in-right-animation';
-@import 'entrances/vanish-in-animation';
+@import 'entrances/drop-in';
+@import 'entrances/fade-in';
+@import 'entrances/pop-in';
+@import 'entrances/rotate-in';
+@import 'entrances/slide-in-left';
+@import 'entrances/slide-in-right';
+@import 'entrances/vanish-in';
 
-@import 'exits/fade-out-animation';
-@import 'exits/fall-out-animation';
-@import 'exits/pop-out-animation';
-@import 'exits/rotate-out-animation';
-@import 'exits/slide-out-left-animation';
-@import 'exits/slide-out-right-animation';
-@import 'exits/vanish-out-animation';
+@import 'exits/fade-out';
+@import 'exits/fall-out';
+@import 'exits/pop-out';
+@import 'exits/rotate-out';
+@import 'exits/slide-out-left';
+@import 'exits/slide-out-right';
+@import 'exits/vanish-out';
 
-@import 'hovers/background-fade-in-hover';
-@import 'hovers/background-sweep-down-hover';
-@import 'hovers/background-sweep-left-hover';
-@import 'hovers/background-sweep-right-hover';
-@import 'hovers/background-sweep-up-hover';
-@import 'hovers/background-sweep-radial-hover';
+@import 'hovers/background-fade-in';
+@import 'hovers/background-sweep-down';
+@import 'hovers/background-sweep-left';
+@import 'hovers/background-sweep-right';
+@import 'hovers/background-sweep-up';
+@import 'hovers/background-sweep-radial';
 @import 'hovers/border';
-@import 'hovers/border-fade-in-hover';
+@import 'hovers/border-fade-in';
 @import 'hovers/overline';
-@import 'hovers/overline-sweep-center-hover';
-@import 'hovers/overline-sweep-left-hover';
-@import 'hovers/overline-sweep-right-hover';
+@import 'hovers/overline-sweep-center';
+@import 'hovers/overline-sweep-left';
+@import 'hovers/overline-sweep-right';
 @import 'hovers/underline';
-@import 'hovers/underline-sweep-center-hover';
-@import 'hovers/underline-sweep-left-hover';
-@import 'hovers/underline-sweep-right-hover';
+@import 'hovers/underline-sweep-center';
+@import 'hovers/underline-sweep-left';
+@import 'hovers/underline-sweep-right';

@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/ab212c7d75e21993ff04
 ///
 
+$animation-use-shake: false !default;
 @if $animation-use-shake == true {
 
   @keyframes shake  {

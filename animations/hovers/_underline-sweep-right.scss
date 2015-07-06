@@ -10,6 +10,8 @@
 /// @example http://sassmeister.com/gist/50672253b785142b5f1b
 ///
 
+$animation-use-underline-sweep-right: false !default;
+
 @mixin underline-sweep-right-hover($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-underline-sweep-right == true {
     overflow: hidden;

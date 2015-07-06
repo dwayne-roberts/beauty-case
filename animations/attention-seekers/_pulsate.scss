@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/9049807dcadac5e3611e
 ///
 
+$animation-use-pulsate: false !default;
 @if $animation-use-pulsate == true {
 
   @keyframes pulsate  {

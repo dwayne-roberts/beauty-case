@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/9e79cdd97082f9f889ea
 ///
 
+$animation-use-fade-out: false !default;
 @if $animation-use-fade-out == true {
   @keyframes fadeOut {
     100% {

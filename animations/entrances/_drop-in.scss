@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/be17f4afde78a4e821ce
 ///
 
+$animation-use-drop-in: false !default;
 @if $animation-use-drop-in == true {
   @keyframes dropIn {
     0% {

@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/2500f7f2a556c7db0970
 ///
 
+$animation-use-pop-in: false !default;
 @if $animation-use-pop-in == true {
 
   @keyframes popIn {

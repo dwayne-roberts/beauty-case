@@ -9,6 +9,8 @@
 /// @example http://sassmeister.com/gist/1a9867958397da7b1610
 ///
 
+$animation-use-background-sweep-down: false !default;
+
 @mixin background-sweep-down-hover($color, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-background-sweep-down == true {
     position: relative;

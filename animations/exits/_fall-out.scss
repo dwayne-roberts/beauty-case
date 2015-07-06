@@ -9,6 +9,7 @@
 /// @example http://sassmeister.com/gist/426377d27c4b4e05c0c3
 ///
 
+$animation-use-fall-out: false !default;
 @if $animation-use-fall-out == true {
   @keyframes fallOut {
     20% {

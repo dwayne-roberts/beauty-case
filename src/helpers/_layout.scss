@@ -1,0 +1,44 @@
+
+// Clearfix
+%clearfix {
+  @include clearfix;
+}
+
+.clear,
+.clearfix {
+  @extend %clearfix;
+}
+
+
+// Center align elements
+%center {
+  @include block-center;
+}
+
+.center,
+.align-center {
+  @extend %center;
+}
+
+
+// Right align elements
+%right {
+  float: right !important;
+}
+
+.right,
+.align-right {
+  @extend %right;
+}
+
+
+// Left align elements
+%left {
+  float: left !important;
+}
+
+.left,
+.align-left {
+  @extend %left;
+}
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Forms</title>
+  <style>
+    .example {
+      border: 4px solid #eee;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      padding: 32px 20px 20px;
+      position: relative;
+    }
+
+    .example > .title {
+      color: #ccc;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: -20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+
+    }
+  </style>
+</head>
+<body style="width: 960px; margin: 0 auto;">
+  <h1>Forms</h1>
+  <p>Blaaaaaaaaaaaaaaaaaaaat</p>
+
+  <div class="example">
+    <h2 class="title">basic form</h2>
+    <form action="" method="get" class="form">
+      <fieldset>
+        <legend>Example form</legend>
+        <div>
+          <label for="name">First name</label>
+          <input type="text" id="firstname" cols="60" placeholder="Type first name">
+        </div>
+        <div>
+          <label for="name" class="required">Last name</label>
+          <input type="text" id="lastname" cols="60" placeholder="Type last name">
+        </div>
+        <div>
+          <label for="age">Your Age</label>
+          <select name="age" id="age">
+            <optgroup label="Please choose your age">
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+            </optgroup>
+          </select>
+        </div>
+        <div>
+          <label for="male">
+            <input type="radio" name="gender" id="male">
+            Male
+          </label>
+          <label for="female">
+            <input type="radio" name="gender" id="female">
+            Female
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="sports[]">
+            Volleyball
+          </label>
+          <label>
+            <input type="checkbox" name="sports[]">
+            Tennis
+          </label>
+          <label>
+            <input type="checkbox" name="sports[]">
+            Table Tennis
+          </label>
+          <label>
+            <input type="checkbox" name="sports[]">
+            Soccer
+          </label>
+          <label>
+            <input type="checkbox" name="sports[]">
+            Football
+          </label>
+        </div>
+        <div>
+          <label for="comments">Comments</label>
+          <textarea name="comments" id="comments" cols="60" rows="7"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn action-primary">Submit</button>
+          <button type="reset" class="btn">Reset</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

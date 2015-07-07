@@ -1,0 +1,175 @@
+// =================================================================================================
+// Typography
+// Default styling for headings, paragraphs, links and other text-level elements
+// =================================================================================================
+
+
+html {
+  @include base-vertical-rhythm($base-font-size, $base-line-height-relative);
+}
+
+body {
+  @include font-size($text-size);
+  color: $text-color;
+  font: {
+    family: $text-face;
+    weight: $text-weight;
+  }
+  line-height: $base-line-height-relative;
+}
+
+// Headings defaults
+@each $heading in headings() {
+  #{$heading} {
+    font-size: $text-size;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0;
+    margin-bottom: $base-leading;
+  }
+}
+
+// Only style available headings
+@each $heading in $available-headings {
+  #{$heading},
+  .#{$heading} {
+    @include font-size(map-get($heading-sizes, $heading));
+    color: $heading-text-color;
+    font: {
+      family: $heading-text-face;
+      weight: $heading-text-weight;
+    }
+    line-height: $heading-line-height-relative;
+  }
+}
+
+// Paragraph
+p {
+  line-height: $base-line-height-relative;
+  margin: 0;
+  margin-bottom: $base-leading;
+}
+
+small {
+  font-size: 80%;
+}
+
+// Links
+a {
+  color: $link-text-color;
+  text-decoration: $link-text-decoration;
+
+  &.active,
+  &:hover {
+    color: $link-hover-text-color;
+    text-decoration: $link-hover-text-decoration;
+  }
+
+  &:focus {
+    @include reset-focus;
+  }
+}
+
+
+// Emphasis & Misc.
+em,
+i,
+cite,
+q,
+address,
+dfn,
+var {
+  font-style: italic;
+  font-weight: inherit;
+}
+
+strong,
+b,
+mark {
+  font-style: inherit;
+  font-weight: weight(bold);
+}
+
+q {
+  quotes: $text-quote-style;
+}
+
+
+// Blockquoutes
+blockquote {
+  margin-left: 5em;
+  margin-right: 5em;
+
+  p {
+    margin: 0;
+    margin-bottom: $base-leading/2;
+
+    &:after,
+    &:before {
+      font: {
+        family: $font-family-serif;
+        size: $font-size-lg;
+      }
+      line-height: 0;
+      position: relative;
+      top: 3px;
+    }
+
+    &:after {
+      content: '\201D';
+      right: -5px;
+    }
+
+    &:before {
+      content: '\201C';
+      left: -5px;
+    }
+  }
+
+  cite {
+    display: block;
+    font-style: italic;
+
+    &:before {
+      content: '\2014 \00A0'; // em dash
+    }
+  }
+}
+
+// Helper/transformation classes
+.#{$class-type} {
+  // Alignment
+  &-left { text-align: left; }
+  &-right { text-align: right; }
+  &-center { text-align: center; }
+  &-justify { text-align: justify; }
+  &-nowrap {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+  }
+
+  // Transformations
+  &-lowercase { text-transform: lowercase; }
+  &-uppercase { text-transform: uppercase; }
+  &-capitalize { text-transform: capitalize; }
+
+  // Disabled/Muted
+  &-muted { color: $text-color-muted; }
+
+  // Weights
+  &-extra-bold { font-weight: weight('extra-black'); }
+  &-bold { font-weight: weight('bold'); }
+  &-semibold { font-weight: weight('semibold'); }
+  &-light { font-weight: weight('light'); }
+  &-thin { font-weight: weight('thin'); }
+
+
+
+  // State variants
+  @each $state, $color in $available-state-colors {
+    &-#{$state} {
+      color: $color;
+    }
+  }
+}

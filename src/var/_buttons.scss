@@ -1,0 +1,13 @@
+
+// Buttons
+// --------------------------------------------------------------
+
+$btn-background-color       : $color-gray !default;
+$btn-hover-background-color : shade($btn-background-color, 15%) !default;
+$btn-border-color           : transparent !default;
+$btn-border-width           : 1px !default;
+$btn-text-alignment         : center !default;
+$btn-text-color             : $color-white !default;
+$btn-hover-text-color       : $btn-text-color !default;
+$btn-text-line-height       : 1 !default;
+$btn-padding                : $padding-sm $padding-md !default;

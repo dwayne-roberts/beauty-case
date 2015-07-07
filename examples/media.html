@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0 auto;
+      width: 960px;
+    }
+
+    .example {
+      border: 4px solid #eee;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      padding: 32px 20px 20px;
+      position: relative;
+    }
+
+    .example > .title {
+      color: #ccc;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: -20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h1>Media</h1>
+
+  <div class="example">
+    <h2 class="title">audio</h2>
+    <audio controls>
+      <source src="http://upload.wikimedia.org/wikipedia/commons/7/75/Winston_Churchill_-_Be_Ye_Men_of_Valour.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="example">
+    <h2 class="title">video</h2>
+    <video></video>
+  </div>
+
+  <div class="example">
+    <h2 class="title">figure</h2>
+    <figure class="fig">
+      <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/be/M_sylvanus_BarbaryApe.jpg/266px-M_sylvanus_BarbaryApe.jpg" alt="Baby Orang Utan hanging from a rope">
+      <figcaption>A cheeky macaque, Lower Kintaganban River, Borneo. Original by <a href="http://www.flickr.com/photos/rclark/">Richard Clark</a></figcaption>
+    </figure>
+  </div>
+
+  <div class="example">
+    <h2 class="title">images</h2>
+    <img src="http://placehold.it/1600x400&text=1600px+responsive+image" class="img img-responsive">
+
+    <img src="http://placehold.it/150x150&text=rounded" class="img img-rounded">
+    <img src="http://placehold.it/150x150&text=circle" class="img img-circle">
+    <img src="http://placehold.it/150x150&text=thumbnail" class="img img-thumbnail">
+  </div>
+
+</body>
+</html>

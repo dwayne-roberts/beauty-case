@@ -1,0 +1,39 @@
+
+// Colors
+// --------------------------------------------------------------
+
+// Black and white
+$color-white            : #fff;
+$color-black            : #000;
+$color-off-white        : #f5f5f5 !default;
+$color-off-black        : #1a1a1a !default;
+$color-gray             : #777777 !default;
+
+
+// Theme
+$color-primary          : #882984 !default;
+$color-secondary        : #e37d8f !default;
+$color-tertiary         : #8f8fc7 !default;
+
+$available-theme-colors : (
+                            primary   : $color-primary,
+                            secondary : $color-secondary,
+                            tertiary  : $color-tertiary
+                          );
+
+// Disabled
+$color-disabled         : #cccccc !default;
+
+// States
+$color-success          : #4caf50 !default;
+$color-info             : #03a9f4 !default;
+$color-warning          : #ffc107 !default;
+$color-danger           : #f44336 !default;
+$color-default          : #777777 !default;
+
+$available-state-colors : (
+                            success  : $color-success,
+                            info     : $color-info,
+                            warning  : $color-warning,
+                            danger   : $color-danger
+                          );

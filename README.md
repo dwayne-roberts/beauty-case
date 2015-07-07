@@ -1,6 +1,6 @@
 ![Beauty Case](https://raw.githubusercontent.com/sky-radio-group/beauty-case/master/beauty-case.png?token=AGMSS7XNpBNvnTrRbxzgOJ2zMjYENmgtks5U8Ju8wA%3D%3D)
 
-A toolkit for the make-up artists of the world wide web. A lightweight library of mixins, functions, helpers and placeholders which can be used throughout our Sass (MaxFactor) projects.
+Beauty Case is a compact but versatile Sass starter kit for the Sky Radio Group. The library forms the foundation for all of its websites. It contains many base scaffolding styles and a lightweight library full of mixins, functions and helpers.
 
 ## Development dependencies
 
@@ -12,11 +12,20 @@ In order to further develop/build this project certain development dependencies 
 
 ## Documentation
 
-Each function/mixin has an example Gist made through Sassmeister.
-
 _NB: In the future, if needed, a Github wiki page may be added._
 
-## Features
+## How To
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+## Library
+
+Each function/mixin has an example Gist made through Sassmeister. Documentation is generated automatically via SassDoc.
 
 #### Reset
 + reset-focus()   — _Resets the outline property when focussed_
@@ -105,3 +114,5 @@ _NB: In the future, if needed, a Github wiki page may be added._
 ## Changelog
 + **1.0.0**
     - Initial production version
++ **2.0.0**
+    - Merge with other Sass project _Pan-Cake_

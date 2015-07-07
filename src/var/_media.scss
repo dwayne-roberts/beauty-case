@@ -1,0 +1,25 @@
+
+// Media
+// --------------------------------------------------------------
+
+$image-border-radius           : $border-radius-lg !default;
+$image-border-width            : 0 !default;
+
+// Thumbnails
+$image-thumb-background-color  : $color-white !default;
+$image-thumb-padding           : $padding-xs !default;
+$image-thumb-border-color      : $color-gray !default;
+$image-thumb-border-radius     : $image-border-radius !default;
+$image-thumb-border-width      : 1px !default;
+
+// Figures
+$figure-image-padding          : $padding-xs !default;
+$figure-image-border-color     : $color-gray !default;
+$figure-image-border-radius    : 0 !default;
+$figure-image-border-width     : 1px !default;
+$figure-caption-padding        : $padding-sm 0 !default;
+$figure-caption-text-alignment : left !default;
+$figure-caption-text-color     : $color-gray !default;
+$figure-caption-text-face      : $font-family-serif !default;
+$figure-caption-text-size      : $font-size-sm !default;
+$figure-caption-text-style     : italic !default;

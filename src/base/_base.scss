@@ -1,0 +1,46 @@
+// =================================================================================================
+// Base/Scaffolding
+// Default styling for html, body and some top level elements
+// =================================================================================================
+
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+// Global box model from Susy
+@include border-box-sizing;
+
+// Default body styles
+body {
+  background-color: $body-background-color;
+  margin: $body-margin;
+  padding: $body-padding;
+  position: relative;
+}
+
+
+// Give a help cursor to elements that give extra info on `:hover`
+abbr,
+dfn {
+  cursor: help;
+}
+
+
+// A better looking default horizontal rule
+hr {
+  border: 0;
+  border-top: {
+    color: $hr-border-color;
+    style: solid;
+    width: $hr-border-width;
+  }
+  display: block;
+  height: 1px;
+  margin: $hr-margin auto;
+
+  &.dotted { border-top-style: dotted; }
+  &.dashed { border-top-style: dashed; }
+  &.double { border-top-style: double; }
+}

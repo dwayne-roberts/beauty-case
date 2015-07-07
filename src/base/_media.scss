@@ -1,0 +1,79 @@
+// =================================================================================================
+// Media
+// Default styling for media related elements
+// =================================================================================================
+
+// Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers:
+audio,
+canvas,
+figure,
+iframe,
+img,
+svg,
+video {
+  line-height: $base-line-height-relative;
+  margin: 0;
+  vertical-align: middle;
+}
+
+
+// Images
+.#{$class-image} {
+  border: $image-border-width;
+
+  &-responsive {
+    @include responsive-image;
+  }
+
+  &-rounded {
+    border-radius: $image-border-radius;
+  }
+
+  &-thumbnail {
+    background-color: $image-thumb-background-color;
+    @if $image-thumb-border-width > 0 {
+      border: {
+        color: $image-thumb-border-color;
+        style: solid;
+        width: $image-thumb-border-width;
+      }
+    }
+    border-radius: $image-thumb-border-radius;
+    padding: $image-thumb-padding;
+  }
+
+  &-circle {
+    border-radius: $border-radius-circle;
+  }
+}
+
+// Figure
+.#{$class-figure} {
+  margin: 0;
+
+  img {
+    @if $figure-image-border-width > 0 {
+      border: {
+        color: $figure-image-border-color;
+        style: solid;
+        width: $figure-image-border-width;
+      }
+    }
+    border-radius: $figure-image-border-radius;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: $figure-image-padding;
+  }
+
+  figcaption {
+    @include font-size($figure-caption-text-size);
+    color: $figure-caption-text-color;
+    font: {
+      family: $figure-caption-text-face;
+      style: $figure-caption-text-style;
+    }
+    padding: $figure-caption-padding;
+    text-align: $figure-caption-text-alignment;
+  }
+}

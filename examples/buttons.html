@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Buttons</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 960px;
+    }
+
+    .example {
+      border: 4px solid #eee;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      padding: 32px 20px 20px;
+      position: relative;
+    }
+
+    .example > .title {
+      color: #ccc;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: -20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h1>Buttons</h1>
+  <p>The starter kit includes a base class <em>.btn</em> with configurable properties. The base style includes padding, alignment, font and border settings. The base background colors are the various state colors plus the primary, secondary and tertiary brand colors.</p>
+  <div class="example">
+    <h2 class="title">Normal</h2>
+    <button type="button">Default</button>
+  </div>
+
+  <div class="example">
+    <h2 class="title">Disabled</h2>
+    <button type="button" class="btn is-disabled">Disabled</button>
+  </div>
+  <div class="example">
+    <h2 class="title">Themes</h2>
+    <button type="button" class="btn">Default</button>
+    <button type="button" class="btn action-primary">Primary</button>
+    <button type="button" class="btn action-secondary">Secondary</button>
+    <button type="button" class="btn action-tertiary">Tertiary</button>
+  </div>
+  <div class="example">
+    <h2 class="title">States</h2>
+    <button type="button" class="btn info">Info</button>
+    <button type="button" class="btn success">Success</button>
+    <button type="button" class="btn warning">Warning</button>
+    <button type="button" class="btn danger">Danger</button>
+  </div>
+
+</body>
+</html>

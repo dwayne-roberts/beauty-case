@@ -1,0 +1,87 @@
+// =================================================================================================
+// Buttons
+// Default styling for buttons
+// =================================================================================================
+
+%button-base {
+  @include link-unstyled;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: $btn-text-line-height;
+  margin: 0;
+  outline: none;
+  padding: $btn-padding;
+  text-align: $btn-text-alignment;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+    outline: 0;
+    padding: 0;
+  }
+}
+
+.#{$class-button} {
+  @extend %button-base;
+  background-color: $btn-background-color;
+  @if $btn-border-width > 0 {
+    border-color: $btn-border-color;
+    border-style: solid;
+    border-width: $btn-border-width;
+  }
+  color: $btn-text-color;
+
+  // hover & focus
+  &:hover,
+  &:focus {
+    background-color: $btn-hover-background-color;
+    color: $btn-hover-text-color;
+  }
+
+  // Action variants
+  @each $action, $color in $available-theme-colors {
+    &.action-#{$action} {
+      background-color: $color;
+
+      &:hover,
+      &:focus {
+        background-color: shade($color, 15%);
+      }
+    }
+  }
+
+  // State variants
+  @each $state, $color in $available-state-colors {
+    &.#{$state} {
+
+      &:hover,
+      &:focus {
+        background-color: shade($color, 15%);
+      }
+    }
+  }
+
+  &.is-disabled {
+    background-color: $color-disabled;
+    border-color: $color-disabled;
+    color: shade($color-disabled, 10%);
+    cursor: not-allowed;
+  }
+}
+
+
+// Unstyled
+.#{$class-button}-unstyled {
+  @extend %reset-button;
+}

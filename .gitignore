@@ -1,33 +1,97 @@
-# OS or Editor folders
-.DS_Store
-._*
+# A concise list of default files and/or glob patterns for git to ignore
+# @link https://www.gitignore.io
+# @version 1.0.0
+# @date Last Edited 2015-07-13 09:42
+
+# Operating System files (Windows)
+$RECYCLE.BIN/
+Desktop.ini
+ehthumbs.db
 Thumbs.db
+*.cab
+*.lnk
+*.msi
+*.msm
+*.msp
+
+# Operating System files (OSX)
+Network Trash Folder
+Temporary Items
+.apdisk
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.DocumentRevisions-V100
+.DS_Store
+.fseventsd
+.LSOverride
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+._*
+
+# Operating System files (Linux)
+.directory
+.Trash-*
+*~
+
+# Software files (ZF2)
+vendor/
+composer.phar
+local.php
+*.local.php
+*.mo
+
+# Program data
+data/cache/
+data/logs/
+data/sessions/
+data/tmp/
+temp/
+
+# Software files (Node)
+build/Release
+coverage
+lib-cov
+logs
+node_modules
+pids
+.grunt
+.lock-wscript
+*.log
+*.pid
+*.seed
+
+# Software files (Sass)
+.sass-cache
+*.css.map
+
+# Software files (Bower)
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+
+# IDE files
+sftp-config.json
+.buildpath
 .cache
+.idea
+.project
 .project
 .settings
-.tmproj
+*.stTheme.cache
 *.sublime-project
 *.sublime-workspace
-.idea
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.vi
 
 # Numerous always-ignore extensions
 *.diff
 *.err
 *.orig
-*.log
 *.rej
 *.swo
 *.swp
-*.zip
-*.vi
-*~
-
-
-# Ignore css and css map since they will be generated anyway
-*.css
-*.css.map
-
-# Folders to ignore
-.sass-cache
-node_modules
-bower_components

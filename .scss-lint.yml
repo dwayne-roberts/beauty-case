@@ -1,24 +1,38 @@
-# Default application configuration that all configurations inherit from.
+# A default SCSS lint configuration file
+# @link https://github.com/brigade/scss-lint
+# @version 1.0.0
+# @date Last Edited 2015-07-13 09:42
 
-exclude:
-- './vendor/**'
+scss_files: './src/**/*.scss'
+exclude: './src/vendor/**'
 
 linters:
-  BorderZero: # Prefer border: 0 over border: none.
+  BangFormat: # Reports when you use improper spacing around ! (the "bang") in !important and !default declarations.
     enabled: true
+    space_before_bang: true
+    space_after_bang: false
+    severity: error
+
+  BemDepth: # Reports when a BEM selector contains more elements than a configurable maximum number.
+    enabled: false
     severity: warning
 
-  CapitalizationInSelector: # IDs, classes, types, placeholders, and pseudo-selectors should be all lowercase.
+  BorderZero: # Prefer border: 0 over border: none.
     enabled: true
+    convention: zero # or `none`
     severity: warning
 
   ColorKeyword: # Prefer hexadecimal color codes over color keywords.
     enabled: true
-    severity: error
+    severity: warning
+
+  ColorVariable: # Prefer color literals (keywords or hexadecimal codes) to be used only in variable declarations.
+    enabled: true
+    severity: warning
 
   Comment: # // comments should be preferred as they don't get rendered in the final generated CSS, whereas /* ... */ comments do.
     enabled: false
-    severity: error
+    severity: warning
 
   DebugStatement: # Reports @debug statements (which you probably left behind accidentally).
     enabled: true
@@ -32,94 +46,151 @@ linters:
     enabled: true
     severity: warning
 
+  ElsePlacement: # Place @else statements on the same line as the preceding curly brace.
+    enabled: true
+    style: same_line # or 'new_line'
+    severity: warning
+
   EmptyLineBetweenBlocks: # Separate rule, function, and mixin declarations with empty lines.
     enabled: true
-    severity: warning
     ignore_single_line_blocks: true
+    severity: error
 
   EmptyRule: # Reports when you have an empty rule set.
     enabled: true
+    severity: error
+
+  ExtendDirective: # Reports when you have an @extend directive.
+    enabled: false
     severity: warning
 
   FinalNewline: # Files should always have a final newline.
     enabled: true
-    severity: error
     present: true
+    severity: error
 
   HexLength: # You can specify whether you prefer shorthand or long-form hexadecimal colors by setting the style option to short or long, respectively.
     enabled: false
-    severity: warning
     style: short # or 'long'
+    severity: warning
 
   HexNotation: # Checks if hexadecimal colors are written in lowercase. You can specify which case with the style option.
     enabled: true
-    severity: warning
     style: lowercase # or 'uppercase'
+    severity: warning
 
   HexValidation: # Ensure hexadecimal colors are valid (either three or six digits).
     enabled: true
     severity: error
 
-  IdWithExtraneousSelector: # Don't combine additional selectors with an ID selector.
+  IdSelector: # Avoid using ID selectors.
     enabled: true
+    severity: error
+
+  ImportantRule: # Avoid using !important in properties.
+    enabled: true
+    severity: warning
+
+  ImportPath: # The basenames of @imported SCSS partials should not begin with an underscore and should not include the filename extension.
+    enabled: true
+    leading_underscore: false
+    filename_extension: false
     severity: error
 
   Indentation: # Use two spaces per indentation level. No hard tabs.
     enabled: true
-    severity: error
+    allow_non_nested_indentation: false
+    character: space # or 'tab'
     width: 2
+    severity: error
 
   LeadingZero: # Don't write leading zeros for numeric values with a decimal point.
     enabled: false
-    severity: warning
     style: exclude_zero # or 'include_zero'
+    severity: warning
 
   MergeableSelector: # Reports when you define the same selector twice in a single sheet.
     enabled: true
-    severity: warning
     force_nesting: true
+    severity: warning
 
   NameFormat: # Functions, mixins, and variables should be declared with all lowercase letters and hyphens instead of underscores.
     enabled: true
-    severity: warning
     convention: hyphenated_lowercase # or 'BEM', or a regex pattern
+    severity: warning
 
   NestingDepth: # Avoid nesting selectors too deeply.
     enabled: true
-    severity: warning
+    ignore_parent_selectors: false
     max_depth: 5
+    severity: warning
 
   PlaceholderInExtend: # Always use placeholder selectors in @extend
     enabled: false
     severity: warning
 
-  PropertySortOrder: # ort properties in a strict order. By default, will require properties be sorted in alphabetical order
+  PropertyCount: # Limit the number of properties in a rule set.
+    enabled: false
+    include_nested: false
+    max_properties: 15
+    severity: warning
+
+  PropertySortOrder: # Sort properties in a strict order. By default, will require properties be sorted in alphabetical order
     enabled: true
+    ignore_unspecified: false
+    min_properties: 2
+    separate_groups: false
     severity: warning
 
   PropertySpelling: # Reports when you use an unknown CSS property (ignoring vendor-prefixed properties).
     enabled: true
-    severity: warning
     extra_properties: []
+    severity: error
+
+  PropertyUnits: # Configure which units are allowed for property values
+    enabled: true
+    global: [
+      'ch', 'em', 'ex', 'rem',                 # Font-relative lengths
+      'cm', 'in', 'mm', 'pc', 'pt', 'px', 'q', # Absolute lengths
+      'vh', 'vw', 'vmin', 'vmax',              # Viewport-percentage lengths
+      'deg', 'grad', 'rad', 'turn',            # Angle
+      'ms', 's',                               # Duration
+      'Hz', 'kHz',                             # Frequency
+      'dpi', 'dpcm', 'dppx',                   # Resolution
+      '%']                                     # Other
+    properties: {}
+    severity: error
 
   QualifyingElement: # Avoid qualifying elements in selectors (also known as "tag-qualifying")
     enabled: true
     allow_element_with_attribute: true  # Allow elements to qualify attributes (default false)
     allow_element_with_class: true      # Allow elements to qualify classes (default false)
     allow_element_with_id: false        # Allow elements to qualify ids (default false)
+    severity: error
 
   SelectorDepth: # Don't write selectors with a depth of applicability greater than x.
     enabled: true
+    max_depth: 6
+    severity: error
+
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_lowercase # or 'strict_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
     severity: warning
-    max_depth: 5
 
   Shorthand: # Prefer the shortest shorthand form possible for properties that support it.
     enabled: false
+    allowed_shorthands: [1, 2, 3]
+    severity: warning
+
+  SingleLinePerProperty: # Properties within rule sets should each reside on their own line.
+    enabled: true
+    allow_single_line_rule_sets: true
     severity: warning
 
   SingleLinePerSelector: # Split selectors onto separate lines after each comma.
     enabled: true
-    severity: error
+    severity: warning
 
   SpaceAfterComma: # Commas in lists should be followed by a space.
     enabled: false
@@ -131,42 +202,70 @@ linters:
 
   SpaceAfterPropertyName: # Properties should be formatted with no space between the name and the colon.
     enabled: true
-    severity: error
+    severity: warning
+
+  SpaceAfterVariableName: # Variables should be formatted with no space between the name and the colon.
+    enabled: true
+    severity: warning
 
   SpaceBeforeBrace: # Opening braces should be preceded by a single space.
     enabled: true
-    severity: warning
     allow_single_line_padding: false
+    severity: warning
 
   SpaceBetweenParens: # Parentheses should not be padded with spaces.
     enabled: true
-    severity: error
     spaces: 0
+    severity: warning
 
   StringQuotes: # String literals should be written with single quotes unless using double quotes would save on escape characters.
     enabled: true
-    severity: warning
     style: single_quotes # or double_quotes
+    severity: warning
 
-  TrailingSemicolonAfterPropertyValue: # Property values should always end with a semicolon.
+  TrailingSemicolon: # Property values; @extend, @include, and @import directives; and variable declarations should always end with a semicolon.
     enabled: true
     severity: error
+
+  TrailingWhitespace: # Reports lines containing trailing whitespace.
+    enabled: true
+    severity: error
+
+  TrailingZero: # Don't write trailing zeros for numeric values with a decimal point.
+    enabled: false
+    severity: warning
 
   UnnecessaryMantissa: # Numeric values should not contain unnecessary fractional portions.
     enabled: true
     severity: warning
 
+  UnnecessaryParentReference: # Do not use parent selector references (&) when they would otherwise be unnecessary.
+    enabled: true
+    severity: error
+
   UrlFormat: # URLs should not contain protocols or domain names.
     enabled: true
-    severity: warning
+    severity: error
 
   UrlQuotes: # URLs should always be enclosed within quotes.
     enabled: true
     severity: error
 
+  VariableForProperty: # Properties, like color and font, are easier to read and maintain when defined using variables rather than literals.
+    enabled: false
+    properties: [color, margin, padding]
+    severity: warning
+
+  VendorPrefix: # Avoid vendor prefixes. That is, don't write them yourself.
+    enabled: true
+    identifier_list: base
+    additional_identifiers: []
+    excluded_identifiers: []
+    severity: warning
+
   ZeroUnit: # Omit length units on zero values.
     enabled: true
-    severity: warning
+    severity: error
 
   Compass::*:
     enabled: false

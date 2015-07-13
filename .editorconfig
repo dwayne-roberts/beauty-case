@@ -1,7 +1,12 @@
-# EditorConfig is awesome: http://EditorConfig.org
+# EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs
+# @link http://editorconfig.org for compatible
+# @version 1.0.0
+# @date Last Edited 2015-07-13 09:42
 
+# top-most EditorConfig file
 root = true
 
+# default for all file types
 [*]
 charset = utf-8
 indent_size = 2
@@ -10,9 +15,26 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+# Sass file type
+[*.{scss,sass}]
+indent_size = 2
 
+# HTML and Zend view script file types
+[*.{html,phtml}]
+indent_size = 4
+
+# Javascript file types
 [*.js]
-index_size= 4
+indent_size= 4
 
+# JSON file types
 [*.json]
 insert_final_newline = false
+
+# Python file types
+[*.py]
+indent_size = 4
+
+# PHP file types
+[*.php]
+indent_size = 4

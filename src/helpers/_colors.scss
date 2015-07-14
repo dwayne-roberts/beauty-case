@@ -1,0 +1,15 @@
+// Colors
+// --------------------------------------------------------------
+
+$available-theme-colors : (
+                            primary   : $color-primary,
+                            secondary : $color-secondary,
+                            tertiary  : $color-tertiary
+                          );
+
+$available-state-colors : (
+                            success  : $color-success,
+                            info     : $color-info,
+                            warning  : $color-warning,
+                            danger   : $color-danger
+                          );

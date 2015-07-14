@@ -1,0 +1,336 @@
+// !!GENERATED FILE DO NOT EDIT!!
+/**
+ *! Beauty Case - A Sass starter kit for the Sky Radio Group. This manifest manages the third party assets within this project.
+ * @version v2.0.0
+ * @author Dwayne Roberts
+ * @link https://github.com/sky-radio-group/beauty-case/
+ * @license MIT Copyright (C) 2015 Sky Radio Group
+ * Last updated on Tue, 14 Jul 2015 14:12:54 GMT
+ */
+
+// Debug
+$debug-mode-enabled  : false;
+$debug-show-baseline : false;
+$debug-show-grid     : false;
+
+// General
+$use-rem-units       : true;
+$use-px-fallback     : true;
+
+// Classnames
+$class-state         : state;
+$class-type          : text;
+$class-form          : form;
+$class-button        : btn;
+$class-table         : table;
+$class-list          : list;
+$class-def-list      : def-list;
+$class-image         : img;
+$class-figure        : fig;
+
+
+// Colors
+// --------------------------------------------------------------
+
+// Black and white
+$color-white     : #fff;
+$color-black     : #000;
+$color-off-white : #f5f5f5;
+$color-off-black : #1a1a1a;
+$color-gray      : #777777;
+
+
+// Theme
+$color-primary   : #882984;
+$color-secondary : #e37d8f;
+$color-tertiary  : #8f8fc7;
+
+// Disabled
+$color-disabled  : #cccccc;
+
+// States
+$color-success   : #4caf50;
+$color-info      : #03a9f4;
+$color-warning   : #ffc107;
+$color-danger    : #f44336;
+$color-default   : #777777;
+
+
+// Typography
+// --------------------------------------------------------------
+
+// Quotes
+$quotes-english               : '\2018' '\2019' '\201c' '\201d';
+$quotes-american              : '\201c' '\201d' '\2018' '\2019';
+$text-quote-style             : $quotes-english;
+
+
+// Font families
+$font-family-monospace        : stack(consolas);
+$font-family-serif            : stack(georgia);
+$font-family-sans-serif       : stack(helvetica);
+
+
+// Baseline
+$base-font-size               : 16px;
+$base-line-height-relative    : ratio(perfect-fifth);
+$base-line-height-absolute    : $base-font-size * $base-line-height-relative;
+$base-leading                 : $base-line-height-relative * 1rem;
+
+
+// Weights
+$font-weight-black            : 800;
+$font-weight-bold             : 700;
+$font-weight-semibold         : 600;
+$font-weight-normal           : 400;
+$font-weight-light            : 200;
+
+
+// Paragraph
+$text-color                   : palette($color-gray, dark);
+$text-weight                  : $font-weight-normal;
+$text-face                    : $font-family-sans-serif;
+$text-size                    : $base-font-size;
+$text-color-muted             : palette($color-gray, lighter);
+
+
+// Anchors
+$link-text-color              : #41b6d6;
+$link-hover-text-color        : darken($link-text-color, 15%);
+$link-text-decoration         : none;
+$link-hover-text-decoration   : underline;
+
+
+// Headings
+$heading-text-color           : $text-color;
+$heading-text-weight          : $font-weight-bold;
+$heading-line-height-relative : ratio(major-third);
+$heading-text-face            : inherit;
+$available-headings           : headings(1,3);
+
+
+// Modular Scale settings
+$ms-base                      : $base-font-size;
+$ms-ratio                     : $heading-line-height-relative;
+
+
+// Sizes
+$font-size-sm                 : even-px(modular-scale(-1));
+$font-size-md                 : even-px(modular-scale(0));
+$font-size-lg                 : even-px(modular-scale(1));
+
+$font-size-h1                 : even-px(modular-scale(4));
+$font-size-h2                 : even-px(modular-scale(3));
+$font-size-h3                 : even-px(modular-scale(2));
+$font-size-h4                 : even-px(modular-scale(1));
+
+$font-size-h5                 : even-px(modular-scale(1));
+$font-size-h6                 : even-px(modular-scale(1));
+
+
+// Layout
+// --------------------------------------------------------------
+
+// Box sizing
+$base-box-sizing         : border-box;
+
+// Base sizes
+$padding-base            : 16px;
+$margin-base             : 24px;
+
+
+// Paddings
+$padding-xs              : size(xs, $padding-base);
+$padding-sm              : size(sm, $padding-base);
+$padding-md              : size(md, $padding-base);
+$padding-lg              : size(lg, $padding-base);
+$padding-xl              : size(xl, $padding-base);
+
+
+// Margins
+$margin-xs               : size(xs, $margin-base);
+$margin-sm               : size(sm, $margin-base);
+$margin-md               : size(md, $margin-base);
+$margin-lg               : size(lg, $margin-base);
+$margin-xl               : size(xl, $margin-base);
+
+
+// Vertical rhythm
+$default-vertical-rhythm : rows(1);
+
+// Animations
+// --------------------------------------------------------------
+
+// Defaults
+$animation-duration                    : 1s;
+$animation-delay                       : 0s;
+$animation-iterations                  : 1;
+$transition-duration                   : .6s;
+$transition-delay                      : .1s;
+
+// Attention Seekers
+$animation-use-blink                   : false;
+$animation-use-bounce                  : false;
+$animation-use-jelly                   : false;
+$animation-use-pulsate                 : false;
+$animation-use-shake                   : false;
+$animation-use-spin                    : false;
+$animation-use-stretch                 : false;
+
+// Entrances
+$animation-use-drop-in                 : false;
+$animation-use-fade-in                 : false;
+$animation-use-pop-in                  : false;
+$animation-use-rotate-in               : false;
+$animation-use-slide-in-left           : false;
+$animation-use-slide-in-right          : false;
+$animation-use-vanish-in               : false;
+
+// Exits
+$animation-use-fade-out                : false;
+$animation-use-fall-out                : false;
+$animation-use-pop-out                 : false;
+$animation-use-rotate-out              : false;
+$animation-use-slide-out-left          : false;
+$animation-use-slide-out-right         : false;
+$animation-use-vanish-out              : false;
+
+// Hovers
+$animation-use-background-fade-in      : false;
+$animation-use-background-sweep-down   : false;
+$animation-use-background-sweep-left   : false;
+$animation-use-background-sweep-radial : false;
+$animation-use-background-sweep-right  : false;
+$animation-use-background-sweep-up     : false;
+$animation-use-border-fade-in          : false;
+$animation-use-border-hover            : false;
+$animation-use-overline-sweep-center   : false;
+$animation-use-overline-sweep-left     : false;
+$animation-use-overline-sweep-right    : false;
+$animation-use-overline-hover          : false;
+$animation-use-underline-sweep-center  : false;
+$animation-use-underline-sweep-left    : false;
+$animation-use-underline-sweep-right   : false;
+$animation-use-underline-hover         : false;
+
+
+// Base
+// --------------------------------------------------------------
+
+// Body
+$body-background-color      : $color-white;
+$body-margin                : 0;
+$body-padding               : 0;
+
+
+// Horizontal rule
+$hr-border-color            : $color-primary;
+$hr-border-width            : 1px;
+$hr-margin                  : rows(1);
+
+
+// Border
+// --------------------------------------------------------------
+
+$border-radius-circle : 50%;
+
+$border-radius-xs     : 2px;
+$border-radius-sm     : 4px;
+$border-radius-md     : 8px;
+$border-radius-lg     : 12px;
+$border-radius-xl     : 16px;
+
+
+// Buttons
+// --------------------------------------------------------------
+
+$btn-background-color       : $color-gray;
+$btn-hover-background-color : shade($btn-background-color, 15%);
+$btn-border-color           : transparent;
+$btn-border-width           : 1px;
+$btn-text-alignment         : center;
+$btn-text-color             : $color-white;
+$btn-hover-text-color       : $btn-text-color;
+$btn-text-line-height       : 1;
+$btn-padding                : $padding-sm $padding-md;
+
+
+// Forms
+// --------------------------------------------------------------
+
+// form
+$form-legend-text-color  : $text-color-muted;
+$form-legend-text-size   : $font-size-sm;
+
+// inputs
+$input-padding           : $padding-xs;
+$input-text-size         : $text-size;
+
+// labels
+$input-label-text-color  : inherit;
+$input-label-text-face   : inherit;
+
+// textarea
+$textarea-height         : rows(3);
+
+
+// Lists
+// --------------------------------------------------------------
+
+$list-indent-width     : $padding-md;
+$list-padding          : 0;
+$list-item-padding     : 0;
+$list-bullet-position  : inside;
+$list-inline-delimiter : ' |';
+
+
+// Media
+// --------------------------------------------------------------
+
+$image-border-radius           : $border-radius-lg;
+$image-border-width            : 0;
+
+// Thumbnails
+$image-thumb-background-color  : $color-white;
+$image-thumb-padding           : $padding-xs;
+$image-thumb-border-color      : $color-gray;
+$image-thumb-border-radius     : $image-border-radius;
+$image-thumb-border-width      : 1px;
+
+// Figures
+$figure-image-padding          : $padding-xs;
+$figure-image-border-color     : $color-gray;
+$figure-image-border-radius    : 0;
+$figure-image-border-width     : 1px;
+$figure-caption-padding        : $padding-sm 0;
+$figure-caption-text-alignment : left;
+$figure-caption-text-color     : $color-gray;
+$figure-caption-text-face      : $font-family-serif;
+$figure-caption-text-size      : $font-size-sm;
+$figure-caption-text-style     : italic;
+
+
+// Tables
+// --------------------------------------------------------------
+
+$table-background-color      : $color-white;
+$table-border-layout         : collapse;
+$table-border-spacing        : 0;
+$table-width                 : 100%;
+
+$table-cell-alignment        : top left;
+$table-cell-border-color     : $color-gray;
+$table-cell-border-width     : 1px;
+$table-cell-background-color : $table-background-color;
+$table-cell-padding          : $padding-sm $padding-md;
+$table-cell-text-face        : inherit;
+$table-cell-text-size        : inherit;
+
+$table-head-alignment        : bottom left;
+$table-head-padding          : $padding-md;
+$table-head-border-color     : $color-gray;
+$table-head-border-width     : 3px;
+$table-head-background-color : $color-off-white;
+$table-head-text-face        : inherit;
+$table-head-text-size        : inherit;
+

@@ -30,10 +30,10 @@ body {
 }
 
 // Only style available headings
-@each $heading in $available-headings {
+@each $heading, $size in $available-heading-sizes {
   #{$heading},
   .#{$heading} {
-    @include font-size(map-get($heading-sizes, $heading));
+    @include font-size($size);
     color: $heading-text-color;
     font: {
       family: $heading-text-face;

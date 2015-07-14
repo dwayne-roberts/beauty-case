@@ -63,13 +63,13 @@ var banner = ['// !!GENERATED FILE DO NOT EDIT!!',
 // -------------------------------
 
 // Create default settings file
-gulp.task('create-settings', function() {
+gulp.task('generate-defaults', function() {
     return gulp.src([
         './src/var/_helpers.scss',
         './src/var/_colors.scss',
         './src/var/_typography.scss',
         './src/var/_layout.scss',
-        './src/var/_animation.scss',
+        './src/var/_animations.scss',
         './src/var/_base.scss',
         './src/var/_borders.scss',
         './src/var/_buttons.scss',

@@ -71,7 +71,7 @@
     font-family: $input-label-text-face;
 
     &.required::after {
-      color: #c00;
+      color: $color-danger;
       content: ' *';
       font-family: $font-family-serif;
     }

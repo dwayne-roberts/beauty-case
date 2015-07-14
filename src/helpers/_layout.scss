@@ -25,6 +25,7 @@
 
 // Right align elements
 %right {
+  // scss-lint:disable ImportantRule
   float: right !important;
 }
 
@@ -36,6 +37,7 @@
 
 // Left align elements
 %left {
+  // scss-lint:disable ImportantRule
   float: left !important;
 }
 

@@ -3,6 +3,7 @@
 
 // Show animation
 .show-animate {
+  // scss-lint:disable ImportantRule
   opacity: 1 !important;
   visibility: visible !important;
 }
@@ -10,6 +11,7 @@
 
 // Hide animation
 .hide-animate {
+  // scss-lint:disable ImportantRule
   opacity: 0 !important;
   visibility: hidden !important;
 }

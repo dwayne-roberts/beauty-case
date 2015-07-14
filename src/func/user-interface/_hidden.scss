@@ -5,6 +5,7 @@
 /// @example http://sassmeister.com/gist/8055585ec1d8475941b4
 ///
 @mixin hidden {
+  // scss-lint:disable ImportantRule
   display: none !important;
   visibility: hidden;
 }

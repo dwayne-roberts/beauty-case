@@ -9,18 +9,16 @@
 /// @example http://sassmeister.com/gist/9e79cdd97082f9f889ea
 ///
 
-$animation-use-fade-out: false !default;
-
-@if $animation-use-fade-out == true {
-  @keyframes fadeOut {
-    100% {
-      opacity: 0;
-    }
-  }
-}
-
 @mixin fade-out-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-fade-out == true {
+    @at-root {
+      @keyframes fadeOut {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: forwards;

@@ -1,0 +1,47 @@
+// Animations
+// --------------------------------------------------------------
+
+// Attention Seekers
+$animation-use-blink: false !default;
+$animation-use-bounce: false !default;
+$animation-use-jelly: false !default;
+$animation-use-pulsate: false !default;
+$animation-use-shake: false !default;
+$animation-use-spin: false !default;
+$animation-use-stretch: false !default;
+
+// Entrances
+$animation-use-drop-in: false !default;
+$animation-use-fade-in: false !default;
+$animation-use-pop-in: false !default;
+$animation-use-rotate-in: false !default;
+$animation-use-slide-in-left: false !default;
+$animation-use-slide-in-right: false !default;
+$animation-use-vanish-in: false !default;
+
+// Exits
+$animation-use-fade-out: false !default;
+$animation-use-fall-out: false !default;
+$animation-use-pop-out: false !default;
+$animation-use-rotate-out: false !default;
+$animation-use-slide-out-left: false !default;
+$animation-use-slide-out-right: false !default;
+$animation-use-vanish-out: false !default;
+
+// Hovers
+$animation-use-background-fade-in: false !default;
+$animation-use-background-sweep-down: false !default;
+$animation-use-background-sweep-left: false !default;
+$animation-use-background-sweep-radial: false !default;
+$animation-use-background-sweep-right: false !default;
+$animation-use-background-sweep-up: false !default;
+$animation-use-border-fade-in: false !default;
+$animation-use-border-hover: false !default;
+$animation-use-overline-sweep-center: false !default;
+$animation-use-overline-sweep-left: false !default;
+$animation-use-overline-sweep-right: false !default;
+$animation-use-overline-hover: false !default;
+$animation-use-underline-sweep-center: false !default;
+$animation-use-underline-sweep-left: false !default;
+$animation-use-underline-sweep-right: false !default;
+$animation-use-underline-hover: false !default;

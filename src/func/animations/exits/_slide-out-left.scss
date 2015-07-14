@@ -9,24 +9,22 @@
 /// @example http://sassmeister.com/gist/0cfa56732e02c3e8371f
 ///
 
-$animation-use-slide-out-left: false !default;
-
-@if $animation-use-slide-out-left == true {
-  @keyframes slideOutLeft {
-    20% {
-      opacity: 1;
-      transform: translate3d(20px, 0, 0);
-    }
-
-    100% {
-      opacity: 0;
-      transform: translate3d(-2000px, 0, 0);
-    }
-  }
-}
-
 @mixin slide-out-left-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-slide-out-left == true {
+    @at-root {
+      @keyframes slideOutLeft {
+        20% {
+          opacity: 1;
+          transform: translate3d(20px, 0, 0);
+        }
+
+        100% {
+          opacity: 0;
+          transform: translate3d(-2000px, 0, 0);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: forwards;

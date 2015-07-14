@@ -9,22 +9,20 @@
 /// @example http://sassmeister.com/gist/0ea7a279755ab883c6d0
 ///
 
-$animation-use-fade-in: false !default;
-
-@if $animation-use-fade-in == true {
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-}
-
 @mixin fade-in-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-fade-in == true {
+    @at-root {
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: both;

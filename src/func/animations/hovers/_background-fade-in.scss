@@ -9,8 +9,6 @@
 /// @example http://sassmeister.com/gist/f694a2552a7ca629c63e
 ///
 
-$animation-use-background-fade-in: false !default;
-
 @mixin background-fade-in-hover($color, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-background-fade-in == true {
     overflow: hidden;

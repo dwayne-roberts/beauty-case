@@ -10,8 +10,6 @@
 /// @example http://sassmeister.com/gist/b2e2d1ce5c7b55a2af22
 ///
 
-$animation-use-overline-sweep-left: false !default;
-
 @mixin overline-sweep-left-hover($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-overline-sweep-left == true {
     overflow: hidden;

@@ -9,24 +9,22 @@
 /// @example http://sassmeister.com/gist/35d0af1a332785f79988
 ///
 
-$animation-use-rotate-out: false !default;
-
-@if $animation-use-rotate-out == true {
-  @keyframes rotateOut {
-    0% {
-      opacity: 1;
-
-    }
-
-    100% {
-      opacity: 0;
-      transform: rotate3d(0, 1, 0, -180deg);
-    }
-  }
-}
-
 @mixin rotate-out-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-rotate-out == true {
+    @at-root {
+      @keyframes rotateOut {
+        0% {
+          opacity: 1;
+
+        }
+
+        100% {
+          opacity: 0;
+          transform: rotate3d(0, 1, 0, -180deg);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: forwards;

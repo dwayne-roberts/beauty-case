@@ -9,28 +9,26 @@
 /// @example http://sassmeister.com/gist/426377d27c4b4e05c0c3
 ///
 
-$animation-use-fall-out: false !default;
-
-@if $animation-use-fall-out == true {
-  @keyframes fallOut {
-    20% {
-      transform: translate3d(0, 10px, 0);
-    }
-
-    30%, 35% {
-      opacity: 1;
-      transform: translate3d(0, -10px, 0);
-    }
-
-    100% {
-      opacity: 0;
-      transform: translate3d(0, 2000px, 0);
-    }
-  }
-}
-
 @mixin fall-out-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-fall-out == true {
+    @at-root {
+      @keyframes fallOut {
+        20% {
+          transform: translate3d(0, 10px, 0);
+        }
+
+        30%, 35% {
+          opacity: 1;
+          transform: translate3d(0, -10px, 0);
+        }
+
+        100% {
+          opacity: 0;
+          transform: translate3d(0, 2000px, 0);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: forwards;

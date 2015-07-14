@@ -9,23 +9,21 @@
 /// @example http://sassmeister.com/gist/2a77a98e204d3698776b
 ///
 
-$animation-use-blink: false !default;
-
-@if $animation-use-blink == true {
-
-  @keyframes blink {
-    0%, 50%, 100% {
-      opacity: 1;
-    }
-
-    25%, 75% {
-      opacity: 0;
-    }
-  }
-}
 
 @mixin blink-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-blink == true {
+    @at-root {
+      @keyframes blink {
+        0%, 50%, 100% {
+          opacity: 1;
+        }
+
+        25%, 75% {
+          opacity: 0;
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-iteration-count: $count;

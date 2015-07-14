@@ -9,39 +9,36 @@
 /// @example http://sassmeister.com/gist/34186eadbafdfd075489
 ///
 
-$animation-use-stretch: false !default;
-
-@if $animation-use-stretch == true {
-
-  @keyframes stretch {
-    0%, 100% {
-      transform: none;
-    }
-
-    30% {
-      transform: scale3d(1.25, 0.75, 1);
-    }
-
-    40% {
-      transform: scale3d(0.75, 1.25, 1);
-    }
-
-    50% {
-      transform: scale3d(1.15, 0.85, 1);
-    }
-
-    65% {
-      transform: scale3d(.95, 1.05, 1);
-    }
-
-    75% {
-      transform: scale3d(1.05, .95, 1);
-    }
-  }
-}
-
 @mixin stretch-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-stretch == true {
+    @at-root {
+      @keyframes stretch {
+        0%, 100% {
+          transform: none;
+        }
+
+        30% {
+          transform: scale3d(1.25, 0.75, 1);
+        }
+
+        40% {
+          transform: scale3d(0.75, 1.25, 1);
+        }
+
+        50% {
+          transform: scale3d(1.15, 0.85, 1);
+        }
+
+        65% {
+          transform: scale3d(.95, 1.05, 1);
+        }
+
+        75% {
+          transform: scale3d(1.05, .95, 1);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-iteration-count: $count;

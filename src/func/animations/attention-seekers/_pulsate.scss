@@ -9,25 +9,22 @@
 /// @example http://sassmeister.com/gist/9049807dcadac5e3611e
 ///
 
-$animation-use-pulsate: false !default;
-
-@if $animation-use-pulsate == true {
-
-  @keyframes pulsate  {
-    0%, 100% {
-      opacity: 1;
-      transform: none;
-    }
-
-    50% {
-      opacity: 0.85;
-      transform: scale3d(1.05, 1.05, 1.05);
-    }
-  }
-}
-
 @mixin pulsate-animation($duration: $animation-duration, $delay: $animation-delay, $count: 3) {
   @if $animation-use-pulsate == true {
+    @at-root {
+      @keyframes pulsate {
+        0%, 100% {
+          opacity: 1;
+          transform: none;
+        }
+
+        50% {
+          opacity: 0.85;
+          transform: scale3d(1.05, 1.05, 1.05);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-iteration-count: $count;

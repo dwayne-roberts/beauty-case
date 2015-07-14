@@ -10,8 +10,6 @@
 /// @example http://sassmeister.com/gist/7d39a014415fff5ac2b9
 ///
 
-$animation-use-underline-hover: false !default;
-
 @mixin underline-hover($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-underline-hover == true {
     overflow: hidden;

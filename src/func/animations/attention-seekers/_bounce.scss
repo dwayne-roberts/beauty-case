@@ -9,30 +9,28 @@
 /// @example http://sassmeister.com/gist/8b8731a932f83647454e
 ///
 
-$animation-use-bounce: false !default;
-
-@if $animation-use-bounce == true {
-  @keyframes bounce {
-    0%, 20%, 53%, 80%, 100% {
-      transform: translate3d(0 ,0, 0);
-    }
-
-    40%, 43% {
-      transform: translate3d(0, -30px, 0);
-    }
-
-    70% {
-      transform: translate3d(0, -15px, 0);
-    }
-
-    90% {
-      transform: translate3d(0,-4px, 0);
-    }
-  }
-}
-
 @mixin bounce-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-bounce == true {
+    @at-root {
+      @keyframes bounce {
+        0%, 20%, 53%, 80%, 100% {
+          transform: translate3d(0 ,0, 0);
+        }
+
+        40%, 43% {
+          transform: translate3d(0, -30px, 0);
+        }
+
+        70% {
+          transform: translate3d(0, -15px, 0);
+        }
+
+        90% {
+          transform: translate3d(0,-4px, 0);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-iteration-count: $count;

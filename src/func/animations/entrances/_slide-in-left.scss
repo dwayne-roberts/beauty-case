@@ -9,36 +9,34 @@
 /// @example http://sassmeister.com/gist/b98b4b97b42823a3a9c0
 ///
 
-$animation-use-slide-in-left: false !default;
-
-@if $animation-use-slide-in-left == true {
-  @keyframes slideInLeft {
-    0% {
-      opacity: 0;
-      transform: translate3d(-3000px, 0, 0);
-    }
-
-    60% {
-      opacity: 1;
-      transform: translate3d(25px, 0, 0);
-    }
-
-    75% {
-      transform: translate3d(-10px, 0, 0);
-    }
-
-    90% {
-      transform: translate3d(5px, 0, 0);
-    }
-
-    100% {
-      transform: none;
-    }
-  }
-}
-
 @mixin slide-in-left-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-slide-in-left == true {
+    @at-root {
+      @keyframes slideInLeft {
+        0% {
+          opacity: 0;
+          transform: translate3d(-3000px, 0, 0);
+        }
+
+        60% {
+          opacity: 1;
+          transform: translate3d(25px, 0, 0);
+        }
+
+        75% {
+          transform: translate3d(-10px, 0, 0);
+        }
+
+        90% {
+          transform: translate3d(5px, 0, 0);
+        }
+
+        100% {
+          transform: none;
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: both;

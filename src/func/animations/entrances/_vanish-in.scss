@@ -9,26 +9,24 @@
 /// @example http://sassmeister.com/gist/36f9c88680e994ebee77
 ///
 
-$animation-use-vanish-in: false !default;
-
-@if $animation-use-vanish-in == true {
-  @keyframes vanishIn {
-    0% {
-      filter: blur(90px);
-      opacity: 0;
-      transform: scale3d(2, 2, 2);
-    }
-
-    100% {
-      filter: none;
-      opacity: 1;
-      transform: scale3d(1, 1, 1);
-    }
-  }
-}
-
 @mixin vanish-in-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-vanish-in == true {
+    @at-root {
+      @keyframes vanishIn {
+        0% {
+          filter: blur(90px);
+          opacity: 0;
+          transform: scale3d(2, 2, 2);
+        }
+
+        100% {
+          filter: none;
+          opacity: 1;
+          transform: scale3d(1, 1, 1);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: both;

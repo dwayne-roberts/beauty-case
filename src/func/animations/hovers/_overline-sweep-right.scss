@@ -10,8 +10,6 @@
 /// @example http://sassmeister.com/gist/9d3abd1d8611564fcd86
 ///
 
-$animation-use-overline-sweep-right: false !default;
-
 @mixin overline-sweep-right-hover($color, $width: 1px, $duration: $transition-duration, $delay: $transition-delay) {
   @if $animation-use-overline-sweep-right == true {
     overflow: hidden;

@@ -9,24 +9,22 @@
 /// @example http://sassmeister.com/gist/33e93515f306800b11c2
 ///
 
-$animation-use-vanish-out: false !default;
-
-@if $animation-use-vanish-out == true {
-  @keyframes vanishOut {
-    0% {
-      opacity: 1;
-      transform: scale3d(1, 1, 1);
-    }
-
-    100% {
-      opacity: 0;
-      transform: scale3d(2, 2, 2);
-    }
-  }
-}
-
 @mixin vanish-out-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-vanish-out == true {
+    @at-root {
+      @keyframes vanishOut {
+        0% {
+          opacity: 1;
+          transform: scale3d(1, 1, 1);
+        }
+
+        100% {
+          opacity: 0;
+          transform: scale3d(2, 2, 2);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: forwards;

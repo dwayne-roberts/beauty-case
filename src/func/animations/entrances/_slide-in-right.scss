@@ -9,36 +9,34 @@
 /// @example http://sassmeister.com/gist/653214f484eedd830803
 ///
 
-$animation-use-slide-in-right: false !default;
-
-@if $animation-use-slide-in-right == true {
-  @keyframes slideInRight {
-    0% {
-      opacity: 0;
-      transform: translate3d(3000px, 0, 0);
-    }
-
-    60% {
-      opacity: 1;
-      transform: translate3d(-25px, 0, 0);
-    }
-
-    75% {
-      transform: translate3d(10px, 0, 0);
-    }
-
-    90% {
-      transform: translate3d(-5px, 0, 0);
-    }
-
-    100% {
-      transform: none;
-    }
-  }
-}
-
 @mixin slide-in-right-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-slide-in-right == true {
+    @at-root {
+      @keyframes slideInRight {
+        0% {
+          opacity: 0;
+          transform: translate3d(3000px, 0, 0);
+        }
+
+        60% {
+          opacity: 1;
+          transform: translate3d(-25px, 0, 0);
+        }
+
+        75% {
+          transform: translate3d(10px, 0, 0);
+        }
+
+        90% {
+          transform: translate3d(-5px, 0, 0);
+        }
+
+        100% {
+          transform: none;
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: both;

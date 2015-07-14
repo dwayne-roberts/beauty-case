@@ -9,28 +9,26 @@
 /// @example http://sassmeister.com/gist/9ffbfd7301cf91a17a77
 ///
 
-$animation-use-pop-out: false !default;
-
-@if $animation-use-pop-out == true {
-  @keyframes popOut {
-    20% {
-      transform: scale3d(.9, .9, .9);
-    }
-
-    40%, 45% {
-      opacity: 1;
-      transform: scale3d(1.1, 1.1, 1.1);
-    }
-
-    100% {
-      opacity: 0;
-      transform: scale3d(.3, .3, .3);
-    }
-  }
-}
-
 @mixin pop-out-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-pop-out == true {
+    @at-root {
+      @keyframes popOut {
+        20% {
+          transform: scale3d(.9, .9, .9);
+        }
+
+        40%, 45% {
+          opacity: 1;
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        100% {
+          opacity: 0;
+          transform: scale3d(.3, .3, .3);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: forwards;

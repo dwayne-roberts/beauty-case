@@ -9,27 +9,24 @@
 /// @example http://sassmeister.com/gist/ab212c7d75e21993ff04
 ///
 
-$animation-use-shake: false !default;
-
-@if $animation-use-shake == true {
-
-  @keyframes shake  {
-    0%, 100% {
-      transform: none;
-    }
-
-    10%, 30%, 50%, 70%, 90% {
-      transform: translate3d(-10px, 0, 0);
-    }
-
-    20%, 40%, 60%, 80% {
-      transform: translate3d(10px, 0, 0);
-    }
-  }
-}
-
 @mixin shake-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-shake == true {
+    @at-root {
+      @keyframes shake  {
+        0%, 100% {
+          transform: none;
+        }
+
+        10%, 30%, 50%, 70%, 90% {
+          transform: translate3d(-10px, 0, 0);
+        }
+
+        20%, 40%, 60%, 80% {
+          transform: translate3d(10px, 0, 0);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-iteration-count: $count;

@@ -9,23 +9,20 @@
 /// @example http://sassmeister.com/gist/66f50863cbaeff7b2c49
 ///
 
-$animation-use-spin: false !default;
-
-@if $animation-use-spin == true {
-
-  @keyframes spin {
-    0% {
-      transform: none;
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-}
-
 @mixin spin-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-spin == true {
+    @at-root {
+      @keyframes spin {
+        0% {
+          transform: none;
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-iteration-count: $count;

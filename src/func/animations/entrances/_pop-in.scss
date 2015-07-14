@@ -9,43 +9,39 @@
 /// @example http://sassmeister.com/gist/2500f7f2a556c7db0970
 ///
 
-$animation-use-pop-in: false !default;
-
-@if $animation-use-pop-in == true {
-
-  @keyframes popIn {
-
-    0% {
-      opacity: 0;
-      transform: scale3d(.3, .3, .3);
-    }
-
-    20% {
-      transform: scale3d(1.1, 1.1, 1.1);
-    }
-
-    40% {
-      transform: scale3d(.9, .9, .9);
-    }
-
-    60% {
-      opacity: 1;
-      transform: scale3d(1.03, 1.03, 1.03);
-    }
-
-    80% {
-      transform: scale3d(.97, .97, .97);
-    }
-
-    100% {
-      opacity: 1;
-      transform: scale3d(1, 1, 1);
-    }
-  }
-}
-
 @mixin pop-in-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-pop-in == true {
+    @at-root {
+      @keyframes popIn {
+        0% {
+          opacity: 0;
+          transform: scale3d(.3, .3, .3);
+        }
+
+        20% {
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        40% {
+          transform: scale3d(.9, .9, .9);
+        }
+
+        60% {
+          opacity: 1;
+          transform: scale3d(1.03, 1.03, 1.03);
+        }
+
+        80% {
+          transform: scale3d(.97, .97, .97);
+        }
+
+        100% {
+          opacity: 1;
+          transform: scale3d(1, 1, 1);
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: both;

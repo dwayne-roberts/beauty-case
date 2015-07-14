@@ -9,24 +9,22 @@
 /// @example http://sassmeister.com/gist/ccb768983a971abde5bc
 ///
 
-$animation-use-rotate-in: false !default;
-
-@if $animation-use-rotate-in == true {
-  @keyframes rotateIn {
-    0% {
-      opacity: 0;
-      transform: rotate3d(0, 1, 0, -180deg);
-    }
-
-    100% {
-      opacity: 1;
-      transform: none;
-    }
-  }
-}
-
 @mixin rotate-in-animation($duration: $animation-duration, $delay: $animation-delay, $count: $animation-iterations) {
   @if $animation-use-rotate-in == true {
+    @at-root {
+      @keyframes rotateIn {
+        0% {
+          opacity: 0;
+          transform: rotate3d(0, 1, 0, -180deg);
+        }
+
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    }
+
     animation-delay: $delay;
     animation-duration: $duration;
     animation-fill-mode: both;

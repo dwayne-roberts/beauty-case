@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "beauty-case",
+  "description": "A Sass starter kit for the Sky Radio Group. This manifest manages the third party assets within this project.",
+  "homepage": "https://github.com/sky-radio-group/beauty-case/",
+  "title": "Beauty Case",
+  "version": "2.0.0",
+  "author": "Dwayne Roberts",
+  "company": "Sky Radio Group",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sky-radio-group/beauty-case.git"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-concat": "~2.6.0",
+    "gulp-header": "~1.2.2",
+    "gulp-replace": "~0.5.3"
+  }
+}
